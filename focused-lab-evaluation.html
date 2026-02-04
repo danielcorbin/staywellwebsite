@@ -17,13 +17,208 @@
 
   gtag('config', 'G-B3E9RVJR52');
 </script>
+<style>
+    /* Lab Package Cards */
+    .lab-packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .lab-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-top: 8px solid #059669;
+    }
+    .lab-card.metabolic { border-top-color: #f97316; }
+    .lab-card.fatigue { border-top-color: #8b5cf6; }
+    .lab-card.mens { border-top-color: #0ea5e9; }
+    .lab-card.womens { border-top-color: #ec4899; }
+    .lab-card.heart { border-top-color: #ef4444; }
+
+    .lab-card h3 {
+        margin: 0 0 0.5rem 0;
+        color: #1f2937;
+        font-size: 1.25rem;
+    }
+    .lab-card .price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #059669;
+        margin-bottom: 1rem;
+    }
+    .lab-card.metabolic .price { color: #f97316; }
+    .lab-card.fatigue .price { color: #8b5cf6; }
+    .lab-card.mens .price { color: #0ea5e9; }
+    .lab-card.womens .price { color: #ec4899; }
+    .lab-card.heart .price { color: #ef4444; }
+
+    .lab-card .description {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .lab-card .includes-label {
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 0.5rem;
+    }
+    .lab-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+    }
+    .lab-card ul li {
+        padding: 0.25rem 0;
+        color: #4b5563;
+        font-size: 0.9rem;
+    }
+    .lab-card ul li::before {
+        content: "•";
+        color: #059669;
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+    .lab-card.metabolic ul li::before { color: #f97316; }
+    .lab-card.fatigue ul li::before { color: #8b5cf6; }
+    .lab-card.mens ul li::before { color: #0ea5e9; }
+    .lab-card.womens ul li::before { color: #ec4899; }
+    .lab-card.heart ul li::before { color: #ef4444; }
+
+    .lab-card .info-box {
+        background: #f8fafc;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        font-size: 0.85rem;
+        color: #64748b;
+    }
+    .lab-card .info-box p {
+        margin: 0.25rem 0;
+    }
+
+    /* Add-On Tests */
+    .addon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .addon-item {
+        background: white;
+        border-radius: 0.75rem;
+        padding: 1rem 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+    }
+    .addon-item .addon-name {
+        font-weight: 500;
+        color: #1f2937;
+    }
+    .addon-item .addon-price {
+        font-weight: 600;
+        color: #059669;
+    }
+
+    /* Advanced Testing Cards */
+    .advanced-tests-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .advanced-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #059669;
+    }
+    .advanced-card h4 {
+        margin: 0 0 0.5rem 0;
+        color: #1f2937;
+        font-size: 1.1rem;
+    }
+    .advanced-card .advanced-price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #059669;
+        margin-bottom: 0.75rem;
+    }
+    .advanced-card .advanced-description {
+        color: #4b5563;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* How It Works */
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .step-card {
+        text-align: center;
+        padding: 2rem;
+    }
+    .step-number {
+        width: 50px;
+        height: 50px;
+        background: #059669;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+    }
+    .step-card h3 {
+        color: #1f2937;
+        margin-bottom: 0.75rem;
+    }
+    .step-card p {
+        color: #4b5563;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Note boxes */
+    .note-box {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+    .note-box h3 {
+        color: #166534;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .note-box p {
+        color: #166534;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+    }
+    .note-box p:last-child {
+        margin-bottom: 0;
+    }
+</style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <img src="Logo.png" alt="Staywell Health" class="logo">
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,7 +226,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                                                <li class="dropdown">
+                <li class="dropdown">
                     <a href="services.html" class="dropbtn">Services ›</a>
                     <div class="dropdown-content">
                         <a href="dpc-services.html">Direct Primary Care</a>
@@ -41,7 +236,7 @@
                     </div>
                 </li>
                 <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="https://www.staywellforlife.com/blog">Blog</a></li>
+                <li><a href="https://www.staywellforlife.com/blog" target="_blank">Blog</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
                 <li><a href="focused-lab-evaluation-es.html" class="language-toggle">Español</a></li>
                 <li><a href="https://www.staywellforlife.com/portal" target="_blank" class="btn-join">PORTAL</a></li>
@@ -54,83 +249,355 @@
         <div class="container">
             <div class="max-w-4xl">
                 <h1>Focused Lab Evaluation</h1>
-                <p>A structured, one-time clinical insight into your health markers. Professional interpretation for those seeking clarity before committing to ongoing care.</p>
+                <p>Professional lab panels with expert interpretation. All-inclusive pricing with no hidden fees.</p>
             </div>
         </div>
     </section>
 
-    <!-- Overview Section -->
+    <!-- How It Works Section -->
     <section class="section section-white">
         <div class="container">
-            <div class="max-w-4xl" style="margin: 0 auto;">
-                <h2 style="text-align: center; margin-bottom: 2rem;">Clarity Through Clinical Insight</h2>
-                <p style="font-size: 1.125rem; margin-bottom: 1.5rem; text-align: center;">
-                    The Focused Lab Evaluation is designed for individuals who are not yet ready for a full membership but are seeking a professional, evidence-informed review of their health markers. This standalone service provides a clear snapshot of your current health status through structured data and expert interpretation.
-                </p>
-                <p style="font-size: 1.125rem; text-align: center;">
-                    This is a one-time evaluation focused specifically on lab data. It is not a substitute for ongoing primary care, but rather a professional bridge for those seeking deeper understanding of their health.
-                </p>
+            <h2 style="text-align: center; margin-bottom: 1rem;">How It Works</h2>
+            <p style="text-align: center; color: #4b5563; max-width: 700px; margin: 0 auto;">
+                A simple, transparent process to get the lab insights you need.
+            </p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Complete Intake</h3>
+                    <p>Fill out a comprehensive questionnaire about your health history, current symptoms, and wellness goals.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Get Your Labs</h3>
+                    <p>We order the appropriate panel based on your needs. Visit a local lab at your convenience.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Receive Interpretation</h3>
+                    <p>Get a personalized, written interpretation of your results with clear, actionable insights.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- Lab Packages Section -->
     <section class="section section-gray">
         <div class="container">
-            <h2 style="margin-bottom: 3rem;">What the Evaluation Includes</h2>
-            <div class="grid grid-2">
-                <div class="card">
-                    <div class="card-icon">📝</div>
-                    <h3>Structured Intake</h3>
-                    <p>A comprehensive written intake questionnaire to capture your health history, current symptoms, and specific wellness goals. (Note: This service does not include a physical exam or live visit.)</p>
+            <h2 style="text-align: center; margin-bottom: 1rem;">Lab Packages</h2>
+            <p style="text-align: center; color: #4b5563; max-width: 700px; margin: 0 auto;">
+                Each package includes professional interpretation. Prices are all-inclusive with no separate evaluation fees.
+            </p>
+
+            <div class="lab-packages-grid">
+                <!-- Basic Wellness Panel -->
+                <div class="lab-card">
+                    <h3>Basic Wellness Panel</h3>
+                    <div class="price">$119</div>
+                    <p class="description">A foundational snapshot of your overall health, ideal for annual checkups or establishing a baseline.</p>
+                    <p class="includes-label">Includes:</p>
+                    <ul>
+                        <li>Complete Blood Count (CBC)</li>
+                        <li>Comprehensive Metabolic Panel (CMP)</li>
+                        <li>Lipid Panel</li>
+                        <li>Hemoglobin A1c</li>
+                        <li>Thyroid Panel (TSH, Free T4)</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Fasting:</strong> 8-10 hours recommended</p>
+                        <p><strong>Best time:</strong> Morning</p>
+                        <p><strong>Comparable retail:</strong> $200-350</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🔬</div>
-                    <h3>Professional Lab Orders</h3>
-                    <p>We order a targeted panel of labs based on your intake. We provide professional oversight to ensure the right tests are ordered for your specific needs.</p>
+
+                <!-- Metabolic Health Panel -->
+                <div class="lab-card metabolic">
+                    <h3>Metabolic Health Panel</h3>
+                    <div class="price">$99</div>
+                    <p class="description">Focused on blood sugar regulation and metabolic function. Great for those monitoring diabetes risk or metabolic health.</p>
+                    <p class="includes-label">Includes:</p>
+                    <ul>
+                        <li>Fasting Glucose</li>
+                        <li>Hemoglobin A1c</li>
+                        <li>Fasting Insulin</li>
+                        <li>Lipid Panel</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Fasting:</strong> 10-12 hours required</p>
+                        <p><strong>Best time:</strong> Morning</p>
+                        <p><strong>Comparable retail:</strong> $150-250</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Written Interpretation</h3>
-                    <p>You will receive a personalized, written interpretation of your results. We translate complex data into clear, actionable insights grounded in clinical evidence.</p>
+
+                <!-- Fatigue & Inflammation Panel -->
+                <div class="lab-card fatigue">
+                    <h3>Fatigue & Inflammation Panel</h3>
+                    <div class="price">$209</div>
+                    <p class="description">For persistent tiredness, brain fog, or unexplained symptoms. Evaluates common causes of fatigue and inflammation.</p>
+                    <p class="includes-label">Includes:</p>
+                    <ul>
+                        <li>Complete Blood Count (CBC)</li>
+                        <li>Comprehensive Metabolic Panel (CMP)</li>
+                        <li>Thyroid Panel (TSH, Free T4, Free T3)</li>
+                        <li>Iron Panel with Ferritin</li>
+                        <li>Vitamin B12</li>
+                        <li>Vitamin D</li>
+                        <li>hs-CRP (inflammation marker)</li>
+                        <li>Sed Rate (ESR)</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Fasting:</strong> 8-10 hours recommended</p>
+                        <p><strong>Best time:</strong> Morning</p>
+                        <p><strong>Comparable retail:</strong> $400-600</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">💬</div>
-                    <h3>Optional Consultation</h3>
-                    <p>If you wish to discuss your results in more detail, an optional follow-up consultation is available at a clearly stated professional rate.</p>
+
+                <!-- Men's Health Panel -->
+                <div class="lab-card mens">
+                    <h3>Men's Health Panel</h3>
+                    <div class="price">$169</div>
+                    <p class="description">Comprehensive men's health assessment including hormone levels, metabolic markers, and prostate screening.</p>
+                    <p class="includes-label">Includes:</p>
+                    <ul>
+                        <li>Complete Blood Count (CBC)</li>
+                        <li>Comprehensive Metabolic Panel (CMP)</li>
+                        <li>Lipid Panel</li>
+                        <li>Testosterone, Total and Free</li>
+                        <li>PSA (Prostate-Specific Antigen)</li>
+                        <li>Hemoglobin A1c</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Fasting:</strong> 8-10 hours recommended</p>
+                        <p><strong>Best time:</strong> Morning (before 10am for testosterone)</p>
+                        <p><strong>Comparable retail:</strong> $300-450</p>
+                    </div>
+                </div>
+
+                <!-- Women's Health Panel -->
+                <div class="lab-card womens">
+                    <h3>Women's Health Panel</h3>
+                    <div class="price">$189</div>
+                    <p class="description">Tailored for women's unique health needs including hormones, thyroid, and key nutritional markers.</p>
+                    <p class="includes-label">Includes:</p>
+                    <ul>
+                        <li>Complete Blood Count (CBC)</li>
+                        <li>Comprehensive Metabolic Panel (CMP)</li>
+                        <li>Thyroid Panel (TSH, Free T4, Free T3)</li>
+                        <li>Iron Panel with Ferritin</li>
+                        <li>Vitamin D</li>
+                        <li>Estradiol</li>
+                        <li>FSH</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Fasting:</strong> 8-10 hours recommended</p>
+                        <p><strong>Best time:</strong> Day 3 of cycle (if applicable)</p>
+                        <p><strong>Comparable retail:</strong> $350-500</p>
+                    </div>
+                </div>
+
+                <!-- Heart Health Panel -->
+                <div class="lab-card heart">
+                    <h3>Heart Health Panel</h3>
+                    <div class="price">$219</div>
+                    <p class="description">Advanced cardiovascular assessment beyond standard lipid testing. Ideal for family history of heart disease or elevated risk.</p>
+                    <p class="includes-label">Includes:</p>
+                    <ul>
+                        <li>Advanced Lipid Panel</li>
+                        <li>Lipoprotein(a)</li>
+                        <li>ApoB</li>
+                        <li>hs-CRP</li>
+                        <li>Homocysteine</li>
+                        <li>Hemoglobin A1c</li>
+                        <li>Fasting Insulin</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Fasting:</strong> 10-12 hours required</p>
+                        <p><strong>Best time:</strong> Morning</p>
+                        <p><strong>Comparable retail:</strong> $450-700</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Transparency Section -->
+    <!-- Add-On Tests Section -->
     <section class="section section-white">
         <div class="container">
-            <div class="max-w-4xl" style="margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 1.5rem; overflow: hidden;">
-                <div style="background: #f8fafc; padding: 2rem; border-bottom: 1px solid #e2e8f0; text-align: center;">
-                    <h2 style="margin: 0;">Transparent Pricing</h2>
+            <h2 style="text-align: center; margin-bottom: 1rem;">Add-On Tests</h2>
+            <p style="text-align: center; color: #4b5563; max-width: 700px; margin: 0 auto;">
+                Enhance any panel with these individual tests based on your specific needs.
+            </p>
+
+            <div class="addon-grid">
+                <div class="addon-item">
+                    <span class="addon-name">Thyroid Antibody Panel</span>
+                    <span class="addon-price">$49</span>
                 </div>
-                <div style="padding: 3rem;">
-                    <div class="grid grid-2" style="gap: 3rem;">
-                        <div>
-                            <h3 style="color: #2d3748; margin-top: 0;">Evaluation Fee</h3>
-                            <p style="font-size: 1.125rem; color: #4a5568;">
-                                The evaluation fee covers the professional time required for the **review of your intake questionnaire** and the delivery of **personalized, actionable insights** based on your lab results.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 style="color: #2d3748; margin-top: 0;">Lab Costs (Separate)</h3>
-                            <p style="font-size: 1.125rem; color: #4a5568; margin-bottom: 1rem;">
-                                **Actual lab costs are separate** and not included in the evaluation fee. Costs vary depending on the specific tests ordered and your clinical needs.
-                            </p>
-                            <ul style="color: #4a5568; padding-left: 1.25rem; margin-bottom: 1rem;">
-                                <li>Standard labs may be billable to insurance.</li>
-                                <li>Specialty tests (DUTCH, salivary analysis, environmental mold, etc.) are typically not billable to insurance.</li>
-                                <li>Specialty test costs range from **$10 to $500+** depending on complexity.</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="addon-item">
+                    <span class="addon-name">Magnesium RBC</span>
+                    <span class="addon-price">$29</span>
                 </div>
+                <div class="addon-item">
+                    <span class="addon-name">Ferritin</span>
+                    <span class="addon-price">$19</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Zinc</span>
+                    <span class="addon-price">$25</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Vitamin D 25-OH</span>
+                    <span class="addon-price">$29</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Cortisol AM</span>
+                    <span class="addon-price">$25</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">ANA Screen with Reflex</span>
+                    <span class="addon-price">$29</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Testosterone Free and Total</span>
+                    <span class="addon-price">$39</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Plasma Histamine</span>
+                    <span class="addon-price">$39</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Advanced Cardio Genetic Panel</span>
+                    <span class="addon-price">$149</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single CTA Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="text-center">
+                <h2>Ready to Get Started?</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Request a lab panel and complete your intake questionnaire. We'll review your information and order the appropriate tests.
+                </p>
+                <a href="https://staywellforlife.hint.com/signup/focusedlabeval" target="_blank" class="btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Request a Lab Panel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Functional Medicine Testing Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Advanced Functional Medicine Testing</h2>
+            <div class="max-w-4xl" style="margin: 0 auto;">
+                <p style="font-size: 1.125rem; text-align: center; color: #4b5563; margin-bottom: 1rem;">
+                    Sometimes basic labs are enough. Sometimes they aren't.
+                </p>
+                <p style="text-align: center; color: #4b5563; margin-bottom: 1rem; line-height: 1.7;">
+                    When symptoms persist despite normal results, advanced functional testing can help us better understand what's happening beneath the surface. These tests look at gut health, hormones, metabolism, toxins, and environmental exposures to help connect the dots when the picture isn't clear.
+                </p>
+                <p style="text-align: center; color: #4b5563; margin-bottom: 2rem; line-height: 1.7;">
+                    This type of testing is not routine and is never ordered just to "run everything." We talk through your symptoms, goals, and history first, then decide together whether advanced testing makes sense and which tests, if any, would be most useful.
+                </p>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 1.5rem; color: #374151;">Commonly Used Advanced Tests</h3>
+
+            <div class="advanced-tests-grid">
+                <div class="advanced-card">
+                    <h4>GI-MAP</h4>
+                    <div class="advanced-price">$427</div>
+                    <p class="advanced-description">Comprehensive stool test that evaluates gut bacteria, parasites, viruses, fungi, and markers of digestion and inflammation. Commonly used for chronic digestive symptoms, autoimmune concerns, skin issues, and unexplained fatigue.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>GI-MAP + Zonulin</h4>
+                    <div class="advanced-price">$480</div>
+                    <p class="advanced-description">Includes the GI-MAP plus a marker associated with intestinal permeability, often referred to as leaky gut. Helpful when digestive symptoms overlap with inflammation, food sensitivities, or immune-related concerns.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>DUTCH Complete</h4>
+                    <div class="advanced-price">$400</div>
+                    <p class="advanced-description">Advanced hormone test measuring sex hormones, cortisol patterns, melatonin, and hormone metabolism. Often used for fatigue, mood changes, weight concerns, and perimenopause or menopause support.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>DUTCH Plus</h4>
+                    <div class="advanced-price">$500</div>
+                    <p class="advanced-description">Expanded hormone testing that combines dried urine hormones with salivary cortisol to provide a more detailed picture of stress and hormone patterns. Useful for complex fatigue and burnout.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>Organic Acids Test (OAT)</h4>
+                    <div class="advanced-price">$380</div>
+                    <p class="advanced-description">Urine-based test that provides insight into nutrient deficiencies, mitochondrial function, detox pathways, neurotransmitter metabolites, and gut microbial activity. Commonly used for fatigue, mood concerns, and metabolic issues.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>MycoTOX</h4>
+                    <div class="advanced-price">$375</div>
+                    <p class="advanced-description">Urine test that screens for mycotoxins produced by certain molds. Considered when there is known or suspected mold exposure or unexplained chronic symptoms.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>GI Effects Comprehensive (3-Day)</h4>
+                    <div class="advanced-price">$539</div>
+                    <p class="advanced-description">In-depth stool test assessing digestion, absorption, inflammation, microbiome balance, and infections over a three-day collection period. Often used for long-standing or complex digestive concerns.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>SIBO/IMO Lactulose Breath Test</h4>
+                    <div class="advanced-price">$399</div>
+                    <p class="advanced-description">Breath test evaluating hydrogen and methane gas production associated with bacterial or methane overgrowth in the small intestine. Commonly used for bloating, constipation, diarrhea, or abdominal discomfort.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>3X4 Genetics Test + Blueprint Report</h4>
+                    <div class="advanced-price">$399</div>
+                    <p class="advanced-description">Cheek swab genetic test evaluating genes related to detoxification, nutrition, inflammation, and metabolism. Results are used to guide personalized lifestyle and nutrition strategies, not to diagnose disease.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>EMMA</h4>
+                    <div class="advanced-price">$399</div>
+                    <p class="advanced-description">Dust sample test that screens for mold species present in the home environment. Helpful when environmental exposure may be contributing to chronic symptoms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Note Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="max-w-4xl" style="margin: 0 auto;">
+                <div class="note-box">
+                    <h3>A Note on Pricing</h3>
+                    <p>The prices listed above reflect non-member pricing.</p>
+                    <p>Patients enrolled in a Staywell Health membership receive highly discounted lab pricing, and in most cases can expect lab costs to be passed through at or near wholesale pricing. Membership allows us to remove much of the administrative overhead that typically drives up healthcare costs and pass those savings directly to you.</p>
+                </div>
+
+                <div class="note-box" style="background: #fef3c7; border-color: #fcd34d;">
+                    <h3 style="color: #92400e;">A Note on Testing</h3>
+                    <p style="color: #92400e;">Advanced testing is optional and individualized. Not everyone needs specialty labs, and more testing does not always mean better care. In many cases, meaningful improvement can happen without advanced testing at all.</p>
+                    <p style="color: #92400e; font-weight: 600;">When advanced labs are used, the goal is clarity, not complexity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Testing Options -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="max-w-4xl" style="margin: 0 auto; text-align: center;">
+                <h2>Other Testing Options</h2>
+                <p style="font-size: 1.125rem; color: #4b5563; line-height: 1.7; margin-bottom: 1.5rem;">
+                    In addition to the tests listed above, other specialty testing is available, including hormone mapping, microbiome testing across different life stages, neurotransmitter testing, environmental exposure assessments, and more.
+                </p>
+                <p style="font-size: 1.125rem; color: #4b5563; line-height: 1.7;">
+                    If you're interested in a specific test or wondering whether advanced testing might be appropriate for you, please reach out through our contact page and we'll be happy to talk it through before anything is ordered.
+                </p>
             </div>
         </div>
     </section>
@@ -150,18 +617,15 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
+    <!-- Final CTA -->
     <section class="section section-white">
         <div class="container">
             <div class="text-center">
-                <h2>Ready for a Focused Evaluation?</h2>
-                <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    Take the first step toward understanding your health markers with professional, ethical, and evidence-informed oversight.
+                <h2>Questions?</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    We're happy to discuss which testing options might be right for you.
                 </p>
-                <div class="hero-buttons">
-                    <a href="https://staywellforlife.hint.com/signup/focusedlabeval" target="_blank" class="btn-primary">Get started now</a>
-                    <a href="index.html#contact" class="btn-secondary">Inquire About Lab Evaluation</a>
-                </div>
+                <a href="index.html#contact" class="btn-secondary">Contact Us</a>
             </div>
         </div>
     </section>
@@ -202,12 +666,33 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
-    <script src="main.js" defer></script>
+<script>
+// Hamburger menu
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
+
+    var links = document.querySelectorAll('.nav-links a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function() {
+        navLinks.classList.remove('active');
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  }
+});
+</script>
+<script src="main.js"></script>
 </body>
 </html>

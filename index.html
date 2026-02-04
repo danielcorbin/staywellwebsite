@@ -80,7 +80,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <img src="Logo.png" alt="Staywell Health" class="logo">
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -540,6 +540,35 @@
         </div>
     </footer>
 
+<script>
+// Hamburger menu
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    var links = document.querySelectorAll('.nav-links a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function() {
+        navLinks.classList.remove('active');
+      });
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  }
+});
+</script>
 <script src="main.js"></script>
 </body>
 </html>

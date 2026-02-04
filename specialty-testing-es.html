@@ -23,7 +23,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <img src="Logo.png" alt="Staywell Health" class="logo">
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -35,13 +35,13 @@
                     <a href="services-es.html" class="dropbtn">Servicios ›</a>
                     <div class="dropdown-content">
                         <a href="dpc-services-es.html">Atención Primaria Directa</a>
-                        <a href="specialty-testing-es.html">Análisis Especializados</a>
+                        <a href="specialty-testing-es.html">Pruebas Especializadas</a>
                         <a href="focused-lab-evaluation-es.html">Evaluación de Laboratorio</a>
                         <a href="aesthetics-es.html">Estética</a>
                     </div>
                 </li>
                 <li><a href="index-es.html#pricing">Precios</a></li>
-                <li><a href="https://www.staywellforlife.com/blog">Blog</a></li>
+                <li><a href="https://www.staywellforlife.com/blog" target="_blank">Blog</a></li>
                 <li><a href="index-es.html#contact">Contacto</a></li>
                 <li><a href="specialty-testing.html" class="language-toggle">English</a></li>
                 <li><a href="https://www.staywellforlife.com/portal" target="_blank" class="btn-join">PORTAL</a></li>
@@ -159,12 +159,33 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
-    <script src="main.js" defer></script>
+<script>
+// Hamburger menu
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
+
+    var links = document.querySelectorAll('.nav-links a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function() {
+        navLinks.classList.remove('active');
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  }
+});
+</script>
+<script src="main.js"></script>
 </body>
 </html>

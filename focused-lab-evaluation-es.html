@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluación de Laboratorio Enfocada - Staywell Health</title>
+    <title>Evaluación de Laboratorio - Staywell Health</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -17,13 +17,208 @@
 
   gtag('config', 'G-B3E9RVJR52');
 </script>
+<style>
+    /* Lab Package Cards */
+    .lab-packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .lab-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-top: 8px solid #059669;
+    }
+    .lab-card.metabolic { border-top-color: #f97316; }
+    .lab-card.fatigue { border-top-color: #8b5cf6; }
+    .lab-card.mens { border-top-color: #0ea5e9; }
+    .lab-card.womens { border-top-color: #ec4899; }
+    .lab-card.heart { border-top-color: #ef4444; }
+
+    .lab-card h3 {
+        margin: 0 0 0.5rem 0;
+        color: #1f2937;
+        font-size: 1.25rem;
+    }
+    .lab-card .price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #059669;
+        margin-bottom: 1rem;
+    }
+    .lab-card.metabolic .price { color: #f97316; }
+    .lab-card.fatigue .price { color: #8b5cf6; }
+    .lab-card.mens .price { color: #0ea5e9; }
+    .lab-card.womens .price { color: #ec4899; }
+    .lab-card.heart .price { color: #ef4444; }
+
+    .lab-card .description {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .lab-card .includes-label {
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 0.5rem;
+    }
+    .lab-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+    }
+    .lab-card ul li {
+        padding: 0.25rem 0;
+        color: #4b5563;
+        font-size: 0.9rem;
+    }
+    .lab-card ul li::before {
+        content: "•";
+        color: #059669;
+        font-weight: bold;
+        margin-right: 0.5rem;
+    }
+    .lab-card.metabolic ul li::before { color: #f97316; }
+    .lab-card.fatigue ul li::before { color: #8b5cf6; }
+    .lab-card.mens ul li::before { color: #0ea5e9; }
+    .lab-card.womens ul li::before { color: #ec4899; }
+    .lab-card.heart ul li::before { color: #ef4444; }
+
+    .lab-card .info-box {
+        background: #f8fafc;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        font-size: 0.85rem;
+        color: #64748b;
+    }
+    .lab-card .info-box p {
+        margin: 0.25rem 0;
+    }
+
+    /* Add-On Tests */
+    .addon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .addon-item {
+        background: white;
+        border-radius: 0.75rem;
+        padding: 1rem 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e5e7eb;
+    }
+    .addon-item .addon-name {
+        font-weight: 500;
+        color: #1f2937;
+    }
+    .addon-item .addon-price {
+        font-weight: 600;
+        color: #059669;
+    }
+
+    /* Advanced Testing Cards */
+    .advanced-tests-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .advanced-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #059669;
+    }
+    .advanced-card h4 {
+        margin: 0 0 0.5rem 0;
+        color: #1f2937;
+        font-size: 1.1rem;
+    }
+    .advanced-card .advanced-price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #059669;
+        margin-bottom: 0.75rem;
+    }
+    .advanced-card .advanced-description {
+        color: #4b5563;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* How It Works */
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .step-card {
+        text-align: center;
+        padding: 2rem;
+    }
+    .step-number {
+        width: 50px;
+        height: 50px;
+        background: #059669;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+    }
+    .step-card h3 {
+        color: #1f2937;
+        margin-bottom: 0.75rem;
+    }
+    .step-card p {
+        color: #4b5563;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Note boxes */
+    .note-box {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+    .note-box h3 {
+        color: #166534;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .note-box p {
+        color: #166534;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+    }
+    .note-box p:last-child {
+        margin-bottom: 0;
+    }
+</style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <img src="Logo.png" alt="Staywell Health" class="logo">
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,17 +226,17 @@
             <ul class="nav-links">
                 <li><a href="index-es.html">Inicio</a></li>
                 <li><a href="about-es.html">Acerca</a></li>
-                                                <li class="dropdown">
+                <li class="dropdown">
                     <a href="services-es.html" class="dropbtn">Servicios ›</a>
                     <div class="dropdown-content">
                         <a href="dpc-services-es.html">Atención Primaria Directa</a>
-                        <a href="specialty-testing-es.html">Análisis Especializados</a>
+                        <a href="specialty-testing-es.html">Pruebas Especializadas</a>
                         <a href="focused-lab-evaluation-es.html">Evaluación de Laboratorio</a>
                         <a href="aesthetics-es.html">Estética</a>
                     </div>
                 </li>
                 <li><a href="index-es.html#pricing">Precios</a></li>
-                <li><a href="https://www.staywellforlife.com/blog">Blog</a></li>
+                <li><a href="https://www.staywellforlife.com/blog" target="_blank">Blog</a></li>
                 <li><a href="index-es.html#contact">Contacto</a></li>
                 <li><a href="focused-lab-evaluation.html" class="language-toggle">English</a></li>
                 <li><a href="https://www.staywellforlife.com/portal" target="_blank" class="btn-join">PORTAL</a></li>
@@ -53,84 +248,356 @@
     <section class="hero">
         <div class="container">
             <div class="max-w-4xl">
-                <h1>Evaluación de Laboratorio Enfocada</h1>
-                <p>Una visión clínica estructurada y única de tus marcadores de salud. Interpretación profesional para quienes buscan claridad antes de comprometerse con una atención continua.</p>
+                <h1>Evaluación de Laboratorio</h1>
+                <p>Paneles de laboratorio profesionales con interpretación experta. Precios todo incluido sin cargos ocultos.</p>
             </div>
         </div>
     </section>
 
-    <!-- Overview Section -->
+    <!-- How It Works Section -->
     <section class="section section-white">
         <div class="container">
-            <div class="max-w-4xl" style="margin: 0 auto;">
-                <h2 style="text-align: center; margin-bottom: 2rem;">Claridad a Través de la Visión Clínica</h2>
-                <p style="font-size: 1.125rem; margin-bottom: 1.5rem; text-align: center;">
-                    La Evaluación de Laboratorio Enfocada está diseñada para personas que aún no están listas para una membresía completa pero buscan una revisión profesional y basada en evidencia de sus marcadores de salud. Este servicio independiente proporciona una imagen clara de tu estado de salud actual a través de datos estructurados e interpretación experta.
-                </p>
-                <p style="font-size: 1.125rem; text-align: center;">
-                    Esta es una evaluación única centrada específicamente en los datos de laboratorio. No es un sustituto de la atención primaria continua, sino más bien un puente profesional para quienes buscan una comprensión más profunda de su salud.
-                </p>
+            <h2 style="text-align: center; margin-bottom: 1rem;">Cómo Funciona</h2>
+            <p style="text-align: center; color: #4b5563; max-width: 700px; margin: 0 auto;">
+                Un proceso simple y transparente para obtener la información de laboratorio que necesita.
+            </p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Complete el Cuestionario</h3>
+                    <p>Complete un cuestionario completo sobre su historial de salud, síntomas actuales y objetivos de bienestar.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Realice sus Análisis</h3>
+                    <p>Ordenamos el panel apropiado según sus necesidades. Visite un laboratorio local a su conveniencia.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Reciba la Interpretación</h3>
+                    <p>Obtenga una interpretación personalizada y escrita de sus resultados con información clara y práctica.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- Lab Packages Section -->
     <section class="section section-gray">
         <div class="container">
-            <h2 style="margin-bottom: 3rem;">Qué Incluye la Evaluación</h2>
-            <div class="grid grid-2">
-                <div class="card">
-                    <div class="card-icon">📝</div>
-                    <h3>Cuestionario Estructurado</h3>
-                    <p>Un cuestionario escrito integral para capturar tu historial de salud, síntomas actuales y objetivos específicos de bienestar. (Nota: Este servicio no incluye un examen físico ni una visita en vivo).</p>
+            <h2 style="text-align: center; margin-bottom: 1rem;">Paquetes de Laboratorio</h2>
+            <p style="text-align: center; color: #4b5563; max-width: 700px; margin: 0 auto;">
+                Cada paquete incluye interpretación profesional. Los precios son todo incluido sin cargos de evaluación separados.
+            </p>
+
+            <div class="lab-packages-grid">
+                <!-- Basic Wellness Panel -->
+                <div class="lab-card">
+                    <h3>Panel de Bienestar Básico</h3>
+                    <div class="price">$119</div>
+                    <p class="description">Una imagen fundamental de su salud general, ideal para chequeos anuales o establecer una línea base.</p>
+                    <p class="includes-label">Incluye:</p>
+                    <ul>
+                        <li>Conteo Sanguíneo Completo (CBC)</li>
+                        <li>Panel Metabólico Completo (CMP)</li>
+                        <li>Panel de Lípidos</li>
+                        <li>Hemoglobina A1c</li>
+                        <li>Panel Tiroideo (TSH, T4 Libre)</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Ayuno:</strong> 8-10 horas recomendado</p>
+                        <p><strong>Mejor hora:</strong> Mañana</p>
+                        <p><strong>Precio comparable:</strong> $200-350</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">🔬</div>
-                    <h3>Órdenes de Laboratorio Profesionales</h3>
-                    <p>Solicitamos un panel específico de análisis basado en tu cuestionario. Proporcionamos supervisión profesional para garantizar que se soliciten las pruebas adecuadas para tus necesidades específicas.</p>
+
+                <!-- Metabolic Health Panel -->
+                <div class="lab-card metabolic">
+                    <h3>Panel de Salud Metabólica</h3>
+                    <div class="price">$99</div>
+                    <p class="description">Enfocado en la regulación del azúcar en sangre y la función metabólica. Ideal para quienes monitorean el riesgo de diabetes.</p>
+                    <p class="includes-label">Incluye:</p>
+                    <ul>
+                        <li>Glucosa en Ayunas</li>
+                        <li>Hemoglobina A1c</li>
+                        <li>Insulina en Ayunas</li>
+                        <li>Panel de Lípidos</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Ayuno:</strong> 10-12 horas requerido</p>
+                        <p><strong>Mejor hora:</strong> Mañana</p>
+                        <p><strong>Precio comparable:</strong> $150-250</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Interpretación Escrita</h3>
-                    <p>Recibirás una interpretación personalizada y escrita de tus resultados. Traducimos datos complejos en información clara y aplicable, fundamentada en evidencia clínica.</p>
+
+                <!-- Fatigue & Inflammation Panel -->
+                <div class="lab-card fatigue">
+                    <h3>Panel de Fatiga e Inflamación</h3>
+                    <div class="price">$209</div>
+                    <p class="description">Para cansancio persistente, niebla mental o síntomas inexplicables. Evalúa causas comunes de fatiga e inflamación.</p>
+                    <p class="includes-label">Incluye:</p>
+                    <ul>
+                        <li>Conteo Sanguíneo Completo (CBC)</li>
+                        <li>Panel Metabólico Completo (CMP)</li>
+                        <li>Panel Tiroideo (TSH, T4 Libre, T3 Libre)</li>
+                        <li>Panel de Hierro con Ferritina</li>
+                        <li>Vitamina B12</li>
+                        <li>Vitamina D</li>
+                        <li>hs-CRP (marcador de inflamación)</li>
+                        <li>Velocidad de Sedimentación (ESR)</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Ayuno:</strong> 8-10 horas recomendado</p>
+                        <p><strong>Mejor hora:</strong> Mañana</p>
+                        <p><strong>Precio comparable:</strong> $400-600</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <div class="card-icon">💬</div>
-                    <h3>Consulta Opcional</h3>
-                    <p>Si deseas discutir tus resultados con más detalle, hay una consulta de seguimiento opcional disponible a una tarifa profesional claramente establecida.</p>
+
+                <!-- Men's Health Panel -->
+                <div class="lab-card mens">
+                    <h3>Panel de Salud Masculina</h3>
+                    <div class="price">$169</div>
+                    <p class="description">Evaluación integral de la salud masculina incluyendo niveles hormonales, marcadores metabólicos y detección de próstata.</p>
+                    <p class="includes-label">Incluye:</p>
+                    <ul>
+                        <li>Conteo Sanguíneo Completo (CBC)</li>
+                        <li>Panel Metabólico Completo (CMP)</li>
+                        <li>Panel de Lípidos</li>
+                        <li>Testosterona Total y Libre</li>
+                        <li>PSA (Antígeno Prostático Específico)</li>
+                        <li>Hemoglobina A1c</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Ayuno:</strong> 8-10 horas recomendado</p>
+                        <p><strong>Mejor hora:</strong> Mañana (antes de las 10am para testosterona)</p>
+                        <p><strong>Precio comparable:</strong> $300-450</p>
+                    </div>
+                </div>
+
+                <!-- Women's Health Panel -->
+                <div class="lab-card womens">
+                    <h3>Panel de Salud Femenina</h3>
+                    <div class="price">$189</div>
+                    <p class="description">Diseñado para las necesidades únicas de salud femenina incluyendo hormonas, tiroides y marcadores nutricionales clave.</p>
+                    <p class="includes-label">Incluye:</p>
+                    <ul>
+                        <li>Conteo Sanguíneo Completo (CBC)</li>
+                        <li>Panel Metabólico Completo (CMP)</li>
+                        <li>Panel Tiroideo (TSH, T4 Libre, T3 Libre)</li>
+                        <li>Panel de Hierro con Ferritina</li>
+                        <li>Vitamina D</li>
+                        <li>Estradiol</li>
+                        <li>FSH</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Ayuno:</strong> 8-10 horas recomendado</p>
+                        <p><strong>Mejor hora:</strong> Día 3 del ciclo (si aplica)</p>
+                        <p><strong>Precio comparable:</strong> $350-500</p>
+                    </div>
+                </div>
+
+                <!-- Heart Health Panel -->
+                <div class="lab-card heart">
+                    <h3>Panel de Salud Cardíaca</h3>
+                    <div class="price">$219</div>
+                    <p class="description">Evaluación cardiovascular avanzada más allá de las pruebas de lípidos estándar. Ideal para historial familiar de enfermedad cardíaca.</p>
+                    <p class="includes-label">Incluye:</p>
+                    <ul>
+                        <li>Panel de Lípidos Avanzado</li>
+                        <li>Lipoproteína(a)</li>
+                        <li>ApoB</li>
+                        <li>hs-CRP</li>
+                        <li>Homocisteína</li>
+                        <li>Hemoglobina A1c</li>
+                        <li>Insulina en Ayunas</li>
+                    </ul>
+                    <div class="info-box">
+                        <p><strong>Ayuno:</strong> 10-12 horas requerido</p>
+                        <p><strong>Mejor hora:</strong> Mañana</p>
+                        <p><strong>Precio comparable:</strong> $450-700</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Transparency Section -->
+    <!-- Add-On Tests Section -->
     <section class="section section-white">
         <div class="container">
-            <div class="max-w-4xl" style="margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 1.5rem; overflow: hidden;">
-                <div style="background: #f8fafc; padding: 2rem; border-bottom: 1px solid #e2e8f0; text-align: center;">
-                    <h2 style="margin: 0;">Transparencia de Precios</h2>
+            <h2 style="text-align: center; margin-bottom: 1rem;">Pruebas Adicionales</h2>
+            <p style="text-align: center; color: #4b5563; max-width: 700px; margin: 0 auto;">
+                Mejore cualquier panel con estas pruebas individuales según sus necesidades específicas.
+            </p>
+
+            <div class="addon-grid">
+                <div class="addon-item">
+                    <span class="addon-name">Panel de Anticuerpos Tiroideos</span>
+                    <span class="addon-price">$49</span>
                 </div>
-                <div style="padding: 3rem;">
-                    <div class="grid grid-2" style="gap: 3rem;">
-                        <div>
-                            <h3 style="color: #2d3748; margin-top: 0;">Tarifa de Evaluación</h3>
-                            <p style="font-size: 1.125rem; color: #4a5568;">
-                                La tarifa de evaluación cubre el tiempo profesional requerido para la **revisión de tu cuestionario de ingreso** y la entrega de **información personalizada y aplicable** basada en tus resultados de laboratorio.
-                            </p>
-                        </div>
-                        <div>
-                            <h3 style="color: #2d3748; margin-top: 0;">Costos de Laboratorio (Aparte)</h3>
-                            <p style="font-size: 1.125rem; color: #4a5568; margin-bottom: 1rem;">
-                                **Los costos reales de laboratorio son aparte** y no están incluidos en la tarifa de evaluación. Los costos varían según las pruebas específicas solicitadas y tus necesidades clínicas.
-                            </p>
-                            <ul style="color: #4a5568; padding-left: 1.25rem; margin-bottom: 1rem;">
-                                <li>Los laboratorios estándar pueden ser facturables al seguro médico.</li>
-                                <li>Las pruebas especializadas (DUTCH, análisis salival, moho ambiental, etc.) normalmente no son facturables al seguro.</li>
-                                <li>Los costos de las pruebas especializadas oscilan entre **$10 y $500+** según la complejidad.</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="addon-item">
+                    <span class="addon-name">Magnesio RBC</span>
+                    <span class="addon-price">$29</span>
                 </div>
+                <div class="addon-item">
+                    <span class="addon-name">Ferritina</span>
+                    <span class="addon-price">$19</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Zinc</span>
+                    <span class="addon-price">$25</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Vitamina D 25-OH</span>
+                    <span class="addon-price">$29</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Cortisol AM</span>
+                    <span class="addon-price">$25</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">ANA Screen con Reflex</span>
+                    <span class="addon-price">$29</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Testosterona Libre y Total</span>
+                    <span class="addon-price">$39</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Histamina Plasmática</span>
+                    <span class="addon-price">$39</span>
+                </div>
+                <div class="addon-item">
+                    <span class="addon-name">Panel Genético Cardio Avanzado</span>
+                    <span class="addon-price">$149</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single CTA Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="text-center">
+                <h2>¿Listo para Comenzar?</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Solicite un panel de laboratorio y complete su cuestionario de admisión. Revisaremos su información y ordenaremos las pruebas apropiadas.
+                </p>
+                <a href="https://staywellforlife.hint.com/signup/focusedlabeval" target="_blank" class="btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Solicitar Panel de Laboratorio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Functional Medicine Testing Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem;">Pruebas Avanzadas de Medicina Funcional</h2>
+            <div class="max-w-4xl" style="margin: 0 auto;">
+                <p style="font-size: 1.125rem; text-align: center; color: #4b5563; margin-bottom: 1rem;">
+                    A veces los análisis básicos son suficientes. A veces no lo son.
+                </p>
+                <p style="text-align: center; color: #4b5563; margin-bottom: 1rem; line-height: 1.7;">
+                    Cuando los síntomas persisten a pesar de resultados normales, las pruebas funcionales avanzadas pueden ayudarnos a entender mejor lo que está sucediendo bajo la superficie. Estas pruebas examinan la salud intestinal, las hormonas, el metabolismo, las toxinas y las exposiciones ambientales para ayudar a conectar los puntos cuando el panorama no está claro.
+                </p>
+                <p style="text-align: center; color: #4b5563; margin-bottom: 2rem; line-height: 1.7;">
+                    Este tipo de pruebas no es rutinario y nunca se ordena solo para "hacer todo". Primero hablamos sobre sus síntomas, objetivos e historial, y luego decidimos juntos si las pruebas avanzadas tienen sentido y cuáles, si las hay, serían más útiles.
+                </p>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 1.5rem; color: #374151;">Pruebas Avanzadas Comúnmente Utilizadas</h3>
+
+            <div class="advanced-tests-grid">
+                <div class="advanced-card">
+                    <h4>GI-MAP</h4>
+                    <div class="advanced-price">$427</div>
+                    <p class="advanced-description">Prueba de heces completa que evalúa bacterias intestinales, parásitos, virus, hongos y marcadores de digestión e inflamación. Comúnmente utilizada para síntomas digestivos crónicos, preocupaciones autoinmunes, problemas de piel y fatiga inexplicable.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>GI-MAP + Zonulin</h4>
+                    <div class="advanced-price">$480</div>
+                    <p class="advanced-description">Incluye el GI-MAP más un marcador asociado con la permeabilidad intestinal, a menudo referido como intestino permeable. Útil cuando los síntomas digestivos se superponen con inflamación, sensibilidades alimentarias o preocupaciones inmunológicas.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>DUTCH Complete</h4>
+                    <div class="advanced-price">$400</div>
+                    <p class="advanced-description">Prueba hormonal avanzada que mide hormonas sexuales, patrones de cortisol, melatonina y metabolismo hormonal. A menudo utilizada para fatiga, cambios de humor, preocupaciones de peso y apoyo en perimenopausia o menopausia.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>DUTCH Plus</h4>
+                    <div class="advanced-price">$500</div>
+                    <p class="advanced-description">Prueba hormonal expandida que combina hormonas en orina seca con cortisol salival para proporcionar una imagen más detallada de los patrones de estrés y hormonas. Útil para fatiga compleja y agotamiento.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>Organic Acids Test (OAT)</h4>
+                    <div class="advanced-price">$380</div>
+                    <p class="advanced-description">Prueba de orina que proporciona información sobre deficiencias de nutrientes, función mitocondrial, vías de desintoxicación, metabolitos de neurotransmisores y actividad microbiana intestinal. Comúnmente utilizada para fatiga, preocupaciones de ánimo y problemas metabólicos.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>MycoTOX</h4>
+                    <div class="advanced-price">$375</div>
+                    <p class="advanced-description">Prueba de orina que detecta micotoxinas producidas por ciertos mohos. Considerada cuando hay exposición conocida o sospechada a moho o síntomas crónicos inexplicables.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>GI Effects Comprehensive (3 Días)</h4>
+                    <div class="advanced-price">$539</div>
+                    <p class="advanced-description">Prueba de heces profunda que evalúa digestión, absorción, inflamación, equilibrio del microbioma e infecciones durante un período de recolección de tres días. A menudo utilizada para preocupaciones digestivas de larga duración o complejas.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>SIBO/IMO Prueba de Aliento</h4>
+                    <div class="advanced-price">$399</div>
+                    <p class="advanced-description">Prueba de aliento que evalúa la producción de hidrógeno y metano asociada con sobrecrecimiento bacteriano o de metano en el intestino delgado. Comúnmente utilizada para hinchazón, estreñimiento, diarrea o malestar abdominal.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>3X4 Genetics Test + Blueprint</h4>
+                    <div class="advanced-price">$399</div>
+                    <p class="advanced-description">Prueba genética de hisopo bucal que evalúa genes relacionados con desintoxicación, nutrición, inflamación y metabolismo. Los resultados se utilizan para guiar estrategias personalizadas de estilo de vida y nutrición, no para diagnosticar enfermedades.</p>
+                </div>
+
+                <div class="advanced-card">
+                    <h4>EMMA</h4>
+                    <div class="advanced-price">$399</div>
+                    <p class="advanced-description">Prueba de muestra de polvo que detecta especies de moho presentes en el ambiente del hogar. Útil cuando la exposición ambiental puede estar contribuyendo a síntomas crónicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Note Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="max-w-4xl" style="margin: 0 auto;">
+                <div class="note-box">
+                    <h3>Nota sobre Precios</h3>
+                    <p>Los precios listados anteriormente reflejan precios para no miembros.</p>
+                    <p>Los pacientes inscritos en una membresía de Staywell Health reciben precios de laboratorio altamente descontados, y en la mayoría de los casos pueden esperar que los costos de laboratorio se transfieran a precios cercanos al mayoreo. La membresía nos permite eliminar gran parte de la sobrecarga administrativa que típicamente aumenta los costos de atención médica y pasar esos ahorros directamente a usted.</p>
+                </div>
+
+                <div class="note-box" style="background: #fef3c7; border-color: #fcd34d;">
+                    <h3 style="color: #92400e;">Nota sobre las Pruebas</h3>
+                    <p style="color: #92400e;">Las pruebas avanzadas son opcionales e individualizadas. No todos necesitan laboratorios especializados, y más pruebas no siempre significa mejor atención. En muchos casos, se puede lograr una mejora significativa sin pruebas avanzadas en absoluto.</p>
+                    <p style="color: #92400e; font-weight: 600;">Cuando se utilizan laboratorios avanzados, el objetivo es claridad, no complejidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Testing Options -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="max-w-4xl" style="margin: 0 auto; text-align: center;">
+                <h2>Otras Opciones de Pruebas</h2>
+                <p style="font-size: 1.125rem; color: #4b5563; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Además de las pruebas listadas anteriormente, hay otras pruebas especializadas disponibles, incluyendo mapeo hormonal, pruebas de microbioma en diferentes etapas de la vida, pruebas de neurotransmisores, evaluaciones de exposición ambiental y más.
+                </p>
+                <p style="font-size: 1.125rem; color: #4b5563; line-height: 1.7;">
+                    Si está interesado en una prueba específica o se pregunta si las pruebas avanzadas podrían ser apropiadas para usted, comuníquese a través de nuestra página de contacto y estaremos encantados de hablarlo antes de ordenar cualquier cosa.
+                </p>
             </div>
         </div>
     </section>
@@ -139,29 +606,26 @@
     <section class="section section-gray">
         <div class="container">
             <div class="max-w-4xl" style="margin: 0 auto; background: #f0fdf4; padding: 3rem; border-radius: 1.5rem; border: 1px solid #bbf7d0;">
-                <h2 style="color: #166534; margin-top: 0;">Apoyando tu Continuidad de Atención</h2>
+                <h2 style="color: #166534; margin-top: 0;">Apoyando su Continuidad de Atención</h2>
                 <p style="font-size: 1.125rem; color: #166534; margin-bottom: 1.5rem;">
-                    Creemos que los mejores resultados de salud provienen de una atención constante basada en la relación médico-paciente. Si consideras valiosa la información de tu evaluación de laboratorio y decides unirte a una membresía de Staywell Health dentro de los 60 días posteriores a completar tu interpretación, eliminaremos la tarifa de inscripción única como cortesía.
+                    Creemos que los mejores resultados de salud provienen de una atención consistente y basada en relaciones. Si encuentra valiosos los conocimientos de su evaluación de laboratorio y elige unirse a una membresía de Staywell Health dentro de los 60 días posteriores a completar su interpretación, renunciaremos a la tarifa única de registro de membresía como cortesía.
                 </p>
                 <p style="font-size: 1rem; color: #166534; font-weight: 600;">
-                    Esta exención es nuestra forma de apoyar tu transición hacia una asociación de atención primaria continua.
+                    Esta exención es nuestra manera de apoyar su transición hacia una asociación continua de atención primaria.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
+    <!-- Final CTA -->
     <section class="section section-white">
         <div class="container">
             <div class="text-center">
-                <h2>¿Listo para una Evaluación Enfocada?</h2>
-                <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    Da el primer paso para entender tus marcadores de salud con una supervisión profesional, ética y basada en evidencia.
+                <h2>¿Preguntas?</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Estamos felices de discutir qué opciones de pruebas podrían ser adecuadas para usted.
                 </p>
-                <div class="hero-buttons">
-                    <a href="https://staywellforlife.hint.com/signup/focusedlabeval" target="_blank" class="btn-primary">Comenzar ahora</a>
-                    <a href="index-es.html#contact" class="btn-secondary">Consultar sobre Evaluación de Laboratorio</a>
-                </div>
+                <a href="index-es.html#contact" class="btn-secondary">Contáctenos</a>
             </div>
         </div>
     </section>
@@ -172,7 +636,7 @@
             <div class="footer-grid">
                 <div>
                     <img src="Logo.png" alt="Staywell Health" class="footer-logo">
-                    <p style="color: #e5e7eb; margin-bottom: 1rem;">Atención primaria premium en Raleigh, NC con acceso real a tu médico y atención que va más profundo.</p>
+                    <p style="color: #e5e7eb; margin-bottom: 1rem;">Atención primaria premium en Raleigh, NC con acceso real a su proveedor y atención que va más profundo.</p>
                     <p style="color: #d1d5db; font-size: 0.875rem;">Este es un espacio inclusivo y afirmativo.</p>
                 </div>
                 <div>
@@ -191,7 +655,7 @@
                     <ul>
                         <li><span style="color: #e5e7eb;">Atención Primaria</span></li>
                         <li><span style="color: #e5e7eb;">Evaluación de Laboratorio</span></li>
-                        <li><span style="color: #e5e7eb;">Análisis Especializados</span></li>
+                        <li><span style="color: #e5e7eb;">Pruebas Especializadas</span></li>
                         <li><span style="color: #e5e7eb;">Estética</span></li>
                     </ul>
                 </div>
@@ -202,12 +666,33 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
-    <script src="main.js" defer></script>
+<script>
+// Hamburger menu
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
+
+    var links = document.querySelectorAll('.nav-links a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function() {
+        navLinks.classList.remove('active');
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  }
+});
+</script>
+<script src="main.js"></script>
 </body>
 </html>

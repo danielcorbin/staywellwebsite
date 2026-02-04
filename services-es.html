@@ -23,7 +23,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <img src="Logo.png" alt="Staywell Health" class="logo">
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,13 +31,21 @@
             <ul class="nav-links">
                 <li><a href="index-es.html">Inicio</a></li>
                 <li><a href="about-es.html">Acerca</a></li>
-                <li><a href="services-es.html">Servicios</a></li>
+                <li class="dropdown">
+                    <a href="services-es.html" class="dropbtn">Servicios ›</a>
+                    <div class="dropdown-content">
+                        <a href="dpc-services-es.html">Atención Primaria Directa</a>
+                        <a href="specialty-testing-es.html">Pruebas Especializadas</a>
+                        <a href="focused-lab-evaluation-es.html">Evaluación de Laboratorio</a>
+                        <a href="aesthetics-es.html">Estética</a>
+                    </div>
+                </li>
                 <li><a href="index-es.html#pricing">Precios</a></li>
-                <li><a href="https://www.staywellforlife.com/blog">Blog</a></li>
+                <li><a href="https://www.staywellforlife.com/blog" target="_blank">Blog</a></li>
                 <li><a href="index-es.html#contact">Contacto</a></li>
                 <li><a href="services.html" class="language-toggle">English</a></li>
                 <li><a href="https://www.staywellforlife.com/portal" target="_blank" class="btn-join">PORTAL</a></li>
-                    </ul>
+            </ul>
         </div>
     </nav>
 
@@ -361,7 +369,7 @@
                         <li><span style="color: #e5e7eb;">Medicina del Estilo de Vida</span></li>
                         <li><span style="color: #e5e7eb;">Estética</span></li>
                         <li><span style="color: #e5e7eb;">Atención Preventiva</span></li>
-                        <li><span style="color: #e5e7eb;">Lab Servicios</span></li>
+                        <li><span style="color: #e5e7eb;">Servicios de Laboratorio</span></li>
                     </ul>
                 </div>
             </div>
@@ -370,18 +378,33 @@
             </div>
         </div>
     </footer>
-    <script src="main.js" defer></script>
-</body>
-</html>
+<script>
+// Hamburger menu
+document.addEventListener('DOMContentLoaded', function() {
+  var hamburger = document.querySelector('.hamburger');
+  var navLinks = document.querySelector('.nav-links');
 
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+    var links = document.querySelectorAll('.nav-links a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function() {
+        navLinks.classList.remove('active');
+      });
+    }
 
-
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
+  }
+});
+</script>
+<script src="main.js"></script>
 </body>
 </html>

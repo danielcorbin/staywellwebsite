@@ -20,30 +20,8 @@ class SiteNavigation {
   }
   
   setupMobileMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-      
-      // Close menu when clicking on nav links
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-          }
-        });
-      });
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-          navLinks.classList.remove('active');
-        }
-      });
-    }
+    // Mobile menu is handled by inline script in HTML
+    // This prevents duplicate event listeners
   }
   
   setupSmoothScroll() {
