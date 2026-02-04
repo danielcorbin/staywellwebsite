@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | Staywell Health</title>
+    <meta name="description" content="Common questions about direct primary care, membership, insurance, and how Staywell Health works. Get answers about our approach to personalized healthcare in Raleigh, NC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .faq-hero {
+            background: linear-gradient(135deg, #7a8a7a 0%, #5a6a5a 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .faq-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .faq-hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        .faq-section {
+            padding: 4rem 0;
+            background: #f9fafb;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .faq-category-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            color: #7a8a7a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #7a8a7a;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: #1f2937;
+            font-size: 1.1rem;
+            transition: background 0.2s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-question .icon {
+            font-size: 1.5rem;
+            color: #7a8a7a;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        
+        .faq-item.active .faq-question .icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .faq-answer-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-section {
+            padding: 4rem 0;
+            text-align: center;
+            background: white;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.25rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: #6b7280;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #7a8a7a;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #6a7a6a;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #7a8a7a;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            border: 2px solid #7a8a7a;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: #7a8a7a;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-hero {
+                padding: 5rem 1.5rem 3rem;
+            }
+            
+            .faq-hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .faq-question {
+                font-size: 1rem;
+                padding: 1rem 1.25rem;
+            }
+            
+            .faq-answer-content {
+                padding: 0 1.25rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="Logo.png" alt="Staywell Health" class="logo">
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services ▼</a>
+                    <div class="dropdown-content">
+                        <a href="dpc-services.html">Direct Primary Care</a>
+                        <a href="specialty-testing.html">Specialty Testing</a>
+                        <a href="focused-lab-evaluation.html">Focused Lab Evaluation</a>
+                        <a href="aesthetics.html">Aesthetics</a>
+                    </div>
+                </li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="promotions.html" style="color: #059669; font-weight: 600;">February Special ✨</a></li>
+                <li><a href="https://www.staywellforlife.com/blog" target="_blank">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index-es.html" class="language-toggle">Español</a></li>
+                <li><a href="https://www.staywellforlife.com/portal" target="_blank" class="btn-join">PORTAL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about direct primary care and membership at Staywell Health.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            
+            <!-- About the Practice -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">About Staywell Health</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can Staywell Health replace my regular primary care provider?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>For most people, yes. Staywell Health is designed to function as your primary care home. We manage preventive care, chronic conditions, acute and urgent issues, medications, labs, and care coordination.</p>
+                            <p>There are times when specialists, urgent care, or hospital-based care are needed, and I'll help guide you through that when appropriate. Staywell serves as your main point of contact and advocate within the healthcare system.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How is this different from concierge medicine?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Concierge medicine and direct primary care both focus on access and relationship-based care, but the models are structured differently.</p>
+                            <p>Concierge practices are often significantly more expensive and many still bill insurance on top of a membership fee, which increases overhead and administrative complexity.</p>
+                            <p>Staywell Health is a direct primary care practice. We do not bill insurance, which keeps overhead low and allows more time for care. Those savings are passed on to members through more affordable pricing, longer visits, and personalized care. The focus is simplicity and quality, not luxury perks.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this a good fit if I'm generally healthy?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes.</p>
+                            <p>This model allows us to focus on prevention, early detection, and building a relationship before problems arise. Many members join to stay healthy, not just to address a specific issue.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Care & Services -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">Care & Services</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What happens if I need urgent care or help after hours?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Many urgent issues can be handled directly through Staywell Health, often avoiding unnecessary urgent care or emergency room visits.</p>
+                            <p>For urgent needs that can't wait until the next business day, I am available after hours. This does not replace emergency services, and true emergencies should always go to the emergency room. Part of care is helping you understand what can safely be handled here versus when higher-level care is needed.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What does care coordination actually mean?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Care coordination means helping you navigate the healthcare system so nothing falls through the cracks.</p>
+                            <p>This may include reviewing outside labs, imaging, or specialist notes, helping you understand recommendations, coordinating next steps, or advising on whether further testing or referrals make sense.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you ever say no to labs, testing, or treatments?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes.</p>
+                            <p>More testing is not always better care. If something is unlikely to change management or meaningfully improve health, we'll talk about that openly. Decisions are made together and are grounded in evidence, safety, and your goals.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I already have specialists?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>That's common and not a problem.</p>
+                            <p>Staywell Health works alongside your specialists. I help interpret recommendations, coordinate care, and make sure everything aligns with your overall health picture.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I want a more natural or lifestyle-based approach?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>That fits well here.</p>
+                            <p>Lifestyle, nutrition, sleep, stress, and movement are foundational parts of care at Staywell Health. Medications and conventional treatments are used when appropriate. This is not an either-or approach.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Insurance & Payment -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">Insurance & Payment</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>If I have insurance, can I still use it?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes.</p>
+                            <p>Staywell Health does not bill insurance for membership or visits, but your insurance can still be used for labs, imaging, specialists, hospital care, and emergency services.</p>
+                            <p>Many labs can be drawn directly in our office for convenience. If coming to the office is not convenient, you may choose to visit a local lab instead. When labs are ordered, we submit your insurance information to the lab, and the lab bills your insurance company directly. Coverage and any out-of-pocket costs depend on your specific plan.</p>
+                            <p>If prior authorization is required by your insurance for certain medications, tests, or procedures, I will handle that as part of your care.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Should I still maintain health insurance coverage?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes. I strongly recommend maintaining some form of coverage.</p>
+                            <p>While Staywell Health can manage most primary care needs, it does not replace coverage for hospitalizations, emergency care, major imaging, or specialty procedures. Many members pair their Staywell membership with traditional insurance or a health share for broader protection.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is a health share?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>A health share is a healthcare cost-sharing program where members contribute a monthly amount that is used to help cover eligible medical expenses.</p>
+                            <p>Health shares are not insurance, but they are often more affordable and can work well for people who want coverage for large, unexpected medical events such as hospitalizations or surgeries. Coverage rules and reimbursement vary by program, so it's important to review the details carefully.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I use my HSA or FSA to pay for membership or services?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>In many cases, yes.</p>
+                            <p>HSA and FSA cards are often accepted for medical services and sometimes for membership fees, but this depends on your specific plan. We provide detailed receipts, but reimbursement is not guaranteed. It's best to confirm eligibility with your plan administrator.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Still Have Questions?</h2>
+            <p>Schedule a free meet and greet to learn more about how Staywell Health can work for you.</p>
+            <div class="cta-buttons">
+                <a href="https://staywellforlife.com/meet" target="_blank" class="btn-primary">Schedule Free Meet & Greet</a>
+                <a href="index.html#contact" class="btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="Logo.png" alt="Staywell Health" class="footer-logo">
+                    <p style="color: #e5e7eb; margin-bottom: 1rem;">Premium direct primary care in Raleigh, NC with real access to your provider and care that goes deeper.</p>
+                    <p style="color: #d1d5db; font-size: 0.875rem;">This is an all-inclusive and affirming space.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="employer-benefits.html">Small Business Solutions</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li><span style="color: #e5e7eb;">Primary Care</span></li>
+                        <li><span style="color: #e5e7eb;">Lifestyle Medicine</span></li>
+                        <li><span style="color: #e5e7eb;">Aesthetics</span></li>
+                        <li><span style="color: #e5e7eb;">Preventive Care</span></li>
+                        <li><span style="color: #e5e7eb;">Lab Services</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Staywell Health, PLLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+    <script>
+        // FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close other open items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Mobile menu toggle (backup if main.js doesn't load)
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
