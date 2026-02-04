@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | Staywell Health</title>
+    <meta name="description" content="Preguntas comunes sobre atención primaria directa, membresía, seguro y cómo funciona Staywell Health. Obtenga respuestas sobre nuestro enfoque de atención médica personalizada en Raleigh, NC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .faq-hero {
+            background: linear-gradient(135deg, #7a8a7a 0%, #5a6a5a 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .faq-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .faq-hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        .faq-section {
+            padding: 4rem 0;
+            background: #f9fafb;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .faq-category-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            color: #7a8a7a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #7a8a7a;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: #1f2937;
+            font-size: 1.1rem;
+            transition: background 0.2s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f9fafb;
+        }
+        
+        .faq-question .icon {
+            font-size: 1.5rem;
+            color: #7a8a7a;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+        
+        .faq-item.active .faq-question .icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: #4b5563;
+            line-height: 1.8;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .faq-answer-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-section {
+            padding: 4rem 0;
+            text-align: center;
+            background: white;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.25rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: #6b7280;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #7a8a7a;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #6a7a6a;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #7a8a7a;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            border: 2px solid #7a8a7a;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: #7a8a7a;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-hero {
+                padding: 5rem 1.5rem 3rem;
+            }
+            
+            .faq-hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .faq-question {
+                font-size: 1rem;
+                padding: 1rem 1.25rem;
+            }
+            
+            .faq-answer-content {
+                padding: 0 1.25rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index-es.html">
+                <img src="Logo.png" alt="Staywell Health" class="logo">
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index-es.html">Inicio</a></li>
+                <li><a href="about-es.html">Acerca de</a></li>
+                <li class="dropdown">
+                    <a href="services-es.html" class="dropbtn">Servicios ▼</a>
+                    <div class="dropdown-content">
+                        <a href="dpc-services-es.html">Atención Primaria Directa</a>
+                        <a href="specialty-testing-es.html">Pruebas Especializadas</a>
+                        <a href="focused-lab-evaluation-es.html">Evaluación de Laboratorio</a>
+                        <a href="aesthetics-es.html">Estética</a>
+                    </div>
+                </li>
+                <li><a href="index-es.html#pricing">Precios</a></li>
+                <li><a href="promotions-es.html" style="color: #059669; font-weight: 600;">Especial de Febrero ✨</a></li>
+                <li><a href="https://www.staywellforlife.com/blog" target="_blank">Blog</a></li>
+                <li><a href="index-es.html#contact">Contacto</a></li>
+                <li><a href="index.html" class="language-toggle">English</a></li>
+                <li><a href="https://www.staywellforlife.com/portal" target="_blank" class="btn-join">PORTAL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="faq-hero">
+        <div class="container">
+            <h1>Preguntas Frecuentes</h1>
+            <p>Todo lo que necesita saber sobre la atención primaria directa y la membresía en Staywell Health.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            
+            <!-- About the Practice -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">Acerca de Staywell Health</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Puede Staywell Health reemplazar a mi proveedor de atención primaria regular?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Para la mayoría de las personas, sí. Staywell Health está diseñado para funcionar como su hogar de atención primaria. Manejamos atención preventiva, condiciones crónicas, problemas agudos y urgentes, medicamentos, laboratorios y coordinación de atención.</p>
+                            <p>Hay momentos en que se necesitan especialistas, atención de urgencia o atención hospitalaria, y le ayudaré a guiarlo cuando sea apropiado. Staywell sirve como su punto de contacto principal y defensor dentro del sistema de salud.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿En qué se diferencia esto de la medicina de conserjería?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>La medicina de conserjería y la atención primaria directa se enfocan en el acceso y la atención basada en relaciones, pero los modelos están estructurados de manera diferente.</p>
+                            <p>Las prácticas de conserjería a menudo son significativamente más caras y muchas todavía facturan al seguro además de una cuota de membresía, lo que aumenta los gastos generales y la complejidad administrativa.</p>
+                            <p>Staywell Health es una práctica de atención primaria directa. No facturamos al seguro, lo que mantiene bajos los gastos generales y permite más tiempo para la atención. Esos ahorros se transfieren a los miembros a través de precios más accesibles, visitas más largas y atención personalizada. El enfoque es simplicidad y calidad, no beneficios de lujo.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Es esto adecuado si generalmente estoy saludable?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Sí.</p>
+                            <p>Este modelo nos permite enfocarnos en la prevención, la detección temprana y construir una relación antes de que surjan problemas. Muchos miembros se unen para mantenerse saludables, no solo para abordar un problema específico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Care & Services -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">Atención y Servicios</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué pasa si necesito atención urgente o ayuda fuera de horario?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Muchos problemas urgentes pueden manejarse directamente a través de Staywell Health, a menudo evitando visitas innecesarias a la sala de urgencias o emergencias.</p>
+                            <p>Para necesidades urgentes que no pueden esperar hasta el siguiente día hábil, estoy disponible fuera de horario. Esto no reemplaza los servicios de emergencia, y las verdaderas emergencias siempre deben ir a la sala de emergencias. Parte de la atención es ayudarle a entender qué se puede manejar de manera segura aquí versus cuándo se necesita atención de nivel superior.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué significa realmente la coordinación de atención?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>La coordinación de atención significa ayudarle a navegar el sistema de salud para que nada se pierda.</p>
+                            <p>Esto puede incluir revisar laboratorios externos, imágenes o notas de especialistas, ayudarle a entender las recomendaciones, coordinar los próximos pasos o aconsejar si tienen sentido pruebas o referencias adicionales.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Alguna vez dice que no a laboratorios, pruebas o tratamientos?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Sí.</p>
+                            <p>Más pruebas no siempre es mejor atención. Si algo es poco probable que cambie el manejo o mejore significativamente la salud, hablaremos de eso abiertamente. Las decisiones se toman juntos y se basan en evidencia, seguridad y sus objetivos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué pasa si ya tengo especialistas?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Eso es común y no es un problema.</p>
+                            <p>Staywell Health trabaja junto con sus especialistas. Ayudo a interpretar recomendaciones, coordinar la atención y asegurar que todo se alinee con su panorama general de salud.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué pasa si quiero un enfoque más natural o basado en el estilo de vida?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Eso encaja bien aquí.</p>
+                            <p>El estilo de vida, la nutrición, el sueño, el estrés y el movimiento son partes fundamentales de la atención en Staywell Health. Los medicamentos y tratamientos convencionales se usan cuando es apropiado. Este no es un enfoque de uno u otro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Insurance & Payment -->
+            <div class="faq-category">
+                <h2 class="faq-category-title">Seguro y Pago</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Si tengo seguro, ¿puedo usarlo?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Sí.</p>
+                            <p>Staywell Health no factura al seguro por membresía o visitas, pero su seguro aún puede usarse para laboratorios, imágenes, especialistas, atención hospitalaria y servicios de emergencia.</p>
+                            <p>Muchos laboratorios pueden extraerse directamente en nuestra oficina para su conveniencia. Si venir a la oficina no es conveniente, puede elegir visitar un laboratorio local en su lugar. Cuando se ordenan laboratorios, enviamos la información de su seguro al laboratorio, y el laboratorio factura directamente a su compañía de seguros. La cobertura y cualquier costo de bolsillo dependen de su plan específico.</p>
+                            <p>Si su seguro requiere autorización previa para ciertos medicamentos, pruebas o procedimientos, yo manejaré eso como parte de su atención.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Debería mantener cobertura de seguro de salud?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Sí. Recomiendo encarecidamente mantener alguna forma de cobertura.</p>
+                            <p>Aunque Staywell Health puede manejar la mayoría de las necesidades de atención primaria, no reemplaza la cobertura para hospitalizaciones, atención de emergencia, imágenes mayores o procedimientos especializados. Muchos miembros combinan su membresía de Staywell con seguro tradicional o un health share para una protección más amplia.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué es un health share?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Un health share es un programa de costo compartido de atención médica donde los miembros contribuyen una cantidad mensual que se usa para ayudar a cubrir gastos médicos elegibles.</p>
+                            <p>Los health shares no son seguros, pero a menudo son más accesibles y pueden funcionar bien para personas que quieren cobertura para eventos médicos grandes e inesperados como hospitalizaciones o cirugías. Las reglas de cobertura y reembolso varían según el programa, por lo que es importante revisar los detalles cuidadosamente.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Puedo usar mi HSA o FSA para pagar la membresía o servicios?</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>En muchos casos, sí.</p>
+                            <p>Las tarjetas HSA y FSA a menudo se aceptan para servicios médicos y a veces para cuotas de membresía, pero esto depende de su plan específico. Proporcionamos recibos detallados, pero el reembolso no está garantizado. Es mejor confirmar la elegibilidad con el administrador de su plan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Todavía Tiene Preguntas?</h2>
+            <p>Programe una consulta gratuita para conocer más sobre cómo Staywell Health puede funcionar para usted.</p>
+            <div class="cta-buttons">
+                <a href="https://staywellforlife.com/meet" target="_blank" class="btn-primary">Programar Consulta Gratuita</a>
+                <a href="index-es.html#contact" class="btn-secondary">Contáctenos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="Logo.png" alt="Staywell Health" class="footer-logo">
+                    <p style="color: #e5e7eb; margin-bottom: 1rem;">Atención primaria directa premium en Raleigh, NC con acceso real a su proveedor y atención más profunda.</p>
+                    <p style="color: #d1d5db; font-size: 0.875rem;">Este es un espacio inclusivo y afirmativo.</p>
+                </div>
+                <div>
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index-es.html">Inicio</a></li>
+                        <li><a href="about-es.html">Acerca de</a></li>
+                        <li><a href="services-es.html">Servicios</a></li>
+                        <li><a href="index-es.html#pricing">Precios</a></li>
+                        <li><a href="index-es.html#contact">Contacto</a></li>
+                        <li><a href="employer-benefits-es.html">Soluciones Empresariales</a></li>
+                        <li><a href="privacy-policy-es.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><span style="color: #e5e7eb;">Atención Primaria</span></li>
+                        <li><span style="color: #e5e7eb;">Medicina de Estilo de Vida</span></li>
+                        <li><span style="color: #e5e7eb;">Estética</span></li>
+                        <li><span style="color: #e5e7eb;">Atención Preventiva</span></li>
+                        <li><span style="color: #e5e7eb;">Servicios de Laboratorio</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Staywell Health, PLLC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+    <script>
+        // FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close other open items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Mobile menu toggle (backup if main.js doesn't load)
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

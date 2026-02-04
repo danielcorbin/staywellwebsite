@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción de Febrero para Nuevos Miembros | Staywell Health</title>
+    <meta name="description" content="Únase a Staywell Health en febrero y reciba un Panel de Laboratorio Advanced Insight de cortesía con su membresía. Oferta por tiempo limitado para nuevos miembros.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .promo-hero {
+            background: linear-gradient(135deg, #7a8a7a 0%, #5a6a5a 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        
+        .promo-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+        
+        .promo-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .promo-hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        .included-section {
+            background: #f9fafb;
+            padding: 4rem 0;
+        }
+        
+        .included-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .included-section .subtitle {
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .labs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .lab-item {
+            background: white;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .lab-item .checkmark {
+            color: #7a8a7a;
+            margin-right: 0.5rem;
+        }
+        
+        .panels-section {
+            padding: 5rem 0;
+            background: white;
+        }
+        
+        .panels-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.25rem;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .panels-section .subtitle {
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .panels-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 640px) {
+            .panels-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .panel-card {
+            background: #f9fafb;
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .panel-card:hover {
+            border-color: #7a8a7a;
+            box-shadow: 0 10px 40px rgba(122, 138, 122, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .panel-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: #7a8a7a;
+            margin-bottom: 1rem;
+        }
+        
+        .panel-card p {
+            color: #6b7280;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        .panel-icon {
+            width: 48px;
+            height: 48px;
+            background: #7a8a7a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        
+        .panel-icon svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+        }
+        
+        .details-section {
+            background: #1f2937;
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .details-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .details-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            font-size: 1.125rem;
+        }
+        
+        .detail-item .bullet {
+            color: #7a8a7a;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .cta-section {
+            padding: 5rem 0;
+            text-align: center;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+        
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: #6b7280;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #7a8a7a;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #6a7a6a;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #7a8a7a;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            border: 2px solid #7a8a7a;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: #7a8a7a;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .promo-hero {
+                padding: 5rem 1.5rem 3rem;
+            }
+            
+            .promo-hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .promo-hero p {
+                font-size: 1.125rem;
+            }
+            
+            .panels-section,
+            .included-section,
+            .cta-section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .details-section {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index-es.html">
+                <img src="Logo.png" alt="Staywell Health" class="logo">
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index-es.html">Inicio</a></li>
+                <li><a href="about-es.html">Acerca de</a></li>
+                <li class="dropdown">
+                    <a href="services-es.html" class="dropbtn">Servicios ▼</a>
+                    <div class="dropdown-content">
+                        <a href="dpc-services-es.html">Atención Primaria Directa</a>
+                        <a href="specialty-testing-es.html">Pruebas Especializadas</a>
+                        <a href="focused-lab-evaluation-es.html">Evaluación de Laboratorio</a>
+                        <a href="aesthetics-es.html">Estética</a>
+                    </div>
+                </li>
+                <li><a href="index-es.html#pricing">Precios</a></li>
+                <li><a href="promotions-es.html" style="color: #059669; font-weight: 600;">Especial de Febrero ✨</a></li>
+                <li><a href="https://www.staywellforlife.com/blog" target="_blank">Blog</a></li>
+                <li><a href="index-es.html#contact">Contacto</a></li>
+                <li><a href="index.html" class="language-toggle">English</a></li>
+                <li><a href="https://www.staywellforlife.com/portal" target="_blank" class="btn-join">PORTAL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="promo-hero">
+        <div class="container">
+            <div class="promo-badge">Oferta por Tiempo Limitado</div>
+            <h1>Especial de Febrero para Nuevos Miembros</h1>
+            <p>Únase a Staywell Health en febrero y reciba un Panel de Laboratorio Advanced Insight de cortesía, además de los laboratorios completos ya incluidos con la membresía.</p>
+            <p style="font-size: 1.125rem; opacity: 0.9;">Este bono por tiempo limitado está diseñado para ayudarnos a profundizar desde el principio y personalizar su atención.</p>
+        </div>
+    </section>
+
+    <!-- Included Labs Section -->
+    <section class="included-section">
+        <div class="container">
+            <h2>Incluido con la Membresía Complete</h2>
+            <p class="subtitle">Sus laboratorios de referencia completos sin costo adicional</p>
+            <div class="labs-grid">
+                <div class="lab-item"><span class="checkmark">✓</span> Panel Metabólico Completo</div>
+                <div class="lab-item"><span class="checkmark">✓</span> Conteo Sanguíneo Completo</div>
+                <div class="lab-item"><span class="checkmark">✓</span> Panel de Lípidos</div>
+                <div class="lab-item"><span class="checkmark">✓</span> Hemoglobina A1c</div>
+                <div class="lab-item"><span class="checkmark">✓</span> Hormona Estimulante de Tiroides</div>
+                <div class="lab-item"><span class="checkmark">✓</span> Vitamina D</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Panels Section -->
+    <section class="panels-section">
+        <div class="container">
+            <h2>Elija un Panel Advanced Insight</h2>
+            <p class="subtitle">Seleccionado en colaboración con su proveedor según sus síntomas y objetivos</p>
+            <div class="panels-grid">
+                <div class="panel-card">
+                    <div class="panel-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Metabolic Insight</h3>
+                    <p>Para resistencia al peso, inflamación, o sentirse estancado a pesar de cambios en el estilo de vida.</p>
+                </div>
+                
+                <div class="panel-card">
+                    <div class="panel-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Hormone Insight</h3>
+                    <p>Para fatiga, estado de ánimo, sueño, o preocupaciones relacionadas con hormonas en todos los géneros.</p>
+                </div>
+                
+                <div class="panel-card">
+                    <div class="panel-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Cardiac Insight</h3>
+                    <p>Para atención enfocada en prevención e historial familiar de enfermedades cardíacas, con análisis más allá del colesterol estándar.</p>
+                </div>
+                
+                <div class="panel-card">
+                    <div class="panel-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Energy &amp; Stress Insight</h3>
+                    <p>Para fatiga crónica, agotamiento, niebla mental, o síntomas relacionados con el estrés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Details Section -->
+    <section class="details-section">
+        <div class="container">
+            <h2>Detalles Importantes</h2>
+            <div class="details-list">
+                <div class="detail-item">
+                    <span class="bullet">•</span>
+                    <span>Disponible solo con la membresía Complete (no aplica para la membresía Access)</span>
+                </div>
+                <div class="detail-item">
+                    <span class="bullet">•</span>
+                    <span>Un panel avanzado por nuevo miembro</span>
+                </div>
+                <div class="detail-item">
+                    <span class="bullet">•</span>
+                    <span>Solo inscripciones de febrero</span>
+                </div>
+                <div class="detail-item">
+                    <span class="bullet">•</span>
+                    <span>Laboratorios completados dentro de 60 días de inscripción</span>
+                </div>
+                <div class="detail-item">
+                    <span class="bullet">•</span>
+                    <span>Selección del panel guiada por su proveedor</span>
+                </div>
+                <div class="detail-item">
+                    <span class="bullet">•</span>
+                    <span>No canjeable por efectivo o descuentos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para Comenzar?</h2>
+            <p>Programe una consulta gratuita para conocer más sobre la membresía y esta oferta especial.</p>
+            <div class="cta-buttons">
+                <a href="https://staywellforlife.com/meet" target="_blank" class="btn-primary">Programar Consulta Gratuita</a>
+                <a href="index-es.html#pricing" class="btn-secondary">Ver Opciones de Membresía</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="Logo.png" alt="Staywell Health" class="footer-logo">
+                    <p style="color: #e5e7eb; margin-bottom: 1rem;">Atención primaria directa premium en Raleigh, NC con acceso real a su proveedor y atención más profunda.</p>
+                    <p style="color: #d1d5db; font-size: 0.875rem;">Este es un espacio inclusivo y afirmativo.</p>
+                </div>
+                <div>
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index-es.html">Inicio</a></li>
+                        <li><a href="about-es.html">Acerca de</a></li>
+                        <li><a href="services-es.html">Servicios</a></li>
+                        <li><a href="index-es.html#pricing">Precios</a></li>
+                        <li><a href="index-es.html#contact">Contacto</a></li>
+                        <li><a href="employer-benefits-es.html">Soluciones Empresariales</a></li>
+                        <li><a href="privacy-policy-es.html">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><span style="color: #e5e7eb;">Atención Primaria</span></li>
+                        <li><span style="color: #e5e7eb;">Medicina de Estilo de Vida</span></li>
+                        <li><span style="color: #e5e7eb;">Estética</span></li>
+                        <li><span style="color: #e5e7eb;">Atención Preventiva</span></li>
+                        <li><span style="color: #e5e7eb;">Servicios de Laboratorio</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Staywell Health, PLLC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+    <script>
+        // Mobile menu toggle (backup if main.js doesn't load)
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
