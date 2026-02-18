@@ -7,3 +7,12 @@
     }
   ]
 }
+{
+  "redirects": [
+    {
+      "source": "/portal",
+      "destination": "https://staywellforlife.hint.com/login/request",
+      "permanent": true
+    }
+  ]
+}
