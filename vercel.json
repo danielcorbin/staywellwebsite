@@ -4,11 +4,7 @@
       "source": "/meet",
       "destination": "https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22",
       "permanent": true
-    }
-  ]
-},
-{
-  "redirects": [
+    },
     {
       "source": "/portal",
       "destination": "https://staywellforlife.hint.com/login/request",
