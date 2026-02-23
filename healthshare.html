@@ -223,38 +223,32 @@
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+        <!-- Navigation -->
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
-                <a href="index.html">
-                    <img src="Logo.png" alt="Staywell Health" class="logo">
-                </a>
+            <img src="Logo.png" alt="Staywell Health" class="logo">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-dropdown">
-                    <a href="services.html" class="nav-link dropdown-toggle">Services ›</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="dpc-services.html">Direct Primary Care</a></li>
-                        <li><a href="specialty-testing.html">Specialty Testing</a></li>
-                        <li><a href="focused-lab-evaluation.html">Focused Lab Evaluation</a></li>
-                        <li><a href="aesthetics.html">Aesthetics</a></li>
-                        <li><a href="healthshare.html">Healthshare Coverage</a></li>
-                    </ul>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">Services ›</a>
+                    <div class="dropdown-content">
+                        <a href="dpc-services.html">Direct Primary Care</a>
+                        <a href="specialty-testing.html">Specialty Testing</a>
+                        <a href="focused-lab-evaluation.html">Focused Lab Evaluation</a>
+                        <a href="aesthetics.html">Aesthetics</a>
+                        <a href="healthshare.html">Healthshare Coverage</a>
+                    </div>
                 </li>
-                <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="promotions.html" class="nav-link">February Special ✨</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-                <li><a href="healthshare-es.html" class="nav-link">Español</a></li>
-                <li><a href="https://staywellforlife.hint.com/login/request" class="nav-link nav-portal">PORTAL</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="healthshare-es.html" class="language-toggle">Español</a></li>
+                <li><a href="https://staywellforlife.hint.com/login/request" target="_blank" class="btn-join">PORTAL</a></li>
             </ul>
         </div>
     </nav>
