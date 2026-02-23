@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobertura Healthshare - Staywell Health</title>
+    <meta name="description" content="Staywell Health se ha asociado con Zion HealthShare para ofrecerle una alternativa asequible al seguro tradicional para gastos médicos mayores.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=DM+Serif+Text:ital@0;1&family=Inter+Tight:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>
+        .zion-heading { font-family: 'DM Serif Text', serif; color: #005F83; }
+        .zion-subheading { font-family: 'Inter Tight', 'Inter', sans-serif; font-weight: 700; color: #0095C8; text-transform: uppercase; letter-spacing: 0.05em; }
+        .zion-body { font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.7; color: #3D3935; }
+        .zion-btn { display: inline-block; background: #0095C8; color: #fff !important; font-family: 'Inter Tight', 'Inter', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 14px 28px; border-radius: 5px; text-decoration: none; transition: background 0.2s ease; }
+        .zion-btn:hover { background: #005F83; }
+        .zion-card { background: #fff; border-radius: 10px; padding: 2rem; border-left: 4px solid #0095C8; }
+        .zion-divider { border: none; border-top: 1px solid #D4D2D0; margin: 3rem 0; }
+        .zion-disclaimer { font-family: 'Inter', sans-serif; font-style: italic; font-size: 0.75rem; color: #888; line-height: 1.6; border-top: 1px solid #D4D2D0; padding-top: 1.5rem; margin-top: 1.5rem; }
+        .step-number { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: #0095C8; color: #fff; font-family: 'Inter Tight', 'Inter', sans-serif; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+        .step-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+        .step-content h4 { font-family: 'Inter Tight', 'Inter', sans-serif; font-weight: 700; color: #005F83; margin: 0 0 0.35rem 0; font-size: 1rem; }
+        .step-content p { margin: 0; font-family: 'Inter', sans-serif; font-weight: 300; color: #3D3935; line-height: 1.6; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+        .feature-item { background: #fff; border-radius: 10px; padding: 1.5rem; text-align: center; }
+        .feature-item .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+        .feature-item h4 { font-family: 'Inter Tight', 'Inter', sans-serif; font-weight: 700; color: #005F83; margin: 0 0 0.5rem 0; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.03em; }
+        .feature-item p { font-family: 'Inter', sans-serif; font-weight: 300; color: #3D3935; font-size: 0.9rem; line-height: 1.5; margin: 0; }
+        .dpc-zion-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        @media (max-width: 640px) { .dpc-zion-compare { grid-template-columns: 1fr; } }
+        .compare-card { border-radius: 10px; padding: 1.75rem; }
+        .compare-card.dpc { background: #f0f4f0; border-left: 4px solid #7a8a7a; }
+        .compare-card.zion { background: #e8f4fb; border-left: 4px solid #0095C8; }
+        .compare-card h4 { font-family: 'Inter Tight', 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 1rem 0; }
+        .compare-card.dpc h4 { color: #7a8a7a; }
+        .compare-card.zion h4 { color: #0095C8; }
+        .compare-card ul { list-style: none; padding: 0; margin: 0; }
+        .compare-card ul li { font-family: 'Inter', sans-serif; font-weight: 300; color: #3D3935; font-size: 0.9rem; line-height: 1.5; padding: 0.35rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; gap: 0.5rem; align-items: flex-start; }
+        .compare-card ul li:last-child { border-bottom: none; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index-es.html">
+                    <img src="Logo.png" alt="Staywell Health" class="nav-logo">
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Alternar navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index-es.html" class="nav-link">Inicio</a></li>
+                <li><a href="about-es.html" class="nav-link">Acerca de</a></li>
+                <li class="nav-dropdown">
+                    <a href="services-es.html" class="nav-link dropdown-toggle">Servicios ›</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="dpc-services-es.html">Atención Primaria Directa</a></li>
+                        <li><a href="specialty-testing-es.html">Pruebas Especializadas</a></li>
+                        <li><a href="focused-lab-evaluation-es.html">Evaluación de Laboratorio</a></li>
+                        <li><a href="aesthetics-es.html">Estética</a></li>
+                        <li><a href="healthshare-es.html">Cobertura Healthshare</a></li>
+                    </ul>
+                </li>
+                <li><a href="index-es.html#pricing" class="nav-link">Precios</a></li>
+                <li><a href="promotions-es.html" class="nav-link">Especial de Febrero ✨</a></li>
+                <li><a href="faq-es.html" class="nav-link">Preguntas</a></li>
+                <li><a href="index-es.html#contact" class="nav-link">Contacto</a></li>
+                <li><a href="healthshare.html" class="nav-link">English</a></li>
+                <li><a href="https://staywellforlife.hint.com/login/request" class="nav-link nav-portal">PORTAL</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero" style="background: linear-gradient(135deg, #002838 0%, #005F83 60%, #0095C8 100%); padding: 5rem 0 4rem;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 2rem; text-align: center;">
+            <img src="zion-healthshare-logo.png" alt="Zion HealthShare" style="height: 70px; width: auto; margin-bottom: 1.75rem; display: block; margin-left: auto; margin-right: auto;">
+            <p style="font-family: 'Inter Tight', sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: #FBD872; font-size: 0.85rem; margin-bottom: 1rem;">Disponible Ahora en Staywell Health</p>
+            <h1 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); color: #fff; font-weight: 400; line-height: 1.2; margin-bottom: 1.25rem;">Cobertura Completa.<br>Más Allá de la Atención Primaria.</h1>
+            <p style="font-family: 'Inter', sans-serif; font-weight: 300; color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.7; max-width: 600px; margin: 0 auto 2rem;">Staywell Health se ha asociado con Zion HealthShare para ofrecerle una forma asequible y comunitaria de cubrir gastos médicos mayores que van más allá de lo que incluye su membresía de atención primaria.</p>
+            <a href="https://zionhealthshare.org" target="_blank" rel="noopener" class="zion-btn">Más Información en Zion HealthShare</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main style="max-width: 900px; margin: 0 auto; padding: 4rem 2rem;">
+
+        <!-- DPC + Healthshare Together -->
+        <section style="margin-bottom: 4rem;">
+            <p class="zion-subheading" style="text-align: center; margin-bottom: 0.5rem;">Una Asociación Natural</p>
+            <h2 class="zion-heading" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); text-align: center; margin-bottom: 1rem;">DPC + Healthshare: Mejor Juntos</h2>
+            <p class="zion-body" style="text-align: center; max-width: 680px; margin: 0 auto 3rem;">La atención primaria directa cubre lo cotidiano: sus visitas preventivas, manejo de enfermedades crónicas, análisis de laboratorio y acceso directo a su proveedor. Healthshare interviene en los momentos más grandes e inesperados: hospitalizaciones, atención especializada, cirugías y otras necesidades médicas mayores. Juntos, ofrecen un enfoque integral y asequible para la salud.</p>
+
+            <div class="dpc-zion-compare">
+                <div class="compare-card dpc">
+                    <h4>Staywell Health DPC</h4>
+                    <ul>
+                        <li>✓ Visitas de atención primaria ilimitadas</li>
+                        <li>✓ Acceso directo a su proveedor</li>
+                        <li>✓ Manejo de enfermedades crónicas</li>
+                        <li>✓ Exámenes anuales de bienestar</li>
+                        <li>✓ Análisis de laboratorio al costo</li>
+                        <li>✓ Atención preventiva</li>
+                        <li>✓ Telemedicina incluida</li>
+                    </ul>
+                </div>
+                <div class="compare-card zion">
+                    <h4>Zion HealthShare</h4>
+                    <ul>
+                        <li>✓ Hospitalizaciones y cirugías</li>
+                        <li>✓ Visitas a especialistas</li>
+                        <li>✓ Atención de emergencia</li>
+                        <li>✓ Maternidad</li>
+                        <li>✓ Imágenes y diagnósticos</li>
+                        <li>✓ Apoyo con medicamentos</li>
+                        <li>✓ Sin restricciones de red</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr class="zion-divider">
+
+        <!-- What is Zion HealthShare -->
+        <section style="margin-bottom: 4rem; background: #F4F2F0; border-radius: 10px; padding: 3rem 2.5rem;">
+            <p class="zion-subheading" style="margin-bottom: 0.5rem;">Entendiendo el Healthshare</p>
+            <h2 class="zion-heading" style="font-size: clamp(1.6rem, 3vw, 2.25rem); margin-bottom: 1.25rem;">¿Qué Es Zion HealthShare?</h2>
+            <p class="zion-body" style="margin-bottom: 1.25rem;">Zion HealthShare es una organización sin fines de lucro y una alternativa comunitaria al seguro médico tradicional. En lugar de pagar primas a una compañía de seguros, los miembros contribuyen una cantidad mensual a un fondo compartido que ayuda a cubrir los gastos médicos elegibles de los demás.</p>
+            <p class="zion-body" style="margin-bottom: 2rem;">No es un seguro médico. Es una comunidad de personas que se unen voluntariamente para compartir la carga financiera de las necesidades médicas mayores. Zion HealthShare está abierto a todos, sin requisitos religiosos, sin restricciones de red y sin períodos de inscripción.</p>
+
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="icon">🌐</div>
+                    <h4>Sin Restricciones de Red</h4>
+                    <p>Visite a cualquier proveedor con licencia en los EE. UU., siempre su elección.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">🤝</div>
+                    <h4>Abierto a Todos</h4>
+                    <p>Sin requisito de fe. Todas las personas son bienvenidas.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">📅</div>
+                    <h4>Inscríbase Cuando Quiera</h4>
+                    <p>Sin períodos de inscripción abierta. Únase cuando esté listo.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">💸</div>
+                    <h4>Contribuciones Asequibles</h4>
+                    <p>Los costos mensuales suelen ser significativamente menores que el seguro tradicional.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">🏥</div>
+                    <h4>Sin Límites de Compartir</h4>
+                    <p>Sin límites anuales ni de por vida en gastos compartidos elegibles.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">💊</div>
+                    <h4>Apoyo con Medicamentos</h4>
+                    <p>Acceda a medicamentos con descuento a través de Zion RxShare, con tecnología de RxValet.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="zion-divider">
+
+        <!-- How It Works -->
+        <section style="margin-bottom: 4rem;">
+            <p class="zion-subheading" style="margin-bottom: 0.5rem;">Simple por Diseño</p>
+            <h2 class="zion-heading" style="font-size: clamp(1.6rem, 3vw, 2.25rem); margin-bottom: 2rem;">Cómo Funciona</h2>
+
+            <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Elija Su Monto Inicial No Compartible (IUA)</h4>
+                        <p>Al inscribirse, selecciona su IUA, el monto del que usted es responsable por cada necesidad médica antes de que comience el proceso de compartir. Las opciones son $1,250, $2,500 o $5,000. Piénselo como un deducible por incidente. Cada hogar es responsable de no más de tres IUAs en cualquier período continuo de 12 meses.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Contribuya Mensualmente</h4>
+                        <p>Usted realiza una contribución mensual al fondo de la comunidad. Estos fondos se utilizan para compartir los gastos médicos elegibles entre los miembros, no para pagar ganancias corporativas.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Surge una Necesidad Médica</h4>
+                        <p>Cuando necesita atención más allá de lo que cubre su membresía de Staywell Health, como un especialista, hospitalización o cirugía, se presenta como paciente de pago propio para recibir descuentos de pago en efectivo, lo que ayuda a mantener los costos bajos para toda la comunidad.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Envíe una Solicitud de Compartir</h4>
+                        <p>Envía sus gastos elegibles a través del portal de miembros de Zion HealthShare. Una vez que se alcanza su IUA y se determina que la solicitud es elegible, la comunidad comparte los costos restantes, a menudo procesados en tan solo cinco días hábiles con la documentación adecuada.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Los Gastos Son Compartidos</h4>
+                        <p>Zion HealthShare facilita el pago directamente a su proveedor o le reembolsa los gastos que ya pagó. Su equipo de defensa de miembros está disponible para ayudar a coordinar durante todo el proceso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="zion-divider">
+
+        <!-- Why Daniel Offers It -->
+        <section style="margin-bottom: 4rem;">
+            <p class="zion-subheading" style="margin-bottom: 0.5rem;">De Su Proveedor</p>
+            <h2 class="zion-heading" style="font-size: clamp(1.6rem, 3vw, 2.25rem); margin-bottom: 1.25rem;">Por Qué Ofrezco Esto</h2>
+            <p class="zion-body" style="margin-bottom: 1.25rem;">Una de las preguntas más comunes que escucho de mis pacientes y futuros miembros es: "¿Qué hago cuando surge algo más grande?" La atención primaria directa cubre la gran mayoría de lo que la mayoría de las personas necesita en un año. Pero la vida trae momentos inesperados como un accidente, un diagnóstico, o una cirugía, y tener un plan importa.</p>
+            <p class="zion-body" style="margin-bottom: 1.25rem;">Elegí asociarme con Zion HealthShare porque sus valores se alinean con los míos: transparencia, asequibilidad y poner a las personas primero. Para muchos pacientes, combinar una membresía de Staywell Health con un plan de Zion HealthShare puede proporcionar una cobertura más completa a una fracción del costo del seguro tradicional.</p>
+            <p class="zion-body">Esto no es algo que esté obligado a ofrecer. Es algo en lo que genuinamente creo que ayuda a mis pacientes a sentirse más seguros y respaldados en su camino hacia la salud.</p>
+        </section>
+
+        <hr class="zion-divider">
+
+        <!-- Exclusive Member Benefit Callout -->
+        <section style="margin-bottom: 4rem;">
+            <div style="background: linear-gradient(135deg, #002838 0%, #005F83 100%); border-radius: 10px; padding: 2.75rem 2.5rem; color: #fff;">
+                <p style="font-family: 'Inter Tight', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FBD872; font-size: 0.8rem; margin-bottom: 0.75rem;">Beneficio Exclusivo de Staywell Health</p>
+                <h2 style="font-family: 'DM Serif Text', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: #fff; margin-bottom: 1rem; font-weight: 400;">Una Mejor Opción para los Pacientes de Staywell Health</h2>
+                <p style="font-family: 'Inter', sans-serif; font-weight: 300; color: rgba(255,255,255,0.88); line-height: 1.7; margin-bottom: 1rem;">Cuando se inscribe a través del enlace de afiliado de Staywell Health, obtiene acceso a algo que la membresía estándar de Zion HealthShare no ofrece: la posibilidad de seleccionar únicamente la cobertura que necesita y pagar solo por lo que elige, sin obligación de inscribirse en todo.</p>
+                <p style="font-family: 'Inter', sans-serif; font-weight: 300; color: rgba(255,255,255,0.88); line-height: 1.7; margin-bottom: 1.75rem;">Esta flexibilidad, combinada con descuentos exclusivos para miembros de DPC, hace que la combinación de Staywell Health + Zion HealthShare sea una opción aún más asequible y personalizable.</p>
+                <a href="https://members.zionhealthshare.org/auth/register?affiliate=200248" target="_blank" rel="noopener" class="zion-btn" style="background: #FBD872; color: #002838 !important;">Inscribirse a Través de Staywell Health →</a>
+            </div>
+        </section>
+
+        <hr class="zion-divider">
+
+        <!-- CTA / Next Steps -->
+        <section style="margin-bottom: 4rem;">
+            <p class="zion-subheading" style="text-align: center; margin-bottom: 0.5rem;">¿Listo para Explorar?</p>
+            <h2 class="zion-heading" style="font-size: clamp(1.6rem, 3vw, 2.25rem); text-align: center; margin-bottom: 1.25rem;">Cómo Comenzar</h2>
+            <p class="zion-body" style="text-align: center; max-width: 620px; margin: 0 auto 2.5rem;">Hay varias formas de obtener más información y dar el siguiente paso.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem;">
+                <div class="zion-card">
+                    <h4 class="zion-subheading" style="font-size: 0.85rem; margin-bottom: 0.75rem;">Inscribirse Como Miembro</h4>
+                    <p class="zion-body" style="font-size: 0.92rem; margin-bottom: 1rem;">Regístrese a través de nuestro enlace de afiliado para acceder a descuentos exclusivos para miembros de DPC y elegir solo la cobertura que necesita.</p>
+                    <a href="https://members.zionhealthshare.org/auth/register?affiliate=200248" target="_blank" rel="noopener" class="zion-btn" style="font-size: 0.85rem; padding: 10px 20px;">Inscribirse Ahora</a>
+                </div>
+                <div class="zion-card">
+                    <h4 class="zion-subheading" style="font-size: 0.85rem; margin-bottom: 0.75rem;">Hablar con Daniel Primero</h4>
+                    <p class="zion-body" style="font-size: 0.92rem; margin-bottom: 1rem;">Reserve una reunión virtual gratuita para hablar sobre si una combinación de DPC + healthshare tiene sentido para su situación.</p>
+                    <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" class="btn btn-primary" style="font-size: 0.85rem;">Reservar Reunión Gratuita</a>
+                </div>
+                <div class="zion-card">
+                    <h4 class="zion-subheading" style="font-size: 0.85rem; margin-bottom: 0.75rem;">Llame a Zion Directamente</h4>
+                    <p class="zion-body" style="font-size: 0.92rem; margin-bottom: 1rem;">Hable con un representante de Zion HealthShare que pueda guiarle a través de los planes y responder sus preguntas.</p>
+                    <a href="tel:+18889209466" class="zion-btn" style="font-size: 0.85rem; padding: 10px 20px;">Llamar (888) 920-9466</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zion Logo Lockup -->
+        <section style="background: #F4F2F0; border-radius: 10px; padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 3rem;">
+            <div>
+                <p class="zion-subheading" style="font-size: 0.8rem; margin-bottom: 0.35rem;">En Asociación Con</p>
+                <p class="zion-body" style="font-size: 0.9rem; margin: 0;">Staywell Health se enorgullece de referir pacientes a Zion HealthShare.</p>
+            </div>
+            <a href="https://zionhealthshare.org" target="_blank" rel="noopener">
+                <img src="zion-healthshare-logo.png" alt="Zion HealthShare" style="height: 56px; width: auto;">
+            </a>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="zion-disclaimer">
+            Zion HealthShare no es una compañía de seguros. Ni esta publicación ni la membresía en Zion HealthShare son ofrecidas por una compañía de seguros. Visite zionhealthshare.org para ver el aviso específico de su estado.
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="Logo.png" alt="Staywell Health" class="footer-logo">
+                <p>Atención primaria directa de primera calidad en Raleigh, NC con acceso real a su proveedor y atención más profunda.</p>
+                <p style="font-size: 0.85rem; opacity: 0.8;">Este es un espacio inclusivo y afirmativo.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Acerca de</a></li>
+                    <li><a href="services-es.html">Servicios</a></li>
+                    <li><a href="index-es.html#pricing">Precios</a></li>
+                    <li><a href="index-es.html#contact">Contacto</a></li>
+                    <li><a href="employer-benefits-es.html">Soluciones para Empresas</a></li>
+                    <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="dpc-services-es.html">Atención Primaria</a></li>
+                    <li><a href="aesthetics-es.html">Estética</a></li>
+                    <li><a href="specialty-testing-es.html">Pruebas Especializadas</a></li>
+                    <li><a href="focused-lab-evaluation-es.html">Evaluación de Laboratorio</a></li>
+                    <li><a href="healthshare-es.html">Cobertura Healthshare</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Staywell Health, PLLC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
