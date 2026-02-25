@@ -10,6 +10,7 @@
       "destination": "https://staywellforlife.hint.com/login/request",
       "permanent": true
     },
+    {
       "source": "/eval",
       "destination": "https://staywellforlife.hint.com/booking?appointment-type=appty-8fca676f894d925d",
       "permanent": true
