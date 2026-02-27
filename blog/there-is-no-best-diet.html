@@ -223,19 +223,72 @@
 
                 <p>That's what I help patients figure out. Not a prescription handed down from a bestselling diet book, but a starting point that actually makes sense for who they are.</p>
 
+                <!-- Share Buttons -->
+                <div style="margin: 2rem 0;">
+                    <p style="font-size: 0.95rem; font-weight: 600; color: #374151; margin-bottom: 1rem;">Found this helpful? Share it:</p>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <a id="share-facebook" href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #1877f2; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.875rem; font-weight: 600;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            Facebook
+                        </a>
+                        <a id="share-twitter" href="#" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #000; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.875rem; font-weight: 600;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            X
+                        </a>
+                        <a id="share-email" href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #6b7280; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.875rem; font-weight: 600;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                            Email
+                        </a>
+                        <button id="share-copy" onclick="copyLink()" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #059669; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; border: none; cursor: pointer; font-size: 0.875rem; font-weight: 600;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                            <span id="copy-label">Copy Link</span>
+                        </button>
+                    </div>
+                </div>
+
+                <script>
+                (function() {
+                    var url = encodeURIComponent(window.location.href);
+                    var title = encodeURIComponent(document.title);
+                    document.getElementById('share-facebook').href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+                    document.getElementById('share-twitter').href = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + title;
+                    document.getElementById('share-email').href = 'mailto:?subject=' + title + '&body=Thought you might find this helpful: ' + url;
+                })();
+                function copyLink() {
+                    navigator.clipboard.writeText(window.location.href).then(function() {
+                        var label = document.getElementById('copy-label');
+                        label.textContent = 'Copied!';
+                        setTimeout(function() { label.textContent = 'Copy Link'; }, 2000);
+                    });
+                }
+                </script>
+
                 <hr class="post-divider">
 
                 <div class="post-author-box">
                     <img src="../provider-photo.jpg" alt="Daniel Corbin, DNP, APRN, FNP-C">
                     <div>
                         <h4>Daniel Corbin, DNP, APRN, FNP-C</h4>
-                        <p>Daniel is the founder of Staywell Health, a direct primary care practice in Raleigh, NC. He focuses on whole-person care, preventive health, and helping patients understand the root causes of what's affecting their wellbeing.</p>
+                        <p>Board-certified Family Nurse Practitioner and founder of Staywell Health, a direct primary care practice in Raleigh, NC specializing in whole-person care, LGBTQ+ health, and lifestyle medicine.</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
+
+    <section class="section section-gray">
+        <div class="container">
+            <div class="text-center">
+                <h2>Looking for care that actually listens?</h2>
+                <p style="font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem; max-width: 40rem; margin-left: auto; margin-right: auto;">Book a free 15-minute virtual meet and greet to see if Staywell Health is the right fit for you.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank" class="btn-primary">Book Free Meet &amp; Greet</a>
+                    <a href="../index.html#pricing" class="btn-secondary">View Membership Plans</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footer-container">
