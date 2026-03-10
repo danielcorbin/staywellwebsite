@@ -14,6 +14,11 @@
       "source": "/eval",
       "destination": "https://staywellforlife.hint.com/booking?appointment-type=appty-8fca676f894d925d",
       "permanent": true
+    },
+    {
+      "source": "/join",
+      "destination": "https://staywellforlife.hint.com/signup/membership",
+      "permanent": true
     }
   ]
 }
