@@ -925,3 +925,27 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
+
+/* Mobile-only persistent Patient Portal button in navbar */
+.btn-join-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .btn-join-mobile {
+    display: inline-block;
+    background: #7a8a7a;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    margin-right: 0.5rem;
+  }
+  .btn-join-mobile:hover {
+    background: #5a7a5a;
+  }
+}
