@@ -982,3 +982,27 @@ h1, h2, h3, h4, h5, h6 {
     height: 14px;
     flex-shrink: 0;
 }
+
+/* Page-specific hero images */
+.hero-primary-care {
+    background-image: url('hero-primary-care.jpg');
+}
+.hero-weight-loss {
+    background-image: url('hero-weight-loss.jpg');
+}
+.hero-hormone-restoration {
+    background-image: url('hero-hormone-restoration.jpg');
+}
+.hero-aesthetics {
+    background-image: url('hero-aesthetics.jpg');
+}
+.hero-longevity {
+    background-image: url('hero-longevity.jpg');
+}
+.hero-land-acknowledgement {
+    background-image: url('hero-land-acknowledgement.jpg');
+}
+/* Gradient heroes for pages without photos */
+.hero-gradient-about {
+    background-image: linear-gradient(135deg, #2d4a2d 0%, #4a7a4a 40%, #7a8a7a 100%);
+}
