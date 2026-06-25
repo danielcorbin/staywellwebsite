@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .hamburger {
     display: flex;
   }
@@ -899,17 +899,6 @@ h1, h2, h3, h4, h5, h6 {
     user-select: none;
 }
 
-/* Tighten nav gap at mid-range widths to prevent overflow */
-@media (max-width: 1280px) and (min-width: 1025px) {
-    .nav-links {
-        gap: 0.25rem;
-    }
-    .nav-links a {
-        padding: 0.5rem 0.5rem;
-        font-size: 0.9rem;
-    }
-}
-
 /* Mobile dropdown adjustments */
 @media (max-width: 768px) {
     .dropdown-content {
@@ -949,7 +938,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .btn-join-mobile {
     display: inline-block;
     background: #7a8a7a;
@@ -966,4 +955,30 @@ h1, h2, h3, h4, h5, h6 {
   .btn-join-mobile:hover {
     background: #5a7a5a;
   }
+}
+
+/* Language toggle icon button */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6b7280 !important;
+    padding: 0.35rem 0.6rem !important;
+    border: 1px solid #d1d5db;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.lang-toggle:hover {
+    background: #f3f4f6 !important;
+    color: #374151 !important;
+    border-color: #9ca3af;
+}
+.lang-toggle svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
 }
