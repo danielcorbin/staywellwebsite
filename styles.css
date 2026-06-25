@@ -887,9 +887,27 @@ h1, h2, h3, h4, h5, h6 {
     visibility: visible;
 }
 
+/* Anchor the last two dropdowns to the right so they don't overflow off-screen */
+.nav-links li:nth-last-child(3) .dropdown-content,
+.nav-links li:nth-last-child(4) .dropdown-content {
+    left: auto;
+    right: 0;
+}
+
 .dropbtn {
     cursor: pointer;
     user-select: none;
+}
+
+/* Tighten nav gap at mid-range widths to prevent overflow */
+@media (max-width: 1280px) and (min-width: 1025px) {
+    .nav-links {
+        gap: 0.25rem;
+    }
+    .nav-links a {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* Mobile dropdown adjustments */
