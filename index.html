@@ -12,21 +12,21 @@
     <meta property="og:url" content="https://www.staywellforlife.com/">
     <meta property="og:title" content="Staywell Health - Direct Primary Care Raleigh NC">
     <meta property="og:description" content="Experience healthcare reimagined with direct access to your provider. No insurance, no rushed visits, just personalized care.">
-    <meta property="og:image" content="https://www.staywellforlife.com/provider-photo.jpg">
+    <meta property="og:image" content="https://www.staywellforlife.com/images/provider-photo.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.staywellforlife.com/">
     <meta name="twitter:title" content="Staywell Health - Direct Primary Care Raleigh NC">
     <meta name="twitter:description" content="Experience healthcare reimagined with direct access to your provider. No insurance, no rushed visits, just personalized care.">
-    <meta name="twitter:image" content="https://www.staywellforlife.com/provider-photo.jpg">
+    <meta name="twitter:image" content="https://www.staywellforlife.com/images/provider-photo.jpg">
 
     <title>Staywell Health - Direct Primary Care Raleigh NC</title>
     <link rel="stylesheet" href="styles.css">
     
     <!-- Favicons - Fixed -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,7 +71,7 @@
         "closes": "17:00"
       }],
       "priceRange": "$75-$150",
-      "image": "https://www.staywellforlife.com/provider-photo.jpg"
+      "image": "https://www.staywellforlife.com/images/provider-photo.jpg"
     }
     </script>
 </head>
@@ -79,43 +79,48 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <img src="Logo.png" alt="Staywell Health" class="logo">
-            <a href="https://staywellforlife.hint.com/login/request" target="_blank" class="btn-join-mobile">Patient Portal</a>
+            <img src="images/Logo.png" alt="Staywell Health" class="logo">
+            <a href="https://staywellforlife.hint.com/login/request" target="_blank" class="btn-join-mobile" data-i18n="nav.portal">Patient Portal</a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-                                    <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
                 <li class="dropdown">
-                    <a href="about.html" class="dropbtn">About &#8250;</a>
+                    <a href="about.html" class="dropbtn"><span data-i18n="nav.aboutDrop">About</span> &#8250;</a>
                     <div class="dropdown-content">
-                        <a href="about.html">About Staywell Health</a>
-                        <a href="land-acknowledgement.html">Land Acknowledgement</a>
+                        <a href="about.html" data-i18n="nav.aboutLink">About Staywell Health</a>
+                        <a href="land-acknowledgement.html" data-i18n="nav.landAck">Land Acknowledgement</a>
                     </div>
                 </li>
-                <li><a href="dpc-services.html">Primary Care</a></li>
+                <li><a href="dpc-services.html" data-i18n="nav.primaryCare">Primary Care</a></li>
                 <li class="dropdown">
-                    <a href="longevity-medicine.html" class="dropbtn">Longevity Medicine &#8250;</a>
+                    <a href="longevity-medicine.html" class="dropbtn"><span data-i18n="nav.longevityDrop">Longevity Medicine</span> &#8250;</a>
                     <div class="dropdown-content">
-                        <a href="medical-weight-loss.html">Medical Weight Loss</a>
-                        <a href="hormone-restoration.html">Hormone Restoration</a>
-                        <a href="aesthetics.html">Aesthetics</a>
+                        <a href="medical-weight-loss.html" data-i18n="nav.weightLoss">Medical Weight Loss</a>
+                        <a href="hormone-restoration.html" data-i18n="nav.hormone">Hormone Restoration</a>
+                        <a href="aesthetics.html" data-i18n="nav.aesthetics">Aesthetics</a>
                     </div>
                 </li>
-                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#pricing" data-i18n="nav.pricing">Pricing</a></li>
                 <li class="dropdown">
-                    <a href="faq.html" class="dropbtn">Resources &#8250;</a>
+                    <a href="faq.html" class="dropbtn"><span data-i18n="nav.resourcesDrop">Resources</span> &#8250;</a>
                     <div class="dropdown-content">
-                        <a href="faq.html">FAQ</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="healthshare.html">Healthshare Coverage</a>
-                        <a href="index.html#contact">Contact</a>
+                        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+                        <a href="blog.html" data-i18n="nav.blog">Blog</a>
+                        <a href="healthshare.html" data-i18n="nav.healthshare">Healthshare Coverage</a>
+                        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
                     </div>
                 </li>
-                <li><a href="index-es.html" class="lang-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>ES</a></li>
-                <li><a href="https://staywellforlife.hint.com/login/request" target="_blank" class="btn-join">PORTAL</a></li>
+                <li>
+                    <a href="#" class="lang-toggle" data-lang-toggle aria-label="Toggle language">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+                        <span class="lang-label">ES</span>
+                    </a>
+                </li>
+                <li><a href="https://staywellforlife.hint.com/login/request" target="_blank" class="btn-join" data-i18n="nav.portalShort">PORTAL</a></li>
             </ul>
         </div>
     </nav>
@@ -171,7 +176,7 @@
         <div class="container">
             <div class="grid grid-2" style="align-items: center;">
                 <div class="relative">
-                    <img src="provider-photo.jpg" alt="Daniel Corbin, DNP, APRN, FNP-C" class="hero-image" loading="lazy">
+                    <img src="images/provider-photo.jpg" alt="Daniel Corbin, DNP, APRN, FNP-C" class="hero-image" loading="lazy">
                 </div>
                 <div>
                     <h2 style="text-align: left; margin-bottom: 1.5rem;">Meet Your Dedicated Provider</h2>
@@ -196,7 +201,7 @@
                     <p style="font-size: 1.125rem;">We take the time to understand your story and help you stay on track. No rushed appointments. No cookie-cutter care. Just thoughtful support built around you.</p>
                 </div>
                 <div class="relative">
-                    <img src="provider-reviewing-charts.jpg" alt="Comprehensive patient review" class="hero-image" loading="lazy">
+                    <img src="images/provider-reviewing-charts.jpg" alt="Comprehensive patient review" class="hero-image" loading="lazy">
                 </div>
             </div>
         </div>
@@ -385,7 +390,7 @@
                 
                 <div class="contact-box">
                     <div style="margin-bottom: 1rem;">
-                        <img src="health-house-logo.png" alt="Health House The Collaborative" style="height: 120px; width: auto; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="images/health-house-logo.png" alt="Health House The Collaborative" style="height: 120px; width: auto; object-fit: contain; display: block; margin: 0 auto;">
                     </div>
                     <h3>Located Within</h3>
                     <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.5rem;">Multi-specialty wellness center</p>
@@ -513,36 +518,36 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <img src="Logo.png" alt="Staywell Health" class="footer-logo">
-                    <p style="color: #e5e7eb; margin-bottom: 1rem;">Premium direct primary care in Raleigh, NC with real access to your provider and care that goes deeper.</p>
-                    <p style="color: #d1d5db; font-size: 0.875rem;">This is an all-inclusive and affirming space.</p>
+                    <img src="images/Logo.png" alt="Staywell Health" class="footer-logo">
+                    <p style="color: #e5e7eb; margin-bottom: 1rem;" data-i18n="footer.tagline">Premium direct primary care in Raleigh, NC with real access to your provider and care that goes deeper.</p>
+                    <p style="color: #d1d5db; font-size: 0.875rem;" data-i18n="footer.affirming">This is an all-inclusive and affirming space.</p>
                 </div>
                 <div>
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                        <li><a href="employer-benefits.html">Small Business Solutions</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="index.html" data-i18n="footer.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="footer.about">About</a></li>
+                        <li><a href="services.html" data-i18n="footer.services">Services</a></li>
+                        <li><a href="index.html#pricing" data-i18n="footer.pricing">Pricing</a></li>
+                        <li><a href="faq.html" data-i18n="footer.faq">FAQ</a></li>
+                        <li><a href="index.html#contact" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="employer-benefits.html" data-i18n="footer.employerBenefits">Small Business Solutions</a></li>
+                        <li><a href="privacy-policy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Services</h3>
+                    <h3 data-i18n="footer.servicesHeading">Services</h3>
                     <ul>
-                        <li><span style="color: #e5e7eb;">Primary Care</span></li>
-                        <li><span style="color: #e5e7eb;">Lifestyle Medicine</span></li>
-                        <li><span style="color: #e5e7eb;">Aesthetics</span></li>
-                        <li><span style="color: #e5e7eb;">Preventive Care</span></li>
-                        <li><span style="color: #e5e7eb;">Lab Services</span></li>
+                        <li><span style="color: #e5e7eb;" data-i18n="footer.svcPrimaryCare">Primary Care</span></li>
+                        <li><span style="color: #e5e7eb;" data-i18n="footer.svcLifestyle">Lifestyle Medicine</span></li>
+                        <li><span style="color: #e5e7eb;" data-i18n="footer.svcAesthetics">Aesthetics</span></li>
+                        <li><span style="color: #e5e7eb;" data-i18n="footer.svcPreventive">Preventive Care</span></li>
+                        <li><span style="color: #e5e7eb;" data-i18n="footer.svcLab">Lab Services</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Staywell Health, PLLC. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Staywell Health, PLLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -576,6 +581,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
-<script src="main.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

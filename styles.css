@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
   position: relative;
-  background-image: url('hero-background.jpg');
+  background-image: url('images/hero-background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -985,22 +985,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Page-specific hero images */
 .hero-primary-care {
-    background-image: url('hero-primary-care.jpg');
+    background-image: url('images/hero-primary-care.jpg');
 }
 .hero-weight-loss {
-    background-image: url('hero-weight-loss.jpg');
+    background-image: url('images/hero-weight-loss.jpg');
 }
 .hero-hormone-restoration {
-    background-image: url('hero-hormone-restoration.jpg');
+    background-image: url('images/hero-hormone-restoration.jpg');
 }
 .hero-aesthetics {
-    background-image: url('hero-aesthetics.jpg');
+    background-image: url('images/hero-aesthetics.jpg');
 }
 .hero-longevity {
-    background-image: url('hero-longevity.jpg');
+    background-image: url('images/hero-longevity.jpg');
 }
 .hero-land-acknowledgement {
-    background-image: url('hero-land-acknowledgement.jpg');
+    background-image: url('images/hero-land-acknowledgement.jpg');
 }
 /* Gradient heroes for pages without photos */
 .hero-gradient-about {
