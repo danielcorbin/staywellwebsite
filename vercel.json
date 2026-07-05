@@ -109,6 +109,11 @@
       "source": "/specialty-testing-es.html",
       "destination": "/dpc-services.html",
       "permanent": true
+    },
+    {
+      "source": "/focused-lab-evaluation.html",
+      "destination": "/dpc-services.html",
+      "permanent": true
     }
   ]
 }
