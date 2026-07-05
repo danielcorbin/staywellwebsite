@@ -35,7 +35,14 @@
         healthshare: 'Healthshare Coverage',
         contact: 'Contact',
         portal: 'Patient Portal',
-        portalShort: 'PORTAL'
+        portalShort: 'PORTAL',
+        // New Services-dropdown keys (used on newly built pages; older pages
+        // still use the keys above until the full nav rollout is done)
+        servicesDrop: 'Services',
+        dpc: 'Direct Primary Care',
+        mensHormone: "Men's Hormone Optimization",
+        womensHormone: "Women's Hormone Optimization",
+        antiAging: 'Anti-Aging and Longevity'
       },
       footer: {
         tagline: 'Premium direct primary care in Raleigh, NC with real access to your provider and care that goes deeper.',
@@ -76,7 +83,12 @@
         healthshare: 'Cobertura Healthshare',
         contact: 'Contacto',
         portal: 'Portal del Paciente',
-        portalShort: 'PORTAL'
+        portalShort: 'PORTAL',
+        servicesDrop: 'Servicios',
+        dpc: 'Atenci\u00F3n Primaria Directa',
+        mensHormone: 'Optimizaci\u00F3n Hormonal para Hombres',
+        womensHormone: 'Optimizaci\u00F3n Hormonal para Mujeres',
+        antiAging: 'Antienvejecimiento y Longevidad'
       },
       footer: {
         tagline: 'Atenci\u00F3n primaria directa premium en Raleigh, NC con acceso real a tu doctor y una atenci\u00F3n m\u00E1s profunda.',
