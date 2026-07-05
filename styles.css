@@ -1005,6 +1005,9 @@ h1, h2, h3, h4, h5, h6 {
 .hero-gaht {
     background-image: url('images/hero-gaht.jpg');
 }
+.hero-blog {
+    background-image: url('images/hero-blog.jpg');
+}
 .hero-aesthetics {
     background-image: url('images/hero-aesthetics.jpg');
 }
