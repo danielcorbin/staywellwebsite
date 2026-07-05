@@ -782,6 +782,22 @@
         proudRefer: 'Staywell Health is proud to refer patients to Zion HealthShare.',
         disclaimer: 'Zion HealthShare is not an insurance company. Neither this publication nor membership in Zion HealthShare are offered by an insurance company. Visit zionhealthshare.org to view your state-specific notice.'
       },
+      landAck: {
+        pageTitle: 'Land Acknowledgement - Staywell Health',
+        heroTitle: 'Land Acknowledgement',
+        heroSubtitle: 'Honoring the peoples and lands that came before us.',
+        p1: 'Staywell Health sits along the Falls of the Neuse in Raleigh, North Carolina, within the ancestral territory of the <strong>Tuscarora (Skaruhreh) Nation</strong>. For centuries before European colonization, the Tuscarora people, whose name means "hemp gatherers," lived, hunted, traded, and thrived throughout this region. The Falls of the Neuse served as part of their hunting grounds, and nearby stood <strong>Kateras</strong>, a major Tuscarora trading center and seat of the Tuscarora leader Kaskusara, documented by explorer John Lederer in 1670. The Tuscarora called this river <em>Gow-ta-no</em>, meaning "pine in water."',
+        p2: 'Following the Tuscarora War of 1711 to 1715, many Tuscarora were killed, enslaved, or displaced. Most survivors migrated north to join the <strong>Haudenosaunee (Iroquois) Confederacy</strong> as its sixth nation, while others remained in North Carolina, where the <strong>Tuscarora Nation of North Carolina</strong> continues today in Robeson County.',
+        p3: 'We also honor the <strong>Shakori, Occaneechi, Lumbee, Catawba (M\u00E1nu: Y\u012F \u012Esuw\u0105), and Cheraw</strong> peoples whose presence shaped this broader region.',
+        p4: 'As a practice rooted in whole-person care, we believe wellness is inseparable from the land and communities that sustain us. These nations are still here and still caring for their people. We encourage you to learn more:',
+        learnMoreHeading: 'Learn More',
+        link1Title: 'Native Land Digital \u2197',
+        link1Desc: "Explore whose land you're on",
+        link2Title: 'Tuscarora Nation of North Carolina \u2197',
+        link2Desc: "Learn about the Tuscarora's history and ongoing presence",
+        link3Title: 'NC Commission of Indian Affairs \u2197',
+        link3Desc: "North Carolina's eight state-recognized tribes"
+      },
       footer: {
         tagline: 'Premium membership medicine in Raleigh, NC with real access to your provider and care that goes deeper.',
         affirming: 'This is an all-inclusive and affirming space.',
@@ -1565,6 +1581,22 @@
         inPartnershipWith: 'En Asociaci\u00F3n Con',
         proudRefer: 'Staywell Health se enorgullece de referir pacientes a Zion HealthShare.',
         disclaimer: 'Zion HealthShare no es una compa\u00F1\u00EDa de seguros. Ni esta publicaci\u00F3n ni la membres\u00EDa en Zion HealthShare son ofrecidas por una compa\u00F1\u00EDa de seguros. Visita zionhealthshare.org para ver el aviso espec\u00EDfico de tu estado.'
+      },
+      landAck: {
+        pageTitle: 'Reconocimiento de Tierras - Staywell Health',
+        heroTitle: 'Reconocimiento de Tierras',
+        heroSubtitle: 'Honrando a los pueblos y tierras que vinieron antes de nosotros.',
+        p1: 'Staywell Health se encuentra a lo largo del Falls of the Neuse en Raleigh, Carolina del Norte, dentro del territorio ancestral de la <strong>Naci\u00F3n Tuscarora (Skaruhreh)</strong>. Durante siglos antes de la colonizaci\u00F3n europea, el pueblo Tuscarora, cuyo nombre significa "recolectores de c\u00E1\u00F1amo," vivi\u00F3, caz\u00F3, comerci\u00F3, y prosper\u00F3 en toda esta regi\u00F3n. El Falls of the Neuse formaba parte de sus terrenos de caza, y cerca se encontraba <strong>Kateras</strong>, un importante centro comercial Tuscarora y sede del l\u00EDder Tuscarora Kaskusara, documentado por el explorador John Lederer en 1670. Los Tuscarora llamaban a este r\u00EDo <em>Gow-ta-no</em>, que significa "pino en el agua."',
+        p2: 'Despu\u00E9s de la Guerra Tuscarora de 1711 a 1715, muchos Tuscarora fueron asesinados, esclavizados, o desplazados. La mayor\u00EDa de los sobrevivientes migraron hacia el norte para unirse a la <strong>Confederaci\u00F3n Haudenosaunee (Iroquesa)</strong> como su sexta naci\u00F3n, mientras que otros permanecieron en Carolina del Norte, donde la <strong>Naci\u00F3n Tuscarora de Carolina del Norte</strong> contin\u00FAa hoy en el condado de Robeson.',
+        p3: 'Tambi\u00E9n honramos a los pueblos <strong>Shakori, Occaneechi, Lumbee, Catawba (M\u00E1nu: Y\u012F \u012Esuw\u0105), y Cheraw</strong> cuya presencia dio forma a esta regi\u00F3n m\u00E1s amplia.',
+        p4: 'Como una pr\u00E1ctica arraigada en la atenci\u00F3n de la persona completa, creemos que el bienestar es inseparable de la tierra y las comunidades que nos sostienen. Estas naciones todav\u00EDa est\u00E1n aqu\u00ED y todav\u00EDa cuidan a su gente. Te animamos a aprender m\u00E1s:',
+        learnMoreHeading: 'Conoce M\u00E1s',
+        link1Title: 'Native Land Digital \u2197',
+        link1Desc: 'Explora en la tierra de qui\u00E9n est\u00E1s',
+        link2Title: 'Tuscarora Nation of North Carolina \u2197',
+        link2Desc: 'Conoce la historia y presencia continua de los Tuscarora',
+        link3Title: 'NC Commission of Indian Affairs \u2197',
+        link3Desc: 'Las ocho tribus reconocidas por el estado de Carolina del Norte'
       },
       footer: {
         tagline: 'Medicina de membres\u00EDa premium en Raleigh, NC con acceso real a tu doctor y una atenci\u00F3n m\u00E1s profunda.',
