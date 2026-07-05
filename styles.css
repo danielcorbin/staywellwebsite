@@ -987,6 +987,9 @@ h1, h2, h3, h4, h5, h6 {
 .hero-primary-care {
     background-image: url('images/hero-primary-care.jpg');
 }
+.hero-about {
+    background-image: url('images/provider-reviewing-charts.jpg');
+}
 .hero-weight-loss {
     background-image: url('images/hero-weight-loss.jpg');
 }
