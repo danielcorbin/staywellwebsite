@@ -1,0 +1,114 @@
+{
+  "redirects": [
+    {
+      "source": "/meet",
+      "destination": "https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22",
+      "permanent": true
+    },
+    {
+      "source": "/portal",
+      "destination": "https://staywellforlife.hint.com/login/request",
+      "permanent": true
+    },
+    {
+      "source": "/eval",
+      "destination": "https://staywellforlife.hint.com/booking?appointment-type=appty-8fca676f894d925d",
+      "permanent": true
+    },
+    {
+      "source": "/join",
+      "destination": "https://staywellforlife.hint.com/signup/membership",
+      "permanent": true
+    },
+    {
+      "source": "/hormone-restoration.html",
+      "destination": "/mens-hormone-optimization.html",
+      "permanent": true
+    },
+    {
+      "source": "/hormone-restoration-es.html",
+      "destination": "/mens-hormone-optimization.html",
+      "permanent": true
+    },
+    {
+      "source": "/index-es.html",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/about-es.html",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq-es.html",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/healthshare-es.html",
+      "destination": "/healthshare.html",
+      "permanent": true
+    },
+    {
+      "source": "/land-acknowledgement-es.html",
+      "destination": "/land-acknowledgement.html",
+      "permanent": true
+    },
+    {
+      "source": "/employer-benefits-es.html",
+      "destination": "/employer-benefits.html",
+      "permanent": true
+    },
+    {
+      "source": "/focused-lab-evaluation-es.html",
+      "destination": "/focused-lab-evaluation.html",
+      "permanent": true
+    },
+    {
+      "source": "/gaht-membership-es.html",
+      "destination": "/gaht-membership.html",
+      "permanent": true
+    },
+    {
+      "source": "/promotions-es.html",
+      "destination": "/promotions.html",
+      "permanent": true
+    },
+    {
+      "source": "/dpc-services-es.html",
+      "destination": "/dpc-services.html",
+      "permanent": true
+    },
+    {
+      "source": "/medical-weight-loss-es.html",
+      "destination": "/medical-weight-loss.html",
+      "permanent": true
+    },
+    {
+      "source": "/aesthetics-es.html",
+      "destination": "/aesthetics.html",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/services-es.html",
+      "destination": "/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/specialty-testing.html",
+      "destination": "/dpc-services.html",
+      "permanent": true
+    },
+    {
+      "source": "/specialty-testing-es.html",
+      "destination": "/dpc-services.html",
+      "permanent": true
+    }
+  ]
+}
