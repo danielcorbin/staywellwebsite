@@ -114,6 +114,11 @@
       "source": "/focused-lab-evaluation.html",
       "destination": "/dpc-services.html",
       "permanent": true
+    },
+    {
+      "source": "/promotions.html",
+      "destination": "/index.html",
+      "permanent": true
     }
   ]
 }
