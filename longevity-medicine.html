@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="longevity.pageTitle">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,10 @@
     padding: 1.25rem 1.5rem;
     background: #7a8a7a;
     color: white;
+    min-height: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .pillar-header h3 { color: white; margin-bottom: 0.25rem; font-size: 1.15rem; }
   .pillar-header p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin: 0; }
@@ -181,12 +185,12 @@
     <section class="hero hero-longevity">
         <div class="container">
             <div class="max-w-4xl">
-                <span class="badge">Anti-Aging &amp; Longevity Medicine</span>
-                <h1>Live Better,<br><span class="accent">Not Just Longer</span></h1>
-                <p>Anti-aging and longevity medicine at Staywell goes beyond managing disease. We use evidence-informed therapies, including peptide therapy, hormonal optimization, and metabolic health strategies, to slow cellular aging, restore function, and help you thrive well into late life.</p>
+                <span class="badge" data-i18n="longevity.heroBadge">Anti-Aging &amp; Longevity Medicine</span>
+                <h1><span data-i18n="longevity.heroTitle1">Live Better,</span><br><span class="accent" data-i18n="longevity.heroAccent">Not Just Longer</span></h1>
+                <p data-i18n="longevity.heroSubtitle">Anti-aging and longevity medicine at Staywell goes beyond managing disease. We use evidence-informed therapies, including peptide therapy, hormonal optimization, and metabolic health strategies, to slow cellular aging, restore function, and help you thrive well into late life.</p>
                 <div class="hero-buttons">
-                    <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" target="_blank" class="btn-primary">Schedule a Consult</a>
-                    <a href="#pillars" class="btn-secondary">Explore Our Approach</a>
+                    <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" target="_blank" class="btn-primary" data-i18n="longevity.scheduleConsult">Schedule a Consult</a>
+                    <a href="#pillars" class="btn-secondary" data-i18n="longevity.exploreApproach">Explore Our Approach</a>
                 </div>
             </div>
         </div>
@@ -197,8 +201,8 @@
         <div class="container">
             <div class="max-w-4xl" style="margin: 0 auto;">
                 <div class="differentiator-lm">
-                    <h3>Medicine Has Been Focused on the Wrong Question</h3>
-                    <p>For decades, conventional medicine has asked: how do we treat disease after it appears? Longevity medicine asks a different question: how do we preserve function, slow biological aging, and extend the years you actually feel well? The research is now clear that aging itself is a modifiable process  -  and that interventions started in your 30s, 40s, and 50s can meaningfully change your trajectory in your 60s, 70s, and beyond.</p>
+                    <h3 data-i18n="longevity.framingTitle">Medicine Has Been Focused on the Wrong Question</h3>
+                    <p data-i18n="longevity.framingDesc">For decades, conventional medicine has asked: how do we treat disease after it appears? Longevity medicine asks a different question: how do we preserve function, slow biological aging, and extend the years you actually feel well? The research is now clear that aging itself is a modifiable process  -  and that interventions started in your 30s, 40s, and 50s can meaningfully change your trajectory in your 60s, 70s, and beyond.</p>
                 </div>
             </div>
         </div>
@@ -207,30 +211,30 @@
     <!-- Conventional vs Longevity -->
     <section class="section section-gray">
         <div class="container">
-            <h2>A Different Kind of Care</h2>
-            <p class="text-center" style="font-size: 1.1rem; color: #6b7280; max-width: 48rem; margin: 0 auto 3rem;">Longevity medicine doesn't replace your primary care  -  it expands what's possible within it.</p>
+            <h2 data-i18n="longevity.differentHeading">A Different Kind of Care</h2>
+            <p class="text-center" style="font-size: 1.1rem; color: #6b7280; max-width: 48rem; margin: 0 auto 3rem;" data-i18n="longevity.differentSubheading">Longevity medicine doesn't replace your primary care  -  it expands what's possible within it.</p>
 
             <div class="compare-wrap">
                 <div class="compare-card conventional">
-                    <h3>&#9888; Conventional Model</h3>
+                    <h3 data-i18n="longevity.conventionalTitle">&#9888; Conventional Model</h3>
                     <ul>
-                        <li>Wait for symptoms before acting</li>
-                        <li>Treat disease after it has developed</li>
-                        <li>Focus on managing chronic conditions</li>
-                        <li>Reference ranges designed around average, not optimal</li>
-                        <li>Aging treated as inevitable decline</li>
-                        <li>Fragmented care across specialists</li>
+                        <li data-i18n="longevity.conv1">Wait for symptoms before acting</li>
+                        <li data-i18n="longevity.conv2">Treat disease after it has developed</li>
+                        <li data-i18n="longevity.conv3">Focus on managing chronic conditions</li>
+                        <li data-i18n="longevity.conv4">Reference ranges designed around average, not optimal</li>
+                        <li data-i18n="longevity.conv5">Aging treated as inevitable decline</li>
+                        <li data-i18n="longevity.conv6">Fragmented care across specialists</li>
                     </ul>
                 </div>
                 <div class="compare-card longevity">
-                    <h3>&#10003; The Longevity Approach</h3>
+                    <h3 data-i18n="longevity.longevityApproachTitle">&#10003; The Longevity Approach</h3>
                     <ul>
-                        <li>Identify and address risk before symptoms appear</li>
-                        <li>Support the body's own regenerative capacity</li>
-                        <li>Optimize function at every stage of life</li>
-                        <li>Interpret biomarkers in context of what is optimal for you</li>
-                        <li>Treat aging as a process that can be slowed</li>
-                        <li>Integrated care with your full health picture in mind</li>
+                        <li data-i18n="longevity.approach1">Identify and address risk before symptoms appear</li>
+                        <li data-i18n="longevity.approach2">Support the body's own regenerative capacity</li>
+                        <li data-i18n="longevity.approach3">Optimize function at every stage of life</li>
+                        <li data-i18n="longevity.approach4">Interpret biomarkers in context of what is optimal for you</li>
+                        <li data-i18n="longevity.approach5">Treat aging as a process that can be slowed</li>
+                        <li data-i18n="longevity.approach6">Integrated care with your full health picture in mind</li>
                     </ul>
                 </div>
             </div>
@@ -240,54 +244,54 @@
     <!-- Three pillars -->
     <section class="section section-white" id="pillars">
         <div class="container">
-            <h2>Three Pillars of Longevity Medicine</h2>
-            <p class="text-center" style="font-size: 1.1rem; color: #6b7280; max-width: 44rem; margin: 0 auto 3rem;">Our longevity programs are built around three interconnected areas that collectively drive how well  -  and how long  -  you feel like yourself.</p>
+            <h2 data-i18n="longevity.pillarsHeading">Three Pillars of Longevity Medicine</h2>
+            <p class="text-center" style="font-size: 1.1rem; color: #6b7280; max-width: 44rem; margin: 0 auto 3rem;" data-i18n="longevity.pillarsSubheading">Our longevity programs are built around three interconnected areas that collectively drive how well  -  and how long  -  you feel like yourself.</p>
 
             <div class="pillar-grid">
                 <div class="pillar-card">
                     <div class="pillar-header">
-                        <h3>Cellular Regeneration</h3>
-                        <p>Peptide therapies &amp; repair protocols</p>
+                        <h3 data-i18n="longevity.pillar1Title">Cellular Regeneration</h3>
+                        <p data-i18n="longevity.pillar1Subtitle">Peptide therapies &amp; repair protocols</p>
                     </div>
                     <div class="pillar-body">
-                        <p>Peptides are short chains of amino acids that act as signaling molecules, directing your body to repair tissue, reduce inflammation, stimulate growth hormone release, and support cellular health. Unlike synthetic drugs, many peptides work by amplifying processes your body already knows how to do.</p>
+                        <p data-i18n="longevity.pillar1Desc">Peptides are short chains of amino acids that act as signaling molecules, directing your body to repair tissue, reduce inflammation, stimulate growth hormone release, and support cellular health. Unlike synthetic drugs, many peptides work by amplifying processes your body already knows how to do.</p>
                         <ul>
-                            <li>Growth hormone secretagogues to support lean mass and recovery</li>
-                            <li>Repair peptides targeting inflammation and tissue healing</li>
-                            <li>Protocols tailored to your specific goals and biology</li>
-                            <li>Ongoing monitoring to assess response and adjust</li>
+                            <li data-i18n="longevity.pillar1a">Growth hormone secretagogues to support lean mass and recovery</li>
+                            <li data-i18n="longevity.pillar1b">Repair peptides targeting inflammation and tissue healing</li>
+                            <li data-i18n="longevity.pillar1c">Protocols tailored to your specific goals and biology</li>
+                            <li data-i18n="longevity.pillar1d">Ongoing monitoring to assess response and adjust</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-header" style="background: #5a7a5a;">
-                        <h3>Hormonal Optimization</h3>
-                        <p>Bioidentical HRT &amp; micronutrient support</p>
+                        <h3 data-i18n="longevity.pillar2Title">Hormonal Optimization</h3>
+                        <p data-i18n="longevity.pillar2Subtitle">Bioidentical HRT &amp; micronutrient support</p>
                     </div>
                     <div class="pillar-body">
-                        <p>Hormones decline with age  -  often silently, and often years before symptoms become obvious. Restoring and maintaining optimal hormonal balance is one of the most impactful interventions available for energy, body composition, brain function, and long-term vitality.</p>
+                        <p data-i18n="longevity.pillar2Desc">Hormones decline with age  -  often silently, and often years before symptoms become obvious. Restoring and maintaining optimal hormonal balance is one of the most impactful interventions available for energy, body composition, brain function, and long-term vitality.</p>
                         <ul>
-                            <li>Comprehensive hormone and micronutrient lab review</li>
-                            <li>Bioidentical testosterone, estrogen, progesterone protocols</li>
-                            <li>Thyroid and adrenal optimization</li>
-                            <li>Micronutrient repletion as a foundation for hormone function</li>
+                            <li data-i18n="longevity.pillar2a">Comprehensive hormone and micronutrient lab review</li>
+                            <li data-i18n="longevity.pillar2b">Bioidentical testosterone, estrogen, progesterone protocols</li>
+                            <li data-i18n="longevity.pillar2c">Thyroid and adrenal optimization</li>
+                            <li data-i18n="longevity.pillar2d">Micronutrient repletion as a foundation for hormone function</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-header" style="background: #3B4A5A;">
-                        <h3>Metabolic Health</h3>
-                        <p>Body composition, glucose &amp; inflammation</p>
+                        <h3 data-i18n="longevity.pillar3Title">Metabolic Health</h3>
+                        <p data-i18n="longevity.pillar3Subtitle">Body composition, glucose &amp; inflammation</p>
                     </div>
                     <div class="pillar-body">
-                        <p>Metabolic dysfunction  -  insulin resistance, chronic low-grade inflammation, visceral fat accumulation  -  is the common thread running through most age-related disease. Addressing it early and aggressively is central to a longevity strategy that actually works.</p>
+                        <p data-i18n="longevity.pillar3Desc">Metabolic dysfunction  -  insulin resistance, chronic low-grade inflammation, visceral fat accumulation  -  is the common thread running through most age-related disease. Addressing it early and aggressively is central to a longevity strategy that actually works.</p>
                         <ul>
-                            <li>Advanced metabolic and inflammatory marker assessment</li>
-                            <li>Medical weight loss and body composition optimization</li>
-                            <li>Nutrition and movement guidance grounded in metabolic science</li>
-                            <li>Targeted interventions for insulin resistance and glucose regulation</li>
+                            <li data-i18n="longevity.pillar3a">Advanced metabolic and inflammatory marker assessment</li>
+                            <li data-i18n="longevity.pillar3b">Medical weight loss and body composition optimization</li>
+                            <li data-i18n="longevity.pillar3c">Nutrition and movement guidance grounded in metabolic science</li>
+                            <li data-i18n="longevity.pillar3d">Targeted interventions for insulin resistance and glucose regulation</li>
                         </ul>
                     </div>
                 </div>
@@ -299,9 +303,9 @@
     <section class="section section-gray">
         <div class="container">
             <div class="max-w-4xl" style="margin: 0 auto; text-align: center;">
-                <h2>Peptide Therapy as Part of Your Protocol</h2>
-                <p style="font-size: 1.05rem; color: #6b7280; margin-bottom: 1.5rem;">Peptide therapy is one of the tools we draw on within a longevity protocol, alongside hormonal and metabolic strategies. Which peptides make sense for you depends on your goals, health history, and lab findings.</p>
-                <a href="peptide-therapy.html" class="btn-secondary">Learn More About Peptide Therapy</a>
+                <h2 data-i18n="longevity.peptideTitle">Peptide Therapy as Part of Your Protocol</h2>
+                <p style="font-size: 1.05rem; color: #6b7280; margin-bottom: 1.5rem;" data-i18n="longevity.peptideDesc">Peptide therapy is one of the tools we draw on within a longevity protocol, alongside hormonal and metabolic strategies. Which peptides make sense for you depends on your goals, health history, and lab findings.</p>
+                <a href="peptide-therapy.html" class="btn-secondary" data-i18n="longevity.peptideLink">Learn More About Peptide Therapy</a>
             </div>
         </div>
     </section>
@@ -309,18 +313,18 @@
     <!-- Who is this for -->
     <section class="section section-white">
         <div class="container">
-            <h2>Who Longevity Medicine Is For</h2>
-            <p class="text-center" style="font-size: 1.05rem; color: #6b7280; max-width: 44rem; margin: 0 auto 2.5rem;">You do not have to be sick to benefit from longevity medicine. Most of our longevity patients are functioning well  -  but want to stay that way for as long as possible.</p>
+            <h2 data-i18n="longevity.whoForHeading">Who Longevity Medicine Is For</h2>
+            <p class="text-center" style="font-size: 1.05rem; color: #6b7280; max-width: 44rem; margin: 0 auto 2.5rem;" data-i18n="longevity.whoForSubheading">You do not have to be sick to benefit from longevity medicine. Most of our longevity patients are functioning well  -  but want to stay that way for as long as possible.</p>
 
             <div style="max-width: 48rem; margin: 0 auto;">
                 <div style="background: white; border-radius: 1rem; padding: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                     <ul style="margin-left: 1.5rem; columns: 2; column-gap: 2rem;">
-                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;">Adults in their 30s&ndash;60s interested in proactive health optimization</li>
-                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;">People experiencing unexplained fatigue, cognitive changes, or body composition shifts</li>
-                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;">Athletes or active adults seeking enhanced recovery and performance</li>
-                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;">Those with a family history of metabolic, cardiovascular, or neurodegenerative disease</li>
-                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;">Anyone who has been told their labs are "normal" but does not feel normal</li>
-                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;">Patients looking for a provider who takes a long-term, integrated view of their health</li>
+                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;" data-i18n="longevity.who1">Adults in their 30s&ndash;60s interested in proactive health optimization</li>
+                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;" data-i18n="longevity.who2">People experiencing unexplained fatigue, cognitive changes, or body composition shifts</li>
+                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;" data-i18n="longevity.who3">Athletes or active adults seeking enhanced recovery and performance</li>
+                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;" data-i18n="longevity.who4">Those with a family history of metabolic, cardiovascular, or neurodegenerative disease</li>
+                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;" data-i18n="longevity.who5">Anyone who has been told their labs are "normal" but does not feel normal</li>
+                        <li style="margin-bottom: 0.75rem; font-size: 0.95rem; color: #374151;" data-i18n="longevity.who6">Patients looking for a provider who takes a long-term, integrated view of their health</li>
                     </ul>
                 </div>
             </div>
@@ -332,10 +336,10 @@
         <div class="container">
             <div class="max-w-4xl" style="margin: 0 auto;">
                 <div style="background: #dcfce7; padding: 2rem; border-radius: 1rem; border-left: 4px solid #059669; text-align: center;">
-                    <h3 style="color: #059669; margin-bottom: 1rem;">Pricing Is Individualized</h3>
-                    <p style="font-size: 1rem; color: #374151; margin-bottom: 1rem;">Longevity medicine protocols vary significantly based on your goals, the therapies involved, and the level of monitoring required. Your provider will discuss costs transparently at your intake consult.</p>
-                    <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1.5rem;">Longevity Medicine services are available as standalone programs. Staywell Health DPC members receive a monthly discount on program fees.</p>
-                    <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" target="_blank" class="btn-primary">Schedule a Consult to Discuss Your Goals</a>
+                    <h3 style="color: #059669; margin-bottom: 1rem;" data-i18n="longevity.pricingTitle">Pricing Is Individualized</h3>
+                    <p style="font-size: 1rem; color: #374151; margin-bottom: 1rem;" data-i18n="longevity.pricingP1">Longevity medicine protocols vary significantly based on your goals, the therapies involved, and the level of monitoring required. Your provider will discuss costs transparently at your intake consult.</p>
+                    <p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1.5rem;" data-i18n="longevity.pricingP2">Longevity Medicine services are available as standalone programs. Staywell Health DPC members receive a monthly discount on program fees.</p>
+                    <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" target="_blank" class="btn-primary" data-i18n="longevity.pricingBtn">Schedule a Consult to Discuss Your Goals</a>
                 </div>
             </div>
         </div>
@@ -345,13 +349,13 @@
     <section class="section section-white">
         <div class="container">
             <div class="text-center">
-                <h2>Start Investing in Your Future Self</h2>
-                <p style="font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem; max-width: 44rem; margin-left: auto; margin-right: auto;">Schedule a consult and we will talk through your health history, your goals, and which longevity strategies make the most sense for where you are right now.</p>
+                <h2 data-i18n="longevity.ctaHeading">Start Investing in Your Future Self</h2>
+                <p style="font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem; max-width: 44rem; margin-left: auto; margin-right: auto;" data-i18n="longevity.ctaDesc">Schedule a consult and we will talk through your health history, your goals, and which longevity strategies make the most sense for where you are right now.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" target="_blank" class="btn-primary">Schedule a Consult</a>
-                    <a href="index.html#contact" class="btn-secondary">Ask a Question First</a>
+                    <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-1737cc0df959ba9e" target="_blank" class="btn-primary" data-i18n="longevity.scheduleConsult">Schedule a Consult</a>
+                    <a href="index.html#contact" class="btn-secondary" data-i18n="common.askQuestionFirst">Ask a Question First</a>
                 </div>
-                <p style="margin-top: 1.5rem; font-size: 0.875rem; color: #9ca3af;">Questions? Text us at <a href="sms:9192389555" style="color: #7a8a7a; font-weight: 600;">919-238-9555</a></p>
+                <p style="margin-top: 1.5rem; font-size: 0.875rem; color: #9ca3af;" data-i18n="hormoneCommon.questionsText">Questions? Text us at <a href="sms:9192389555" style="color: #7a8a7a; font-weight: 600;">919-238-9555</a></p>
             </div>
         </div>
     </section>
