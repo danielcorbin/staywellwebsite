@@ -119,6 +119,11 @@
       "source": "/promotions.html",
       "destination": "/index.html",
       "permanent": true
+    },
+    {
+      "source": "/membership",
+      "destination": "/index.html",
+      "permanent": true
     }
   ]
 }
