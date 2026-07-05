@@ -45,7 +45,7 @@
         antiAging: 'Anti-Aging and Longevity'
       },
       footer: {
-        tagline: 'Premium direct primary care in Raleigh, NC with real access to your provider and care that goes deeper.',
+        tagline: 'Premium membership medicine in Raleigh, NC with real access to your provider and care that goes deeper.',
         affirming: 'This is an all-inclusive and affirming space.',
         quickLinks: 'Quick Links',
         home: 'Home',
@@ -57,11 +57,11 @@
         employerBenefits: 'Small Business Solutions',
         privacy: 'Privacy Policy',
         servicesHeading: 'Services',
-        svcPrimaryCare: 'Primary Care',
-        svcLifestyle: 'Lifestyle Medicine',
+        svcPrimaryCare: 'Direct Primary Care',
+        svcLifestyle: 'Hormone Optimization',
         svcAesthetics: 'Aesthetics',
-        svcPreventive: 'Preventive Care',
-        svcLab: 'Lab Services',
+        svcPreventive: 'Medical Weight Loss',
+        svcLab: 'Anti-Aging & Longevity',
         copyright: '\u00A9 2026 Staywell Health, PLLC. All rights reserved.'
       }
     },
@@ -91,7 +91,7 @@
         antiAging: 'Antienvejecimiento y Longevidad'
       },
       footer: {
-        tagline: 'Atenci\u00F3n primaria directa premium en Raleigh, NC con acceso real a tu doctor y una atenci\u00F3n m\u00E1s profunda.',
+        tagline: 'Medicina de membres\u00EDa premium en Raleigh, NC con acceso real a tu doctor y una atenci\u00F3n m\u00E1s profunda.',
         affirming: 'Este es un espacio inclusivo y afirmativo.',
         quickLinks: 'Enlaces R\u00E1pidos',
         home: 'Inicio',
@@ -103,11 +103,11 @@
         employerBenefits: 'Soluciones para Peque\u00F1as Empresas',
         privacy: 'Pol\u00EDtica de Privacidad',
         servicesHeading: 'Servicios',
-        svcPrimaryCare: 'Atenci\u00F3n Primaria',
-        svcLifestyle: 'Medicina de Estilo de Vida',
+        svcPrimaryCare: 'Atenci\u00F3n Primaria Directa',
+        svcLifestyle: 'Optimizaci\u00F3n Hormonal',
         svcAesthetics: 'Est\u00E9tica',
-        svcPreventive: 'Atenci\u00F3n Preventiva',
-        svcLab: 'Servicios de Laboratorio',
+        svcPreventive: 'P\u00E9rdida de Peso M\u00E9dica',
+        svcLab: 'Antienvejecimiento y Longevidad',
         copyright: '\u00A9 2026 Staywell Health, PLLC. Todos los derechos reservados.'
       }
     }
