@@ -60,6 +60,7 @@
         connectSocial: 'Connect on social media'
       },
       home: {
+        pageTitle: 'Staywell Health - Personalized Membership Medicine in Raleigh, NC',
         heroBadge: 'Personalized Membership Medicine in Raleigh, NC',
         heroTitle1: 'Whole-person care,',
         heroTitle2: 'on your terms',
@@ -127,6 +128,7 @@
         cookieLearnMore: 'Learn More'
       },
       about: {
+        pageTitle: 'About - Staywell Health',
         heroTitle: 'About Staywell Health',
         heroQuote: 'A re-imagining of what healthcare could look like, from primary care to hormone health, weight management, and longevity medicine, to help people truly get well - and stay well.',
         whoWeAreHeading: 'Who We Are',
@@ -175,6 +177,7 @@
         valueEmpowermentDesc: 'We believe in empowering you with knowledge, tools, and support to take an active role in your health and well-being.'
       },
       dpc: {
+        pageTitle: 'Direct Primary Care Services - Staywell Health',
         heroTitle: 'Direct Primary Care Services',
         heroSubtitle: 'Comprehensive healthcare services designed to support your whole health journey, from prevention to treatment and everything in between.',
         servicesHeading: 'Primary Care Services',
@@ -282,6 +285,7 @@
         questionsText: 'Questions? Text us at <a href="sms:9192389555" style="color: #7a8a7a; font-weight: 600;">919-238-9555</a>'
       },
       mens: {
+        pageTitle: "Men's Hormone Optimization (TRT) - Staywell Health",
         heroTitle: "Men's Hormone Optimization",
         heroSubtitle: 'Testosterone replacement therapy (TRT) and hormone care guided by expert lab interpretation and precise, individualized protocols. Not a template, a plan built around your biology.',
         problemDesc: "Standard reference ranges are built around population averages, not optimal function. Testosterone in the low-normal range gets dismissed, even when it's robbing you of drive, strength, and sleep. A TSH of 3.8 is technically within range, but for many men it represents sluggish thyroid function that affects energy and weight too. At Staywell, we read labs the way they were meant to be read, in the context of your symptoms, your history, and what optimal actually looks like for you.",
@@ -304,6 +308,7 @@
         pricingNote1: "Pricing for men's hormone optimization is individualized based on your protocol, labs, and ongoing monitoring needs. Your provider will review all costs transparently at your intake consult, no surprises."
       },
       womens: {
+        pageTitle: "Women's Hormone Optimization (HRT) - Staywell Health",
         heroTitle: "Women's Hormone Optimization",
         heroSubtitle: 'Hormone replacement therapy (HRT) for menopause, perimenopause, and beyond, guided by expert lab interpretation and precise, individualized protocols. Not a template, a plan built around your biology.',
         problemDesc: 'Standard reference ranges are built around population averages, not optimal function. Perimenopause and menopause symptoms get dismissed as "just aging," even when they\'re affecting your sleep, mood, and quality of life. A TSH of 3.8 is technically within range, but for many women it represents sluggish thyroid function that affects energy, weight, and mood. At Staywell, we read labs the way they were meant to be read, in the context of your symptoms, your history, and what optimal actually looks like for you.',
@@ -324,6 +329,100 @@
         step2Desc: 'We run a thorough hormone panel that may include estrogen, progesterone, testosterone, thyroid markers, adrenal function, micronutrients, and metabolic markers. Results are interpreted by your provider in context, not just flagged as in or out of range.',
         step3Desc: 'Based on your labs, symptoms, and goals, your provider builds a personalized protocol. This may include bioidentical hormone replacement therapy, micronutrient supplementation, lifestyle adjustments, or a combination. Dosing is precise and compounded specifically for you.',
         pricingNote1: "Pricing for women's hormone optimization is individualized based on your protocol, labs, and ongoing monitoring needs. Your provider will review all costs transparently at your intake consult, no surprises."
+      },
+      weightLoss: {
+        heroTitle: 'Medical Weight Loss',
+        heroAccent: 'Done Differently',
+        heroSubtitle: 'Precision microdosing protocols using compounded semaglutide, tirzepatide, and tesamorelin, supervised by a primary care provider who actually knows your health history.',
+        scheduleConsult: 'Schedule a Consult',
+        pricingEnrollment: 'Pricing &amp; Enrollment',
+        noMembershipTitle: 'Open to Everyone, No Primary Care Membership Required',
+        noMembershipDesc: 'The Staywell Medical Weight Loss Program is available as a standalone program for anyone, no DPC membership needed. If you are already a Staywell Health member, you receive a <strong>monthly discount on your program fee</strong> as a member benefit, and your intake consult is waived.',
+        microdosingHeading: 'Why Microdosing Changes Everything',
+        microdosingSubheading: 'Most weight loss clinics start patients on the same standard dose used in clinical trials. That approach prioritizes speed over safety, and it shows in the side effects.',
+        standardTitle: '&#9888; Standard High-Dose Protocols',
+        standard1: 'Start at maximum tolerated dose immediately',
+        standard2: 'Rapid receptor saturation drives aggressive appetite suppression',
+        standard3: 'Higher rates of nausea, vomiting, and GI distress',
+        standard4: 'Rapid weight loss increases risk of lean muscle loss',
+        standard5: 'Associated with <strong>"Ozempic face"</strong>, facial volume loss from muscle wasting',
+        standard6: 'Hair thinning and loss from nutritional deficits and rapid weight change',
+        standard7: 'Patients often stop due to intolerable side effects',
+        standard8: 'Receptor downregulation may reduce long-term effectiveness',
+        microTitle: '&#10003; The Staywell Microdosing Approach',
+        micro1: 'Begin at a fraction of standard starting doses',
+        micro2: 'Gradual escalation allows receptors to adapt physiologically',
+        micro3: 'Significantly better tolerability, less nausea, fewer dropouts',
+        micro4: 'Slower, steadier fat loss preserves lean muscle mass',
+        micro5: 'Dramatically reduced risk of facial volume and hair loss',
+        micro6: "Sustainable results that don't rely on pushing to maximum dose",
+        micro7: 'Personalized, dose adjusted based on your individual response',
+        micro8: 'Integrated with nutrition and movement for lasting metabolic change',
+        fatLossTitle: 'The Goal Is Fat Loss, Not Just Weight Loss',
+        fatLossDesc: "The number on the scale doesn't tell the full story. Losing muscle along with fat leaves you weaker, slows your metabolism, and increases the likelihood of regaining weight. Our protocol prioritizes body composition, losing fat while protecting the muscle you've worked for. That's why we pair every medication track with protein-forward nutrition guidance and resistance training recommendations.",
+        tracksHeading: 'Three Medication Tracks',
+        tracksSubheading: 'Your provider will help you choose the right track based on your health history, goals, and how your body responds over time.',
+        semaTag: 'GLP-1 Agonist',
+        semaTitle: 'Semaglutide',
+        semaSubtitle: '+ Vitamin B12',
+        semaDesc: 'Semaglutide reduces appetite, slows digestion, and improves insulin sensitivity. Combined with B12 to support energy and reduce fatigue. Our microdose protocol starts at 1/5th the standard starting dose.',
+        sema1: 'Best first-line GLP-1 option',
+        sema2: 'Proven 12&ndash;15% average body weight loss',
+        sema3: 'Improves blood sugar and cardiovascular markers',
+        sema4: 'Weekly injection, self-administered at home',
+        tirzTag: 'Dual GLP-1 / GIP',
+        tirzTitle: 'Tirzepatide',
+        tirzSubtitle: '+ Niacinamide (B3)',
+        tirzDesc: 'Tirzepatide works on two appetite-regulating hormones simultaneously, delivering superior weight loss compared to semaglutide. Combined with niacinamide to support metabolic and skin health.',
+        tirz1: 'Strongest weight loss outcomes available',
+        tirz2: '18&ndash;22% average body weight loss in trials',
+        tirz3: 'Particularly effective for insulin resistance',
+        tirz4: 'Weekly injection, self-administered at home',
+        tesaTag: 'GHRH Analogue',
+        tesaTitle: 'Tesamorelin',
+        tesaSubtitle: 'Body Composition',
+        tesaDesc: "Tesamorelin stimulates your body's own growth hormone production to specifically target visceral fat, the deep abdominal fat linked to metabolic disease. Unlike GLP-1s, it works on body composition directly.",
+        tesa1: 'Targets visceral (belly) fat specifically',
+        tesa2: 'Preserves and supports lean muscle mass',
+        tesa3: 'Can be used alone or added to a GLP-1 track',
+        tesa4: '5 days on / 2 days off weekly schedule',
+        tesa5: 'Self-administered injection at home',
+        includedHeading: 'Everything Included in Your Program',
+        includedSubheading: 'No per-visit charges, no hidden fees, no surprise bills. Your monthly fee covers everything below.',
+        inc1Title: 'Monthly Provider Check-In',
+        inc1Desc: 'Telehealth or in-person visit with your provider for dose review, progress tracking, and prescription renewal.',
+        inc2Title: 'Medication Pickup',
+        inc2Desc: 'All medications require in-office pickup. This allows your provider to supply needles, syringes, and personalized dosing instructions to ensure accuracy and safety.',
+        inc3Title: 'Direct Text Access',
+        inc3Desc: 'Reach your provider between visits by text for side effect questions, dose concerns, or anything that comes up.',
+        inc4Title: 'Nutrition Coaching',
+        inc4Desc: 'Protein-first guidance, anti-inflammatory food principles, and practical strategies for managing appetite changes on medication.',
+        inc5Title: 'Activity Guidance',
+        inc5Desc: 'Personalized movement recommendations focused on resistance training and Zone 2 cardio to preserve lean mass during weight loss.',
+        inc6Title: 'Progress Tracking',
+        inc6Desc: 'Monthly weight, BMI, and waist circumference measurements with progress charted over time to keep you and your provider on the same page.',
+        pricingHeading: 'Individualized Pricing',
+        pricingP1: 'Pricing for our Medical Weight Loss Program is individualized based on your medication track, dosage, and clinical needs. There is no one-size-fits-all cost because there is no one-size-fits-all protocol.',
+        pricingP2: 'Your provider will review your health history at your intake consult and build a plan tailored to your goals and your body. Pricing will be discussed transparently at that visit.',
+        pricingBtn: 'Schedule a Consult to Discuss Pricing',
+        faqHeading: 'Common Questions',
+        faq1Q: 'Is this program right for me?',
+        faq1A: 'Good candidates have a BMI of 30 or higher, or a BMI of 27 or higher with a weight-related condition such as high blood pressure, prediabetes, high cholesterol, PCOS, or sleep apnea. The program is not appropriate during pregnancy, with a personal or family history of medullary thyroid cancer or MEN2 syndrome, or with active pancreatitis. Your provider will review your full health history at intake.',
+        faq2Q: 'Why do you use microdosing instead of standard doses?',
+        faq2A: 'Standard GLP-1 protocols start patients at doses designed for maximum weight loss speed, but this comes at a cost. High starting doses saturate receptors rapidly, leading to nausea, muscle loss, facial volume changes ("Ozempic face"), and hair thinning. Our approach starts much lower and escalates gradually, allowing your body to adapt. The result is better tolerability, preserved lean mass, and results that are sustainable rather than dramatic and short-lived.',
+        faq3Q: 'How is the medication delivered?',
+        faq3A: 'Medications are compounded at FDA-registered pharmacies (Empower Pharmacy for semaglutide and tirzepatide; Alpha Biomed for tesamorelin) and require in-office pickup. This allows your provider to supply needles, syringes, and personalized dosing instructions at every pickup. You self-administer injections subcutaneously, your provider will walk you through the technique at your intake visit and is available by text with any questions.',
+        faq4Q: 'What makes tesamorelin different from semaglutide or tirzepatide?',
+        faq4A: 'GLP-1 medications like semaglutide and tirzepatide reduce weight primarily by suppressing appetite. Tesamorelin works differently, it stimulates your pituitary gland to produce growth hormone, which directly reduces visceral fat (the deep abdominal fat around your organs). It does not suppress appetite, making it an excellent option for patients who want body composition changes without aggressive appetite suppression, or as an add-on for patients already on a GLP-1 who want to accelerate fat loss while protecting muscle.',
+        faq5Q: 'Do I need a DPC membership to enroll?',
+        faq5A: 'No. The weight loss program is available as a completely standalone service. If you are already a Staywell Health DPC member, you receive a monthly discount on your program fee and have your intake consult waived. You can also join the DPC membership at any time if you decide you want integrated primary care alongside your weight loss program.',
+        faq6Q: 'How long will I need to be on the program?',
+        faq6A: 'Obesity is a chronic condition, and these medications work best as long-term tools. Most patients see meaningful results within the first 3 months, with continued improvement over 6&ndash;12 months. Patients who discontinue without a solid lifestyle foundation in place typically regain some weight. Your provider will work with you on a long-term strategy, including whether dose reduction, intermittent dosing, or a maintenance protocol makes sense for your goals.',
+        faq7Q: 'Can I use my insurance?',
+        faq7A: 'Everything is included in the monthly membership. The program is transparent and all-inclusive, no surprise bills.',
+        ctaHeading: 'Ready to Get Started?',
+        ctaDesc: "Schedule your intake consult with your provider. We'll review your health history, order your baseline labs, and build a protocol that fits your body and your goals.",
+        scheduleIntake: 'Schedule Intake Consult'
       },
       footer: {
         tagline: 'Premium membership medicine in Raleigh, NC with real access to your provider and care that goes deeper.',
@@ -387,6 +486,7 @@
         connectSocial: 'Con\u00E9ctate en redes sociales'
       },
       home: {
+        pageTitle: 'Staywell Health - Medicina de Membres\u00EDa Personalizada en Raleigh, NC',
         heroBadge: 'Medicina de Membres\u00EDa Personalizada en Raleigh, NC',
         heroTitle1: 'Atenci\u00F3n integral,',
         heroTitle2: 'a tu manera',
@@ -454,6 +554,7 @@
         cookieLearnMore: 'Conoce M\u00E1s'
       },
       about: {
+        pageTitle: 'Acerca de - Staywell Health',
         heroTitle: 'Acerca de Staywell Health',
         heroQuote: 'Una reimaginaci\u00F3n de lo que la atenci\u00F3n m\u00E9dica podr\u00EDa ser, desde atenci\u00F3n primaria hasta salud hormonal, control de peso y medicina de longevidad, para ayudar a las personas a sanar de verdad y mantenerse bien.',
         whoWeAreHeading: 'Qui\u00E9nes Somos',
@@ -502,6 +603,7 @@
         valueEmpowermentDesc: 'Creemos en empoderarte con conocimiento, herramientas y apoyo para que tomes un papel activo en tu salud y bienestar.'
       },
       dpc: {
+        pageTitle: 'Servicios de Atenci\u00F3n Primaria Directa - Staywell Health',
         heroTitle: 'Servicios de Atenci\u00F3n Primaria Directa',
         heroSubtitle: 'Servicios de atenci\u00F3n m\u00E9dica integral dise\u00F1ados para apoyar tu camino de salud completo, desde la prevenci\u00F3n hasta el tratamiento y todo lo dem\u00E1s.',
         servicesHeading: 'Servicios de Atenci\u00F3n Primaria',
@@ -609,6 +711,7 @@
         questionsText: 'Preguntas? Env\u00EDanos un mensaje al <a href="sms:9192389555" style="color: #7a8a7a; font-weight: 600;">919-238-9555</a>'
       },
       mens: {
+        pageTitle: 'Optimizaci\u00F3n Hormonal para Hombres (TRT) - Staywell Health',
         heroTitle: 'Optimizaci\u00F3n Hormonal para Hombres',
         heroSubtitle: 'Terapia de reemplazo de testosterona (TRT) y atenci\u00F3n hormonal guiada por interpretaci\u00F3n experta de laboratorio y protocolos precisos e individualizados. No es una plantilla, es un plan construido alrededor de tu biolog\u00EDa.',
         problemDesc: 'Los rangos de referencia est\u00E1ndar se basan en promedios poblacionales, no en la funci\u00F3n \u00F3ptima. La testosterona en el rango bajo-normal se descarta, incluso cuando te est\u00E1 quitando impulso, fuerza y sue\u00F1o. Un TSH de 3.8 est\u00E1 t\u00E9cnicamente dentro de rango, pero para muchos hombres representa una funci\u00F3n tiroidea lenta que tambi\u00E9n afecta la energ\u00EDa y el peso. En Staywell, leemos los laboratorios como deben leerse, en el contexto de tus s\u00EDntomas, tu historial, y lo que \u00F3ptimo realmente significa para ti.',
@@ -631,6 +734,7 @@
         pricingNote1: 'El precio de la optimizaci\u00F3n hormonal para hombres es individualizado seg\u00FAn tu protocolo, an\u00E1lisis y necesidades de monitoreo continuo. Tu doctor revisar\u00E1 todos los costos de forma transparente en tu consulta inicial, sin sorpresas.'
       },
       womens: {
+        pageTitle: 'Optimizaci\u00F3n Hormonal para Mujeres (HRT) - Staywell Health',
         heroTitle: 'Optimizaci\u00F3n Hormonal para Mujeres',
         heroSubtitle: 'Terapia de reemplazo hormonal (HRT) para la menopausia, perimenopausia y m\u00E1s, guiada por interpretaci\u00F3n experta de laboratorio y protocolos precisos e individualizados. No es una plantilla, es un plan construido alrededor de tu biolog\u00EDa.',
         problemDesc: 'Los rangos de referencia est\u00E1ndar se basan en promedios poblacionales, no en la funci\u00F3n \u00F3ptima. Los s\u00EDntomas de perimenopausia y menopausia se descartan como "simplemente envejecer," incluso cuando est\u00E1n afectando tu sue\u00F1o, estado de \u00E1nimo y calidad de vida. Un TSH de 3.8 est\u00E1 t\u00E9cnicamente dentro de rango, pero para muchas mujeres representa una funci\u00F3n tiroidea lenta que afecta la energ\u00EDa, el peso y el estado de \u00E1nimo. En Staywell, leemos los laboratorios como deben leerse, en el contexto de tus s\u00EDntomas, tu historial, y lo que \u00F3ptimo realmente significa para ti.',
@@ -696,6 +800,14 @@
         el.innerHTML = value;
       }
     });
+    // Translate the browser tab title, if this page declares one
+    const titleKey = document.documentElement.getAttribute('data-i18n-title');
+    if (titleKey) {
+      const titleValue = lookup(dict, titleKey);
+      if (titleValue !== undefined) {
+        document.title = titleValue;
+      }
+    }
     // The toggle always shows the language you'd switch TO, not the current one.
     document.querySelectorAll('[data-lang-toggle] .lang-label').forEach(function (el) {
       el.textContent = lang === 'en' ? 'ES' : 'EN';
