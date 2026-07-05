@@ -999,6 +999,9 @@ h1, h2, h3, h4, h5, h6 {
 .hero-mens-hormone {
     background-image: url('images/hero-mens-hormone.jpg');
 }
+.hero-womens-hormone {
+    background-image: url('images/hero-womens-hormone.jpg');
+}
 .hero-aesthetics {
     background-image: url('images/hero-aesthetics.jpg');
 }
