@@ -77,10 +77,14 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
+        <nav class="navbar">
         <div class="nav-container">
             <img src="../Logo.png" alt="Staywell Health" class="logo">
-            <div class="hamburger"><span></span><span></span><span></span></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../about.html">About</a></li>
@@ -265,11 +269,11 @@
         </div>
     </div>
 
-    <section class="section section-gray">
+        <section class="section section-gray">
         <div class="container">
             <div class="text-center">
-                <h2>Looking for care that actually listens?</h2>
-                <p style="font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem; max-width: 40rem; margin-left: auto; margin-right: auto;">Book a free 15-minute virtual meet and greet to see if Staywell Health is the right fit for you.</p>
+                <h2>Ready to experience care like this?</h2>
+                <p style="font-size: 1.125rem; color: #6b7280; margin-bottom: 2rem; max-width: 40rem; margin-left: auto; margin-right: auto;">Book a free 15-minute virtual meet and greet to see if Staywell Health is right for you.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="https://staywellforlife.hint.com/booking?appointment-type=appty-fc881b06ab392a22" target="_blank" class="btn-primary">Book Free Meet &amp; Greet</a>
                     <a href="../index.html#pricing" class="btn-secondary">View Membership Plans</a>
@@ -278,23 +282,66 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <img src="../Logo.png" alt="Staywell Health" class="footer-logo">
-                <p>Direct Primary Care in Raleigh, NC</p>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="../Logo.png" alt="Staywell Health" class="footer-logo">
+                    <p style="color: #e5e7eb; margin-bottom: 1rem;">Premium direct primary care in Raleigh, NC with real access to your provider and care that goes deeper.</p>
+                    <p style="color: #d1d5db; font-size: 0.875rem;">This is an all-inclusive and affirming space.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../index.html#pricing">Pricing</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li><span style="color: #e5e7eb;">Primary Care</span></li>
+                        <li><span style="color: #e5e7eb;">Lifestyle Medicine</span></li>
+                        <li><span style="color: #e5e7eb;">Aesthetics</span></li>
+                        <li><span style="color: #e5e7eb;">Preventive Care</span></li>
+                        <li><span style="color: #e5e7eb;">Lab Services</span></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="../dpc-services.html">Services</a>
-                <a href="../index.html#pricing">Pricing</a>
-                <a href="../blog.html">Blog</a>
-                <a href="../index.html#contact">Contact</a>
-                <a href="https://staywellforlife.hint.com/login/request" target="_blank">Patient Portal</a>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Staywell Health, PLLC. All rights reserved.</p>
             </div>
-            <p class="footer-disclaimer">This blog is for educational purposes only and does not constitute medical advice. Please consult a qualified healthcare provider for personalized guidance.</p>
         </div>
     </footer>
 
-    <script src="../scripts.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function(e) {
+          e.stopPropagation();
+          navLinks.classList.toggle('active');
+        });
+        var links = document.querySelectorAll('.nav-links a');
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener('click', function() {
+            navLinks.classList.remove('active');
+          });
+        }
+        document.addEventListener('click', function(e) {
+          if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('active');
+          }
+        });
+      }
+    });
+    </script>
+    <script src="../main.js"></script>
 </body>
 </html>
