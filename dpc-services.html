@@ -248,6 +248,106 @@
             <h2 data-i18n="dpc.pricingHeading">Transparent Membership Pricing</h2>
             <p class="text-center mb-8" style="font-size: 1.125rem; color: #6b7280;" data-i18n="dpc.pricingSubheading">No hidden fees. No insurance hassles. Just honest, upfront pricing.</p>
 
+            <!-- Which Membership Quiz -->
+            <div class="max-w-4xl" style="margin: 0 auto;">
+                <div id="membership-quiz" class="mq-wrap">
+                    <h3 class="text-center" style="margin-bottom: 0.5rem;" data-i18n="dpc.quizHeading">Not Sure Which Membership Is Right for You?</h3>
+                    <p class="text-center" style="color: #6b7280; margin-bottom: 2rem;" data-i18n="dpc.quizSubheading">Answer a couple of quick questions and we'll point you in the right direction.</p>
+
+                    <!-- Step 1 -->
+                    <div class="mq-step" data-step="1">
+                        <p class="mq-question" data-i18n="dpc.quizQ1">What are you looking for?</p>
+                        <div class="mq-options">
+                            <button type="button" class="mq-option" data-next="result-optimization" data-i18n="dpc.quizQ1OptA">Ongoing hormone, peptide, or functional medicine management</button>
+                            <button type="button" class="mq-option" data-next="result-weightloss" data-i18n="dpc.quizQ1OptB">Medical Weight Loss</button>
+                            <button type="button" class="mq-option" data-next="2-gaht" data-i18n="dpc.quizQ1OptGaht">GAHT (gender-affirming hormone therapy)</button>
+                            <button type="button" class="mq-option" data-next="result-compare" data-i18n="dpc.quizQ1OptC">Standard primary care only (no specialty care)</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2-gaht -->
+                    <div class="mq-step" data-step="2-gaht" hidden>
+                        <p class="mq-question" data-i18n="dpc.quizQ2Gaht">Do you have a primary care provider you'll continue seeing?</p>
+                        <div class="mq-options">
+                            <button type="button" class="mq-option" data-next="result-gaht-standalone" data-i18n="dpc.quizQ2GahtOptYes">Yes, I'll keep my current PCP</button>
+                            <button type="button" class="mq-option" data-next="result-compare-gaht" data-i18n="dpc.quizQ2GahtOptNo">No, I'd like Staywell Health to be my PCP too</button>
+                        </div>
+                        <button type="button" class="mq-back" data-back="1" data-i18n="dpc.quizBack">&larr; Back</button>
+                    </div>
+
+                    <!-- Result: Optimization -->
+                    <div class="mq-result" data-step="result-optimization" hidden>
+                        <div class="mq-result-card mq-optimization">
+                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
+                            <h4 data-i18n="dpc.optimizationTitle">Optimization Membership</h4>
+                            <p data-i18n="dpc.quizResultOptDesc">Includes everything in Complete Membership, plus management of hormone optimization, peptide therapy, functional medicine, or anti-aging and longevity care.</p>
+                            <a href="#optimization-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingOptimization">See Optimization Pricing</a>
+                        </div>
+                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
+                    </div>
+
+                    <!-- Result: Weight Loss -> Access -->
+                    <div class="mq-result" data-step="result-weightloss" hidden>
+                        <div class="mq-result-card mq-access">
+                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
+                            <h4 data-i18n="dpc.accessTitle">Access Membership</h4>
+                            <p data-i18n="dpc.quizResultWeightLossDesc">Medical Weight Loss management is included with Access Membership at no extra program cost, medication is billed separately, so Access is the lowest-cost way to get started.</p>
+                            <a href="#access-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingAccess">See Access Pricing</a>
+                        </div>
+                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
+                    </div>
+
+                    <!-- Result: GAHT standalone -->
+                    <div class="mq-result" data-step="result-gaht-standalone" hidden>
+                        <div class="mq-result-card mq-gaht">
+                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
+                            <h4 data-i18n="dpc.quizResultGahtTitle">Standalone GAHT Membership</h4>
+                            <p data-i18n="dpc.quizResultGahtDesc">Since you already have a primary care provider, the standalone GAHT Membership gets you focused hormone therapy management for $49/month, no primary care membership needed.</p>
+                            <a href="gaht-membership.html" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeeGahtPricing">See GAHT Pricing</a>
+                        </div>
+                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
+                    </div>
+
+                    <!-- Result: Compare Access vs Complete (standard primary care) -->
+                    <div class="mq-result" data-step="result-compare" hidden>
+                        <p class="mq-question" data-i18n="dpc.quizCompareIntro">Both of these cover standard primary care, the difference is how visits are billed.</p>
+                        <div class="mq-compare-grid">
+                            <div class="mq-result-card mq-access mq-compare-card">
+                                <h4 data-i18n="dpc.accessTitle">Access Membership</h4>
+                                <p data-i18n="dpc.quizCompareAccessDesc">Lower monthly cost, pay-as-you-go per visit. Good if you only need care a few times a year.</p>
+                                <a href="#access-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingAccess">See Access Pricing</a>
+                            </div>
+                            <div class="mq-result-card mq-complete mq-compare-card">
+                                <h4 data-i18n="dpc.completeTitle">Complete Membership</h4>
+                                <p data-i18n="dpc.quizCompareCompleteDesc">Higher monthly cost, unlimited visits with no per-visit fee. Good if you expect to need care regularly.</p>
+                                <a href="#complete-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingComplete">See Complete Pricing</a>
+                            </div>
+                        </div>
+                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
+                    </div>
+
+                    <!-- Result: Compare Access vs Complete (GAHT + wants Staywell as PCP) -->
+                    <div class="mq-result" data-step="result-compare-gaht" hidden>
+                        <p class="mq-question" data-i18n="dpc.quizCompareGahtIntro">Either of these works, GAHT management is included at no extra cost. The difference is how your other primary care visits are billed.</p>
+                        <div class="mq-compare-grid">
+                            <div class="mq-result-card mq-access mq-compare-card">
+                                <h4 data-i18n="dpc.accessTitle">Access Membership</h4>
+                                <p data-i18n="dpc.quizCompareAccessDesc">Lower monthly cost, pay-as-you-go per visit. Good if you only need care a few times a year.</p>
+                                <a href="#access-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingAccess">See Access Pricing</a>
+                            </div>
+                            <div class="mq-result-card mq-complete mq-compare-card">
+                                <h4 data-i18n="dpc.completeTitle">Complete Membership</h4>
+                                <p data-i18n="dpc.quizCompareCompleteDesc">Higher monthly cost, unlimited visits with no per-visit fee. Good if you expect to need care regularly.</p>
+                                <a href="#complete-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingComplete">See Complete Pricing</a>
+                            </div>
+                        </div>
+                        <button type="button" class="mq-back" data-back="2-gaht" data-i18n="dpc.quizBack">&larr; Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-center" style="margin: 3rem 0 2rem; color: #374151;" data-i18n="dpc.orBrowseAll">Or Browse All Membership Pricing</h3>
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: start; margin-bottom: 2rem;">
                 <!-- Access Membership -->
                 <div id="access-card" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 8px solid #0ea5e9;">
@@ -374,105 +474,6 @@
                     <p style="color: #6b7280; text-align: center; font-size: 0.85rem; margin-top: 1rem;" data-i18n="dpc.enrollmentFee">Enrollment fee: $50 per person (family max $100)</p>
                 </div>
             </div>
-
-            <!-- Which Membership Quiz -->
-            <div class="max-w-4xl" style="margin: 0 auto;">
-                <div id="membership-quiz" class="mq-wrap">
-                    <h3 class="text-center" style="margin-bottom: 0.5rem;" data-i18n="dpc.quizHeading">Not Sure Which Membership Is Right for You?</h3>
-                    <p class="text-center" style="color: #6b7280; margin-bottom: 2rem;" data-i18n="dpc.quizSubheading">Answer a couple of quick questions and we'll point you in the right direction.</p>
-
-                    <!-- Step 1 -->
-                    <div class="mq-step" data-step="1">
-                        <p class="mq-question" data-i18n="dpc.quizQ1">What are you looking for?</p>
-                        <div class="mq-options">
-                            <button type="button" class="mq-option" data-next="result-optimization" data-i18n="dpc.quizQ1OptA">Ongoing hormone, peptide, or functional medicine management</button>
-                            <button type="button" class="mq-option" data-next="result-weightloss" data-i18n="dpc.quizQ1OptB">Medical Weight Loss</button>
-                            <button type="button" class="mq-option" data-next="2-gaht" data-i18n="dpc.quizQ1OptGaht">GAHT (gender-affirming hormone therapy)</button>
-                            <button type="button" class="mq-option" data-next="result-compare" data-i18n="dpc.quizQ1OptC">Standard primary care only (no specialty care)</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 2-gaht -->
-                    <div class="mq-step" data-step="2-gaht" hidden>
-                        <p class="mq-question" data-i18n="dpc.quizQ2Gaht">Do you have a primary care provider you'll continue seeing?</p>
-                        <div class="mq-options">
-                            <button type="button" class="mq-option" data-next="result-gaht-standalone" data-i18n="dpc.quizQ2GahtOptYes">Yes, I'll keep my current PCP</button>
-                            <button type="button" class="mq-option" data-next="result-compare-gaht" data-i18n="dpc.quizQ2GahtOptNo">No, I'd like Staywell Health to be my PCP too</button>
-                        </div>
-                        <button type="button" class="mq-back" data-back="1" data-i18n="dpc.quizBack">&larr; Back</button>
-                    </div>
-
-                    <!-- Result: Optimization -->
-                    <div class="mq-result" data-step="result-optimization" hidden>
-                        <div class="mq-result-card mq-optimization">
-                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
-                            <h4 data-i18n="dpc.optimizationTitle">Optimization Membership</h4>
-                            <p data-i18n="dpc.quizResultOptDesc">Includes everything in Complete Membership, plus management of hormone optimization, peptide therapy, functional medicine, or anti-aging and longevity care.</p>
-                            <a href="#optimization-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingOptimization">See Optimization Pricing</a>
-                        </div>
-                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
-                    </div>
-
-                    <!-- Result: Weight Loss -> Access -->
-                    <div class="mq-result" data-step="result-weightloss" hidden>
-                        <div class="mq-result-card mq-access">
-                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
-                            <h4 data-i18n="dpc.accessTitle">Access Membership</h4>
-                            <p data-i18n="dpc.quizResultWeightLossDesc">Medical Weight Loss management is included with Access Membership at no extra program cost, medication is billed separately, so Access is the lowest-cost way to get started.</p>
-                            <a href="#access-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingAccess">See Access Pricing</a>
-                        </div>
-                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
-                    </div>
-
-                    <!-- Result: GAHT standalone -->
-                    <div class="mq-result" data-step="result-gaht-standalone" hidden>
-                        <div class="mq-result-card mq-gaht">
-                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
-                            <h4 data-i18n="dpc.quizResultGahtTitle">Standalone GAHT Membership</h4>
-                            <p data-i18n="dpc.quizResultGahtDesc">Since you already have a primary care provider, the standalone GAHT Membership gets you focused hormone therapy management for $49/month, no primary care membership needed.</p>
-                            <a href="gaht-membership.html" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeeGahtPricing">See GAHT Pricing</a>
-                        </div>
-                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
-                    </div>
-
-                    <!-- Result: Compare Access vs Complete (standard primary care) -->
-                    <div class="mq-result" data-step="result-compare" hidden>
-                        <p class="mq-question" data-i18n="dpc.quizCompareIntro">Both of these cover standard primary care, the difference is how visits are billed.</p>
-                        <div class="mq-compare-grid">
-                            <div class="mq-result-card mq-access mq-compare-card">
-                                <h4 data-i18n="dpc.accessTitle">Access Membership</h4>
-                                <p data-i18n="dpc.quizCompareAccessDesc">Lower monthly cost, pay-as-you-go per visit. Good if you only need care a few times a year.</p>
-                                <a href="#access-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingAccess">See Access Pricing</a>
-                            </div>
-                            <div class="mq-result-card mq-complete mq-compare-card">
-                                <h4 data-i18n="dpc.completeTitle">Complete Membership</h4>
-                                <p data-i18n="dpc.quizCompareCompleteDesc">Higher monthly cost, unlimited visits with no per-visit fee. Good if you expect to need care regularly.</p>
-                                <a href="#complete-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingComplete">See Complete Pricing</a>
-                            </div>
-                        </div>
-                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
-                    </div>
-
-                    <!-- Result: Compare Access vs Complete (GAHT + wants Staywell as PCP) -->
-                    <div class="mq-result" data-step="result-compare-gaht" hidden>
-                        <p class="mq-question" data-i18n="dpc.quizCompareGahtIntro">Either of these works, GAHT management is included at no extra cost. The difference is how your other primary care visits are billed.</p>
-                        <div class="mq-compare-grid">
-                            <div class="mq-result-card mq-access mq-compare-card">
-                                <h4 data-i18n="dpc.accessTitle">Access Membership</h4>
-                                <p data-i18n="dpc.quizCompareAccessDesc">Lower monthly cost, pay-as-you-go per visit. Good if you only need care a few times a year.</p>
-                                <a href="#access-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingAccess">See Access Pricing</a>
-                            </div>
-                            <div class="mq-result-card mq-complete mq-compare-card">
-                                <h4 data-i18n="dpc.completeTitle">Complete Membership</h4>
-                                <p data-i18n="dpc.quizCompareCompleteDesc">Higher monthly cost, unlimited visits with no per-visit fee. Good if you expect to need care regularly.</p>
-                                <a href="#complete-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingComplete">See Complete Pricing</a>
-                            </div>
-                        </div>
-                        <button type="button" class="mq-back" data-back="2-gaht" data-i18n="dpc.quizBack">&larr; Back</button>
-                    </div>
-                </div>
-            </div>
-
 
 
             <!-- Billing Options -->
