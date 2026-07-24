@@ -19,6 +19,76 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="/images/favicon-16x16.png" sizes="16x16" type="image/png">
+<style>
+  /* Membership quiz */
+  .mq-wrap {
+    background: white;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  }
+  .mq-question {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+  }
+  .mq-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+  .mq-option {
+    font-family: inherit;
+    font-size: 0.95rem;
+    text-align: left;
+    background: #f8fafc;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    color: #374151;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .mq-option:hover { border-color: #7a8a7a; background: #f0fdf4; }
+  .mq-back {
+    display: block;
+    margin: 1.5rem auto 0;
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .mq-back:hover { color: #374151; text-decoration: underline; }
+  .mq-result-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+  }
+  .mq-result-label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  .mq-result-card h4 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .mq-result-card p { color: #374151; max-width: 34rem; margin: 0 auto 1.5rem; line-height: 1.6; }
+  .mq-result-btn { display: inline-block; }
+  .mq-access { background: #f0f9ff; border-color: #0ea5e9; }
+  .mq-access h4 { color: #0ea5e9; }
+  .mq-complete { background: #f0fdf4; border-color: #059669; }
+  .mq-complete h4 { color: #059669; }
+  .mq-optimization { background: #f5f3ff; border-color: #7a5af5; }
+  .mq-optimization h4 { color: #7a5af5; }
+</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3E9RVJR52"></script>
 <script>
@@ -167,15 +237,9 @@
             <h2 data-i18n="dpc.pricingHeading">Transparent Membership Pricing</h2>
             <p class="text-center mb-8" style="font-size: 1.125rem; color: #6b7280;" data-i18n="dpc.pricingSubheading">No hidden fees. No insurance hassles. Just honest, upfront pricing.</p>
 
-            <div class="max-w-4xl" style="margin: 0 auto 2.5rem;">
-                <div style="background: #f8fafc; padding: 1.5rem 2rem; border-radius: 1rem; border-left: 4px solid #7a8a7a; text-align: center;">
-                    <p style="margin: 0; color: #374151; font-size: 0.95rem;" data-i18n="dpc.standardCareNote">Direct Primary Care is for your standard primary care needs, not specialty testing and management of hormones, peptides, or other advanced protocols. Medical Weight Loss and GAHT management are included with your Access, Complete, or Optimization membership at no additional program cost (medication is billed separately). Hormone optimization, peptide therapy, functional medicine, and anti-aging and longevity care require Optimization Membership, which includes everything in Complete Membership.</p>
-                </div>
-            </div>
-
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: start; margin-bottom: 2rem;">
                 <!-- Access Membership -->
-                <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 8px solid #0ea5e9;">
+                <div id="access-card" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 8px solid #0ea5e9;">
                     <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: #0ea5e9; text-align: center;" data-i18n="dpc.accessTitle">Access Membership</h3>
                     <p style="color: #6b7280; margin-bottom: 2rem; text-align: center; font-size: 0.9rem;" data-i18n="dpc.accessTagline">Basic access to care &bull; Pay-as-you-go visits &bull; This membership is not insurance</p>
 
@@ -216,7 +280,7 @@
                 </div>
 
                 <!-- Complete Membership -->
-                <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 8px solid #059669;">
+                <div id="complete-card" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 8px solid #059669;">
                     <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: #059669; text-align: center;" data-i18n="dpc.completeTitle">Complete Membership</h3>
                     <p style="color: #6b7280; margin-bottom: 2rem; text-align: center; font-size: 0.9rem;" data-i18n="dpc.completeTagline">Full primary care services &bull; No additional copays &bull; This membership is not insurance</p>
 
@@ -266,7 +330,7 @@
                 </div>
 
                 <!-- Optimization Membership -->
-                <div style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 8px solid #7a5af5;">
+                <div id="optimization-card" style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-top: 8px solid #7a5af5;">
                     <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem; color: #7a5af5; text-align: center;" data-i18n="dpc.optimizationTitle">Optimization Membership</h3>
                     <p style="color: #6b7280; margin-bottom: 2rem; text-align: center; font-size: 0.9rem;" data-i18n="dpc.optimizationTagline">Everything in Complete Membership, plus hormone, peptide, and functional medicine management &bull; This membership is not insurance</p>
 
@@ -300,55 +364,78 @@
                 </div>
             </div>
 
-            <!-- Lab payment note -->
-            <div class="max-w-4xl" style="margin: 0 auto 2.5rem;">
-                <div style="background: #dcfce7; padding: 1.5rem 2rem; border-radius: 1rem; border-left: 4px solid #059669; text-align: center;">
-                    <p style="margin: 0; color: #374151; font-size: 0.95rem;" data-i18n="dpc.labPaymentNote">Every membership can use insurance to cover labs, or pay Staywell Health directly for labs. Optimization members receive exclusive lab discounts, Complete members receive discounted labs, and Access members can always use insurance or discuss self-pay options with their provider.</p>
+            <!-- Which Membership Quiz -->
+            <div class="max-w-4xl" style="margin: 0 auto;">
+                <div id="membership-quiz" class="mq-wrap">
+                    <h3 class="text-center" style="margin-bottom: 0.5rem;" data-i18n="dpc.quizHeading">Not Sure Which Membership Is Right for You?</h3>
+                    <p class="text-center" style="color: #6b7280; margin-bottom: 2rem;" data-i18n="dpc.quizSubheading">Answer a couple of quick questions and we'll point you in the right direction.</p>
+
+                    <!-- Step 1 -->
+                    <div class="mq-step" data-step="1">
+                        <p class="mq-question" data-i18n="dpc.quizQ1">What are you looking for?</p>
+                        <div class="mq-options">
+                            <button type="button" class="mq-option" data-next="result-optimization" data-i18n="dpc.quizQ1OptA">Ongoing hormone, peptide, or functional medicine management</button>
+                            <button type="button" class="mq-option" data-next="result-weightgaht" data-i18n="dpc.quizQ1OptB">Medical Weight Loss or GAHT only</button>
+                            <button type="button" class="mq-option" data-next="2" data-i18n="dpc.quizQ1OptC">Standard primary care (checkups, sick visits, chronic conditions)</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="mq-step" data-step="2" hidden>
+                        <p class="mq-question" data-i18n="dpc.quizQ2">How often do you expect to need visits?</p>
+                        <div class="mq-options">
+                            <button type="button" class="mq-option" data-next="result-access" data-i18n="dpc.quizQ2OptA">Just a few times a year</button>
+                            <button type="button" class="mq-option" data-next="result-complete" data-i18n="dpc.quizQ2OptB">Regularly, and I'd rather not pay a per-visit fee</button>
+                        </div>
+                        <button type="button" class="mq-back" data-back="1" data-i18n="dpc.quizBack">&larr; Back</button>
+                    </div>
+
+                    <!-- Result: Access -->
+                    <div class="mq-result" data-step="result-access" hidden>
+                        <div class="mq-result-card mq-access">
+                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
+                            <h4 data-i18n="dpc.accessTitle">Access Membership</h4>
+                            <p data-i18n="dpc.quizResultAccessDesc">Low monthly cost with pay-as-you-go visits, a good fit if you only need care a few times a year.</p>
+                            <a href="#access-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingAccess">See Access Pricing</a>
+                        </div>
+                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
+                    </div>
+
+                    <!-- Result: Complete -->
+                    <div class="mq-result" data-step="result-complete" hidden>
+                        <div class="mq-result-card mq-complete">
+                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
+                            <h4 data-i18n="dpc.completeTitle">Complete Membership</h4>
+                            <p data-i18n="dpc.quizResultCompleteDesc">Unlimited visits with no per-visit fees, a good fit if you expect to need care regularly.</p>
+                            <a href="#complete-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingComplete">See Complete Pricing</a>
+                        </div>
+                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
+                    </div>
+
+                    <!-- Result: Optimization -->
+                    <div class="mq-result" data-step="result-optimization" hidden>
+                        <div class="mq-result-card mq-optimization">
+                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
+                            <h4 data-i18n="dpc.optimizationTitle">Optimization Membership</h4>
+                            <p data-i18n="dpc.quizResultOptDesc">Includes everything in Complete Membership, plus management of hormone optimization, peptide therapy, functional medicine, or anti-aging and longevity care.</p>
+                            <a href="#optimization-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingOptimization">See Optimization Pricing</a>
+                        </div>
+                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
+                    </div>
+
+                    <!-- Result: Weight Loss / GAHT -->
+                    <div class="mq-result" data-step="result-weightgaht" hidden>
+                        <div class="mq-result-card mq-access">
+                            <span class="mq-result-label" data-i18n="dpc.quizResultLabel">We'd recommend</span>
+                            <h4 data-i18n="dpc.quizResultWeightGahtTitle">Start With Access Membership</h4>
+                            <p data-i18n="dpc.quizResultWeightGahtDesc">Medical Weight Loss and GAHT management are included with any membership tier, medication is billed separately, so Access is the lowest-cost way to get started. If you'd rather keep your current primary care provider, GAHT is also available on its own for $49/month.</p>
+                            <a href="#access-card" class="btn-secondary mq-result-btn" data-i18n="dpc.quizSeePricingAccess">See Access Pricing</a>
+                        </div>
+                        <button type="button" class="mq-back" data-restart="true" data-i18n="dpc.quizStartOver">&larr; Start Over</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Which membership do I need -->
-            <div class="max-w-4xl" style="margin: 0 auto 2.5rem;">
-                <h3 class="text-center" style="margin-bottom: 1.5rem;" data-i18n="dpc.whichMembershipHeading">Which Membership Do I Need?</h3>
-                <div class="pricing-table" style="width: 100%;">
-                    <div class="pricing-row pricing-header">
-                        <div class="pricing-cell" data-i18n="dpc.programColumn">Program</div>
-                        <div class="pricing-cell" data-i18n="dpc.membershipRequiredColumn">Membership Required</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-cell" data-i18n="dpc.rowStandardCare">Standard Primary Care</div>
-                        <div class="pricing-cell" data-i18n="dpc.rowStandardCareReq">Access or Complete</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-cell" data-i18n="dpc.rowWeightLoss">Medical Weight Loss</div>
-                        <div class="pricing-cell" data-i18n="dpc.rowWeightLossReq">Included with Access, Complete, or Optimization (medication billed separately)</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-cell" data-i18n="dpc.rowGaht">GAHT</div>
-                        <div class="pricing-cell" data-i18n="dpc.rowGahtReq">Included with Access, Complete, or Optimization, or standalone GAHT Membership ($49/mo) if you have your own PCP</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-cell" data-i18n="dpc.rowAesthetics">Aesthetics</div>
-                        <div class="pricing-cell" data-i18n="dpc.rowAestheticsReq">No membership required</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-cell" data-i18n="dpc.rowHormone">Hormone Optimization (Men's &amp; Women's)</div>
-                        <div class="pricing-cell" data-i18n="dpc.rowHormoneReq">Optimization Membership</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-cell" data-i18n="dpc.rowPeptide">Peptide Therapy</div>
-                        <div class="pricing-cell" data-i18n="dpc.rowPeptideReq">Optimization Membership (or included in Medical Weight Loss protocol)</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-cell" data-i18n="dpc.rowFunctionalMed">Functional Medicine</div>
-                        <div class="pricing-cell" data-i18n="dpc.rowFunctionalMedReq">Optimization Membership</div>
-                    </div>
-                    <div class="pricing-row">
-                        <div class="pricing-cell" data-i18n="dpc.rowLongevity">Anti-Aging &amp; Longevity</div>
-                        <div class="pricing-cell" data-i18n="dpc.rowLongevityReq">Optimization Membership</div>
-                    </div>
-                </div>
-            </div>
 
             <!-- Billing Options -->
             <div style="text-align: center; margin-bottom: 2rem; padding: 1.5rem; background: #f8fafc; border-radius: 8px; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -460,6 +547,39 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+});
+</script>
+<script>
+// Membership quiz
+document.addEventListener('DOMContentLoaded', function() {
+  var quiz = document.getElementById('membership-quiz');
+  if (!quiz) return;
+
+  var allSteps = quiz.querySelectorAll('.mq-step, .mq-result');
+
+  function showStep(stepName) {
+    allSteps.forEach(function(el) {
+      el.hidden = el.getAttribute('data-step') !== stepName;
+    });
+  }
+
+  quiz.querySelectorAll('.mq-option').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      showStep(btn.getAttribute('data-next'));
+    });
+  });
+
+  quiz.querySelectorAll('.mq-back[data-back]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      showStep(btn.getAttribute('data-back'));
+    });
+  });
+
+  quiz.querySelectorAll('.mq-back[data-restart]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      showStep('1');
+    });
+  });
 });
 </script>
 <script src="js/i18n.js"></script>
