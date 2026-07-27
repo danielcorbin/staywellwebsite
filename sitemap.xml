@@ -31,6 +31,11 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://www.staywellforlife.com/staywell-functional-medicine.html</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://www.staywellforlife.com/staywell-services.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
