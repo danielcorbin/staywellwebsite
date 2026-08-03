@@ -155,11 +155,11 @@
         partnerP1: "At Staywell Health, you're not just another patient in a busy schedule. You're a valued partner in your own healthcare journey, working with a dedicated provider who takes the time to truly understand your unique needs and goals.",
         partnerP2: 'Our membership model allows for unhurried consultations, comprehensive care planning, and the development of genuine therapeutic relationships that make all the difference in your health outcomes.',
         partnerP3: 'Experience the difference that personalized, relationship-based healthcare can make in your life.',
-        danielHeading: 'Meet Daniel',
-        danielP1: 'Daniel brings a unique perspective to healthcare, spanning primary care, hormone optimization, and longevity medicine, combining traditional medical training with a deep understanding of lifestyle medicine and integrative approaches to health.',
-        danielP2: 'With years of experience in primary care, Daniel has witnessed firsthand the transformative power of taking time with patients, addressing root causes, and focusing on prevention rather than just treatment.',
+        danielHeading: 'Meet Dr. Corbin',
+        danielP1: 'Dr. Daniel Corbin is a nationally board-certified family nurse practitioner who earned his Doctor of Nursing Practice from UNCW. He brings 9 years of experience in primary care, with emphasis on lifestyle and functional medicine.',
+        danielP2: 'With his background in primary care, Dr. Corbin has witnessed firsthand the transformative power of taking time with patients, addressing root causes, and focusing on prevention rather than just treatment.',
         danielP3: 'His approach is grounded in evidence-based medicine while recognizing that true healing often requires addressing the whole person - mind, body, and spirit.',
-        danielP4: 'When not caring for patients, Daniel enjoys spending time with his family, staying active outdoors, and continuing his education in functional and lifestyle medicine.',
+        danielP4: 'When not caring for patients, Dr. Corbin enjoys spending time with his family, staying active outdoors, and continuing his education in functional and lifestyle medicine.',
         missionTitle: 'Our Mission',
         missionText: 'To provide compassionate, root-cause, lifestyle-based healthcare that treats the whole person - body, mind, and spirit - through thoughtful, evidence-based care that respects the whole person.',
         visionTitle: 'Our Vision',
@@ -731,7 +731,7 @@
         ctaHeading: 'Ready to Get to the Root of It?',
         ctaDesc: 'Join today. We will review your history, order the right functional labs, and build a protocol designed around your biology and your goals.',
         certDisclosureTitle: 'A Note on Training',
-        certDisclosureDesc: 'Daniel is currently pursuing certification in functional medicine. He does not currently hold, and does not claim to hold, a functional medicine certification. Functional medicine principles are applied based on his ongoing training, clinical experience, and continuing education.'
+        certDisclosureDesc: 'Dr. Corbin is currently pursuing certification in functional medicine. He does not currently hold, and does not claim to hold, a functional medicine certification. Functional medicine principles are applied based on his ongoing training, clinical experience, and continuing education.'
       },
       gaht: {
         pageTitle: 'Gender-Affirming Hormone Therapy Membership - Staywell Health',
@@ -1161,7 +1161,7 @@
         tag17: 'Our Story',
         meta17: 'October 1, 2025 &middot; 4 min read',
         title17: 'Why I Started Staywell Health',
-        excerpt17: 'After 8 years in traditional primary care, I hit a wall. Here is what pushed me to leave, what scared me about it, and what I set out to build.',
+        excerpt17: 'After 9 years in traditional primary care, I hit a wall. Here is what pushed me to leave, what scared me about it, and what I set out to build.',
         ctaHeading: 'Ready to experience care like this?',
         ctaDesc: 'Book a free 15-minute virtual meet and greet to see if Staywell Health is right for you.',
         viewMembershipPlans: 'View Membership Plans'
@@ -1324,11 +1324,11 @@
         partnerP1: 'En Staywell Health, no eres solo otro paciente en una agenda ocupada. Eres un compa\u00F1ero valioso en tu propio camino de salud, trabajando con un doctor dedicado que se toma el tiempo para entender verdaderamente tus necesidades y objetivos \u00FAnicos.',
         partnerP2: 'Nuestro modelo de membres\u00EDa permite consultas sin prisa, planificaci\u00F3n integral de la atenci\u00F3n, y el desarrollo de relaciones terap\u00E9uticas genuinas que hacen toda la diferencia en tus resultados de salud.',
         partnerP3: 'Experimenta la diferencia que la atenci\u00F3n m\u00E9dica personalizada y basada en relaciones puede hacer en tu vida.',
-        danielHeading: 'Conoce a Daniel',
-        danielP1: 'Daniel aporta una perspectiva \u00FAnica a la atenci\u00F3n m\u00E9dica, que abarca atenci\u00F3n primaria, optimizaci\u00F3n hormonal y medicina de longevidad, combinando la formaci\u00F3n m\u00E9dica tradicional con un profundo entendimiento de la medicina de estilo de vida y enfoques integrativos de la salud.',
-        danielP2: 'Con a\u00F1os de experiencia en atenci\u00F3n primaria, Daniel ha sido testigo de primera mano del poder transformador de tomarse el tiempo con los pacientes, abordar las causas ra\u00EDz, y enfocarse en la prevenci\u00F3n en lugar de solo el tratamiento.',
+        danielHeading: 'Conoce al Dr. Corbin',
+        danielP1: 'El Dr. Daniel Corbin es un enfermero practicante familiar con certificaci\u00F3n nacional de junta que obtuvo su Doctor de Pr\u00E1ctica de Enfermer\u00EDa de UNCW. Trae 9 a\u00F1os de experiencia en atenci\u00F3n primaria, con \u00E9nfasis en medicina del estilo de vida y medicina funcional.',
+        danielP2: 'Con su trasfondo en atenci\u00F3n primaria, el Dr. Corbin ha sido testigo de primera mano del poder transformador de tomarse el tiempo con los pacientes, abordar las causas ra\u00EDz, y enfocarse en la prevenci\u00F3n en lugar de solo el tratamiento.',
         danielP3: 'Su enfoque se basa en la medicina basada en evidencia, reconociendo al mismo tiempo que la verdadera curaci\u00F3n a menudo requiere abordar a la persona completa: mente, cuerpo y esp\u00EDritu.',
-        danielP4: 'Cuando no est\u00E1 cuidando pacientes, Daniel disfruta pasar tiempo con su familia, mantenerse activo al aire libre, y continuar su educaci\u00F3n en medicina funcional y de estilo de vida.',
+        danielP4: 'Cuando no est\u00E1 cuidando pacientes, el Dr. Corbin disfruta pasar tiempo con su familia, mantenerse activo al aire libre, y continuar su educaci\u00F3n en medicina funcional y de estilo de vida.',
         missionTitle: 'Nuestra Misi\u00F3n',
         missionText: 'Brindar atenci\u00F3n m\u00E9dica compasiva, basada en causas ra\u00EDz y en el estilo de vida, que trate a la persona completa (cuerpo, mente y esp\u00EDritu) a trav\u00E9s de una atenci\u00F3n reflexiva y basada en evidencia que respeta a la persona completa.',
         visionTitle: 'Nuestra Visi\u00F3n',
@@ -1900,7 +1900,7 @@
         ctaHeading: '\u00BFListo para Llegar a la Ra\u00EDz del Problema?',
         ctaDesc: 'Inscr\u00EDbete hoy. Revisaremos tu historial, ordenaremos los an\u00E1lisis funcionales correctos, y construiremos un protocolo dise\u00F1ado seg\u00FAn tu biolog\u00EDa y tus objetivos.',
         certDisclosureTitle: 'Una Nota Sobre la Formaci\u00F3n',
-        certDisclosureDesc: 'Daniel se encuentra actualmente cursando una certificaci\u00F3n en medicina funcional. Actualmente no posee, ni afirma poseer, una certificaci\u00F3n en medicina funcional. Los principios de la medicina funcional se aplican con base en su formaci\u00F3n continua, su experiencia cl\u00EDnica, y su educaci\u00F3n continua.'
+        certDisclosureDesc: 'El Dr. Corbin se encuentra actualmente cursando una certificaci\u00F3n en medicina funcional. Actualmente no posee, ni afirma poseer, una certificaci\u00F3n en medicina funcional. Los principios de la medicina funcional se aplican con base en su formaci\u00F3n continua, su experiencia cl\u00EDnica, y su educaci\u00F3n continua.'
       },
       gaht: {
         pageTitle: 'Membres\u00EDa de Terapia Hormonal de Afirmaci\u00F3n de G\u00E9nero - Staywell Health',
@@ -2330,7 +2330,7 @@
         tag17: 'Nuestra Historia',
         meta17: '1 de octubre de 2025 &middot; 4 min de lectura',
         title17: 'Por Qu\u00E9 Comenc\u00E9 Staywell Health',
-        excerpt17: 'Despu\u00E9s de 8 a\u00F1os en atenci\u00F3n primaria tradicional, llegu\u00E9 a un l\u00EDmite. Esto es lo que me impuls\u00F3 a irme, lo que me asust\u00F3 al respecto, y lo que me propuse construir.',
+        excerpt17: 'Despu\u00E9s de 9 a\u00F1os en atenci\u00F3n primaria tradicional, llegu\u00E9 a un l\u00EDmite. Esto es lo que me impuls\u00F3 a irme, lo que me asust\u00F3 al respecto, y lo que me propuse construir.',
         ctaHeading: '\u00BFListo para experimentar una atenci\u00F3n as\u00ED?',
         ctaDesc: 'Reserva una consulta virtual gratuita de 15 minutos para ver si Staywell Health es adecuado para ti.',
         viewMembershipPlans: 'Ver Planes de Membres\u00EDa'
