@@ -51,6 +51,26 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://www.staywellforlife.com/staywell-female-fertility-program.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.staywellforlife.com/staywell-male-fertility-program.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.staywellforlife.com/staywell-mycotoxin-program.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.staywellforlife.com/staywell-trusted-resources.html</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://www.staywellforlife.com/staywell-about.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
@@ -187,6 +207,11 @@
   </url>
   <url>
     <loc>https://www.staywellforlife.com/blog/womens-hormone-health.html</loc>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.staywellforlife.com/blog/functional-lab-testing.html</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
