@@ -2,6 +2,7 @@
 
 <html lang="en">
 <head>
+<script>(function(){if('scrollRestoration' in history){history.scrollRestoration='manual';}function staywellScrollTop(){if(!location.hash){window.scrollTo(0,0);}}window.addEventListener('pageshow',staywellScrollTop);})();</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title data-i18n="homepage.title">Staywell Health | Direct Primary Care in Raleigh, NC</title>
@@ -181,7 +182,7 @@
 
   /* SPECIALTY GRID */
   .grid-specialty{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
     background:var(--line);
     max-width:1180px;margin:0 auto;
     border:1px solid var(--line);
@@ -354,9 +355,13 @@ End Meta Pixel Code -->
 <div class="nav-inner">
 <div class="nav-mark"><img alt="Staywell Health" class="nav-logo-img" src="images/Logo.png"/></div>
 <button aria-label="Toggle menu" class="hamburger"><span></span><span></span><span></span></button>
-<ul class="nav-links"><li><a data-i18n="homepage.navhome" href="index.html">Home</a></li><li><a data-i18n="homepage.navservices" href="staywell-services.html">Services</a></li>
+<ul class="nav-links"><li><a data-i18n="homepage.navhome" href="index.html">Home</a></li><li class="dropdown"><a class="dropbtn" data-i18n="homepage.navservices" href="staywell-services.html">Services ›</a>
+<div class="dropdown-content">
+<a data-i18n="homepage.navmembership" href="staywell-memberships.html">Membership</a>
+<a data-i18n="homepage.navfuncmed" href="staywell-functional-medicine.html">Functional Medicine</a>
+</div>
+</li>
 <li><a data-i18n="homepage.a2" href="staywell-about.html">About</a></li>
-<li><a data-i18n="homepage.a3" href="staywell-memberships.html">Memberships</a></li>
 <li class="dropdown">
 <a class="dropbtn" data-i18n="homepage.a4" href="#">Resources ›</a>
 <div class="dropdown-content">
@@ -378,7 +383,7 @@ End Meta Pixel Code -->
 <h1 data-i18n="homepage.h111">Restored from the <em>root up.</em></h1>
 <p data-i18n="homepage.p12">Root-cause, whole-person medicine that uses regenerative therapies, hormone optimization, and longevity protocols to help you feel like yourself again, not just hit a normal lab range.</p>
 <div class="hero-buttons">
-<a class="btn-brass" data-i18n="homepage.a13" href="#membership">Explore the Optimization Membership</a>
+<a class="btn-brass" data-i18n="homepage.a13" href="#membership">Explore Our Programs</a>
 <a class="btn-outline-light" data-i18n="homepage.a14" href="#about">Meet Your Provider</a>
 </div>
 </div>
@@ -387,23 +392,23 @@ End Meta Pixel Code -->
 <section class="section" id="membership">
 <div class="container">
 <div class="section-head">
-<div class="eyebrow" data-i18n="homepage.div15">The Flagship Membership</div>
-<h2 data-i18n="homepage.h216">Optimization Membership</h2>
+<div class="eyebrow" data-i18n="homepage.div15">Functional Medicine Programs</div>
+<h2 data-i18n="homepage.h216">Functional Medicine Programs, built around your biology</h2>
 <div class="divider"></div>
-<p data-i18n="homepage.p17">Our most comprehensive tier, built for patients who want ongoing hormone, peptide, and functional medicine management under one dedicated provider.</p>
+<p data-i18n="homepage.p17">Alongside Access and Complete membership, we offer Functional Medicine Programs for patients who want dedicated, root-cause care in a specific area. No membership is required to enroll.</p>
 </div>
 <div class="flagship">
 <div class="flagship-body">
-<div class="eyebrow" data-i18n="homepage.div18">What's Included</div>
+<div class="eyebrow" data-i18n="homepage.div18">What We Offer</div>
 <h3 data-i18n="homepage.h319">A fully managed path to feeling your best</h3>
-<p data-i18n="homepage.p20">Every Optimization member works with a provider who treats the whole person and looks for the root cause first, using hormone therapy, peptides, and longevity protocols to build a plan around your biology, not a symptom checklist.</p>
+<p data-i18n="homepage.p20">Every program is guided by a provider who treats the whole person and looks for the root cause first, building a plan around your biology, not a symptom checklist.</p>
 <ul class="flagship-list">
 <li data-i18n="homepage.li21"><strong>Hormone Optimization</strong>: bioidentical hormone therapy for men and women, tailored and monitored</li>
-<li data-i18n="homepage.li22"><strong>Peptide Therapy</strong>: targeted protocols for recovery, metabolism, and weight management</li>
-<li data-i18n="homepage.li23"><strong>Functional Medicine</strong>: root-cause lab work and personalized protocols</li>
-<li data-i18n="homepage.li24"><strong>Anti-Aging &amp; Longevity</strong>: proactive, whole-body care built for the long run</li>
+<li data-i18n="homepage.li22"><strong>Mycotoxin &amp; Mold Illness Program</strong>: root-cause testing and treatment for mold-related symptoms</li>
+<li data-i18n="homepage.li23"><strong>Female Fertility Program</strong>: a root-cause hormone and metabolic workup</li>
+<li data-i18n="homepage.li24"><strong>Male Fertility Program</strong>: semen analysis, hormone panel, and lifestyle optimization</li>
 </ul>
-<a class="btn-brass" data-i18n="homepage.a25" href="#pricing" style="width:100%;text-align:center;">View Optimization Pricing</a>
+<a class="btn-brass" data-i18n="homepage.a25" href="staywell-memberships.html" style="width:100%;text-align:center;">See Memberships &amp; Programs</a>
 </div>
 </div>
 </div>
@@ -418,26 +423,20 @@ End Meta Pixel Code -->
 <div class="grid-specialty">
 <div class="spec-card">
 <div class="spec-mark"></div>
-<h4 data-i18n="homepage.h428">Hormone Optimization</h4>
-<p data-i18n="homepage.p29">Bioidentical hormone therapy for men and women, tailored to how you feel and function, not just a lab number.</p>
-<a class="spec-link" data-i18n="homepage.a30" href="staywell-hormone-optimization.html">Learn More</a>
+<h4 data-i18n="homepage.h428">Direct Primary Care</h4>
+<p data-i18n="homepage.p29">Same-day access, extended visits, and a provider who knows your full history for standard primary care needs.</p>
+<a class="spec-link" data-i18n="homepage.a30" href="staywell-dpc.html">Learn More</a>
 </div>
 <div class="spec-card">
 <div class="spec-mark"></div>
-<h4 data-i18n="homepage.h431">Peptide Therapy</h4>
-<p data-i18n="homepage.p32">Targeted peptide protocols supporting recovery, metabolism, and weight management goals.</p>
-<a class="spec-link" data-i18n="homepage.a33" href="staywell-peptide-therapy.html">Learn More</a>
-</div>
-<div class="spec-card">
-<div class="spec-mark"></div>
-<h4 data-i18n="homepage.h434">Anti-Aging &amp; Longevity</h4>
-<p data-i18n="homepage.p35">Proactive, whole-body care focused on healthspan, not just treating what's already gone wrong.</p>
-<a class="spec-link" data-i18n="homepage.a36" href="staywell-longevity.html">Learn More</a>
+<h4 data-i18n="homepage.h431">Gender Affirming Care</h4>
+<p data-i18n="homepage.p32">Affirming, judgment-free hormone therapy management for adults 18 and older.</p>
+<a class="spec-link" data-i18n="homepage.a33" href="staywell-gaht.html">Learn More</a>
 </div>
 </div>
 <div class="also-strip">
-<div class="also-item"><a data-i18n="homepage.a37" href="staywell-dpc.html" style="color:inherit;"><strong>Direct Primary Care</strong>Everyday primary care, still available for members</a></div>
-<div class="also-item"><a data-i18n="homepage.a37b" href="staywell-gaht.html" style="color:inherit;"><strong>Gender Affirming Care</strong>Affirming, judgment-free hormone therapy</a></div>
+<div class="also-item"><a data-i18n="homepage.a37" href="staywell-peptide-therapy.html" style="color:inherit;"><strong>Peptide Therapy</strong>Targeted peptide protocols supporting recovery, metabolism, and weight management goals</a></div>
+<div class="also-item"><a data-i18n="homepage.a37b" href="staywell-longevity.html" style="color:inherit;"><strong>Anti-Aging &amp; Longevity</strong>Proactive, whole-body care focused on healthspan</a></div>
 </div>
 </div>
 </section>
@@ -479,11 +478,11 @@ End Meta Pixel Code -->
 <a class="price-cta" data-i18n="homepage.a55" href="staywell-memberships.html">View Details</a>
 </div>
 <div class="price-card featured">
-<div class="featured-tag">Flagship</div>
-<div class="eyebrow" data-i18n="homepage.div56">Comprehensive</div>
-<h4 data-i18n="homepage.h457">Optimization Membership</h4>
-<div class="price-amt">$149<span data-i18n="homepage.span58"> /mo starting</span></div>
-<p class="desc" data-i18n="homepage.p59">Unlimited primary care visits plus dedicated hormone, peptide, and functional medicine management, our full regenerative wellness program.</p>
+<div class="featured-tag">Programs</div>
+<div class="eyebrow" data-i18n="homepage.div56">No Membership Required</div>
+<h4 data-i18n="homepage.h457">Functional Medicine Programs</h4>
+<div class="price-amt" data-i18n="homepage.span58b" style="font-size:1.3rem;">Starting point varies by program</div>
+<p class="desc" data-i18n="homepage.p59">Hormone Optimization, our Mycotoxin &amp; Mold Illness Program, and our Fertility Programs, sold separately from membership, each with its own program fee.</p>
 <a class="price-cta" data-i18n="homepage.a60" href="staywell-memberships.html">View Details</a>
 </div>
 </div>
