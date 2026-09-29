@@ -497,5 +497,59 @@ document.querySelectorAll('.nav-links a').forEach(function(a){
 </script>
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
+<!-- CHERRY WIDGET BEGIN -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Slabo+27px&family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100..900&family=Montserrat:wght@100..900&family=Oswald:wght@200..700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100..900&family=Source+Sans+3:wght@200..900&family=PT+Sans:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+<script>
+    (function (w, d, s, o, f, js, fjs) {
+        w[o] = w[o] || function () {
+            (w[o].q = w[o].q || []).push(arguments);
+        };
+        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+        js.id = o;
+        js.src = f;
+        js.async = 1;
+        fjs.parentNode.insertBefore(js, fjs);
+    })(window, document, "script", "_hw", "https://files.withcherry.com/widgets/widget.js");
+    // Lift the widget above the cookie banner until cookies are accepted, so it never covers the Accept button
+    var cherryLift = "0px";
+    try {
+        if (!localStorage.getItem("cookieConsent")) {
+            cherryLift = window.innerWidth <= 600 ? "170px" : "90px";
+        }
+    } catch (e) {}
+    _hw("init", {
+        debug: false,
+        variables: {
+            slug: "staywell-health",
+            name: "Staywell Health",
+            images: [10],
+            customLogo: "",
+            defaultPurchaseAmount: 2999,
+            customImage: "", 
+            imageCategory: "other",
+            language: "en",
+        },
+        styles: {
+            primaryColor: "#b8925a",
+            secondaryColor: "#f7f4ec",
+            fontFamily: "Poppins",
+            headerFontFamily: "Playfair Display",
+            floatingEstimator: {
+                position: "bottom-right",
+                offset: {
+                    x: "0px",
+                    y: cherryLift
+                },
+                zIndex: 9999,
+                ctaFontFamily: "Poppins",
+                bodyFontFamily: "Poppins",
+                ctaColor: "#b8925a",
+                ctaTextColor: "#FFFFFF"
+            }
+        }
+    }, ["floatingEstimator"]);
+</script>
+<div id="floatingEstimator"></div>
+<!-- CHERRY WIDGET END -->
 </body>
 </html>
