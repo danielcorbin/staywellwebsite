@@ -120,5 +120,22 @@
       "destination": "/staywell-memberships.html",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/pricing-2027",
+      "destination": "/staywell-pricing-2027.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(pricing-2027|staywell-pricing-2027.html)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    }
   ]
 }
