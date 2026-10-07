@@ -187,6 +187,8 @@
         k95: "© 2026 Staywell Health, PLLC. All rights reserved."
       },
       homepage: {
+        pvLine: "Not ready for a membership? Pay per visit, starting at $100.",
+        pvLink: "See per-visit pricing",
         title: "Direct Primary Care &amp; Functional Medicine in Raleigh, NC | Staywell Health",
         navhome: "Home",
         navservices: "Services ›",
@@ -725,6 +727,8 @@
         div59: "© 2026 Staywell Health, PLLC. All rights reserved."
       },
       faq: {
+        pvQ: "Do I have to join a membership to be seen?",
+        pvA: "No. If you would rather not join, you can pay per visit: $100 for a virtual visit (15 to 30 min), $150 for an in-person acute or chronic follow-up visit (30 to 45 min), $200 for an annual physical (60 min), or $300 for a functional medicine consultation (90 min). The consultation fee goes toward a Functional Medicine Program if you enroll. If you expect to see us more than a few times a year, a membership may be the better value. Visit our <a href=\"staywell-memberships.html#pay-per-visit\">Memberships page</a> for details.",
         k1: "Frequently Asked Questions | Staywell Health",
         navhome: "Home",
         navservices: "Services ›",
@@ -1474,6 +1478,24 @@
         k66: "© 2026 Staywell Health, PLLC. All rights reserved."
       },
       memberships: {
+        pvEyebrow: "Pay Per Visit",
+        pvH2: "Prefer not to join? Pay per visit.",
+        pvIntro: "No membership and no monthly fee. Choose the visit that fits what you need and pay as you go.",
+        pvV_t: "Virtual Visit",
+        pvV_d: "15 to 30 min",
+        pvV_p: "A convenient video visit with your clinician, from wherever you are.",
+        pvI_t: "In-Person Visit",
+        pvI_d: "30 to 45 min",
+        pvI_p: "Acute or chronic follow-up care in our Raleigh office, with time to talk through what is going on.",
+        pvA_t: "Annual Physical",
+        pvA_d: "60 min",
+        pvA_p: "A full hour for your yearly exam and a look at your health priorities for the year ahead.",
+        pvF_t: "Functional Medicine Consultation",
+        pvF_d: "90 min",
+        pvF_p: "A root-cause conversation about your history, symptoms, and goals. If you enroll in a Functional Medicine Program, your visit fee goes toward it.",
+        pvNote: "Per-visit rates do not include labs, imaging, or medications, which are billed separately. Seeing us more than a few times a year? A membership may be the better value.",
+        pvDisc: "Functional medicine consultations are provided by Daniel Corbin, DNP, APRN, FNP-C, who is currently pursuing functional medicine certification.",
+        pvBtn: "Request a Visit",
         title: "Membership Pricing | Staywell Health Raleigh, NC",
         navhome: "Home",
         navservices: "Services ›",
@@ -1686,6 +1708,10 @@
         div85: "© 2026 Staywell Health, PLLC. All rights reserved."
       },
       "pricing-details": {
+        pvEyebrow: "Pay Per Visit",
+        pvH2: "No membership? Pay per visit.",
+        pvIntro: "Prefer not to join? You can see us visit by visit, with no monthly fee and no enrollment fee.",
+        pvNote: "Per-visit rates do not include labs, imaging, or medications, which are billed separately. The Functional Medicine Consultation fee goes toward a Functional Medicine Program if you enroll.",
         title: "Full Pricing Details | Staywell Health Raleigh, NC",
         navhome: "Home",
         navservices: "Services ›",
@@ -1948,6 +1974,8 @@
     },
     es: {
       homepage: {
+        pvLine: "¿Aún no estás listo para una membresía? Paga por visita, desde $100.",
+        pvLink: "Ver precios por visita",
         title: "Atención Primaria Directa y Medicina Funcional en Raleigh, NC | Staywell Health",
         navhome: "Inicio",
         navservices: "Servicios ›",
@@ -2312,6 +2340,24 @@
         div55: "© 2026 Staywell Health, PLLC. Todos los derechos reservados."
       },
       memberships: {
+        pvEyebrow: "Pago por Visita",
+        pvH2: "¿Prefieres no unirte? Paga por visita.",
+        pvIntro: "Sin membresía y sin cuota mensual. Elige la visita que se ajuste a lo que necesitas y paga conforme vayas usando el servicio.",
+        pvV_t: "Visita Virtual",
+        pvV_d: "15 a 30 min",
+        pvV_p: "Una cómoda visita por video con tu clínico, desde donde estés.",
+        pvI_t: "Visita en Persona",
+        pvI_d: "30 a 45 min",
+        pvI_p: "Atención aguda o seguimiento de condiciones crónicas en nuestra oficina de Raleigh, con tiempo para conversar sobre lo que está pasando.",
+        pvA_t: "Examen Físico Anual",
+        pvA_d: "60 min",
+        pvA_p: "Una hora completa para tu examen anual y para revisar tus prioridades de salud del año que viene.",
+        pvF_t: "Consulta de Medicina Funcional",
+        pvF_d: "90 min",
+        pvF_p: "Una conversación sobre las causas de fondo, con tu historial, síntomas y metas. Si te inscribes en un Programa de Medicina Funcional, el costo de tu visita se aplica a ese programa.",
+        pvNote: "Las tarifas por visita no incluyen laboratorios, imágenes ni medicamentos, que se facturan por separado. ¿Nos visitas más de unas pocas veces al año? Una membresía puede ser la mejor opción.",
+        pvDisc: "Las consultas de medicina funcional están a cargo de Daniel Corbin, DNP, APRN, FNP-C, quien actualmente está cursando la certificación en medicina funcional.",
+        pvBtn: "Solicitar una Visita",
         title: "Precios de Membresías | Staywell Health Raleigh, NC",
         navhome: "Inicio",
         navservices: "Servicios ›",
@@ -2579,6 +2625,8 @@
         k66: "© 2026 Staywell Health, PLLC. Todos los derechos reservados."
       },
       faq: {
+        pvQ: "¿Tengo que unirme a una membresía para ser atendido?",
+        pvA: "No. Si prefieres no unirte, puedes pagar por visita: $100 por una visita virtual (15 a 30 min), $150 por una visita en persona de atención aguda o seguimiento crónico (30 a 45 min), $200 por un examen físico anual (60 min) o $300 por una consulta de medicina funcional (90 min). El costo de la consulta se aplica a un Programa de Medicina Funcional si te inscribes. Si esperas visitarnos más de unas pocas veces al año, una membresía puede ser la mejor opción. Visita nuestra <a href=\"staywell-memberships.html#pay-per-visit\">página de Membresías</a> para más detalles.",
         k1: "Preguntas Frecuentes | Staywell Health",
         navhome: "Inicio",
         navservices: "Servicios ›",
@@ -3537,6 +3585,10 @@
         k66: "© 2026 Staywell Health, PLLC. Todos los derechos reservados."
       },
       "pricing-details": {
+        pvEyebrow: "Pago por Visita",
+        pvH2: "¿Sin membresía? Paga por visita.",
+        pvIntro: "¿Prefieres no unirte? Puedes atenderte visita por visita, sin cuota mensual y sin cuota de inscripción.",
+        pvNote: "Las tarifas por visita no incluyen laboratorios, imágenes ni medicamentos, que se facturan por separado. El costo de la Consulta de Medicina Funcional se aplica a un Programa de Medicina Funcional si te inscribes.",
         title: "Detalles Completos de Precios | Staywell Health Raleigh, NC",
         navhome: "Inicio",
         navservices: "Servicios ›",
