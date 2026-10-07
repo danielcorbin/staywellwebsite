@@ -728,7 +728,7 @@
       },
       faq: {
         pvQ: "Do I have to join a membership to be seen?",
-        pvA: "No. If you would rather not join, you can pay per visit: $100 for a virtual visit (30 min), $150 for an in-person acute or chronic follow-up visit (30 to 45 min), $200 for an annual physical (60 min), or $300 for a functional medicine consultation (90 min). The consultation fee goes toward a Functional Medicine Program if you enroll. For virtual visits, you must be physically located in North Carolina, Maryland, Minnesota, Oregon, Utah, or South Dakota during your appointment. If you expect to see us more than a few times a year, a membership may be the better value. Visit our <a href=\"staywell-memberships.html#pay-per-visit\">Memberships page</a> for details.",
+        pvA: "No. If you would rather not join, you can pay per visit: $100 for a virtual visit (30 min), $150 for an in-person acute or chronic follow-up visit (45 min), $200 for an annual physical (60 min), or $300 for a functional medicine consultation (90 min). The consultation fee goes toward a Functional Medicine Program if you enroll. For virtual visits, you must be physically located in North Carolina, Maryland, Minnesota, Oregon, Utah, or South Dakota during your appointment. If you expect to see us more than a few times a year, a membership may be the better value. Visit our <a href=\"staywell-memberships.html#pay-per-visit\">Memberships page</a> for details.",
         k1: "Frequently Asked Questions | Staywell Health",
         navhome: "Home",
         navservices: "Services ›",
@@ -1478,6 +1478,11 @@
         k66: "© 2026 Staywell Health, PLLC. All rights reserved."
       },
       memberships: {
+        pdSummary: "View Full Pricing Details",
+        programsIncluded: "Programs Included in This Membership",
+        billQ: "Quarterly billing",
+        billB: "Biannual billing",
+        billA: "Annual billing",
         pvEyebrow: "Pay Per Visit",
         pvH2: "Prefer not to join? Pay per visit.",
         pvIntro: "No membership and no monthly fee. Choose the visit that fits what you need and pay as you go.",
@@ -1485,7 +1490,7 @@
         pvV_d: "30 min",
         pvV_p: "A convenient video visit with your clinician. You must be physically located in North Carolina, Maryland, Minnesota, Oregon, Utah, or South Dakota during your appointment.",
         pvI_t: "In-Person Visit",
-        pvI_d: "30 to 45 min",
+        pvI_d: "45 min",
         pvI_p: "Acute or chronic follow-up care in our Raleigh office, with time to talk through what is going on.",
         pvA_t: "Annual Physical",
         pvA_d: "60 min",
@@ -2341,6 +2346,11 @@
         div55: "© 2026 Staywell Health, PLLC. Todos los derechos reservados."
       },
       memberships: {
+        pdSummary: "Ver Detalles Completos de Precios",
+        programsIncluded: "Programas Incluidos en Esta Membresía",
+        billQ: "Facturación trimestral",
+        billB: "Facturación semestral",
+        billA: "Facturación anual",
         pvEyebrow: "Pago por Visita",
         pvH2: "¿Prefieres no unirte? Paga por visita.",
         pvIntro: "Sin membresía y sin cuota mensual. Elige la visita que se ajuste a lo que necesitas y paga conforme vayas usando el servicio.",
@@ -2348,7 +2358,7 @@
         pvV_d: "30 min",
         pvV_p: "Una cómoda visita por video con tu clínico. Debes encontrarte físicamente en Carolina del Norte, Maryland, Minnesota, Oregón, Utah o Dakota del Sur durante tu cita.",
         pvI_t: "Visita en Persona",
-        pvI_d: "30 a 45 min",
+        pvI_d: "45 min",
         pvI_p: "Atención aguda o seguimiento de condiciones crónicas en nuestra oficina de Raleigh, con tiempo para conversar sobre lo que está pasando.",
         pvA_t: "Examen Físico Anual",
         pvA_d: "60 min",
@@ -2627,7 +2637,7 @@
       },
       faq: {
         pvQ: "¿Tengo que unirme a una membresía para ser atendido?",
-        pvA: "No. Si prefieres no unirte, puedes pagar por visita: $100 por una visita virtual (30 min), $150 por una visita en persona de atención aguda o seguimiento crónico (30 a 45 min), $200 por un examen físico anual (60 min) o $300 por una consulta de medicina funcional (90 min). El costo de la consulta se aplica a un Programa de Medicina Funcional si te inscribes. Para visitas virtuales, debes encontrarte físicamente en Carolina del Norte, Maryland, Minnesota, Oregón, Utah o Dakota del Sur durante tu cita. Si esperas visitarnos más de unas pocas veces al año, una membresía puede ser la mejor opción. Visita nuestra <a href=\"staywell-memberships.html#pay-per-visit\">página de Membresías</a> para más detalles.",
+        pvA: "No. Si prefieres no unirte, puedes pagar por visita: $100 por una visita virtual (30 min), $150 por una visita en persona de atención aguda o seguimiento crónico (45 min), $200 por un examen físico anual (60 min) o $300 por una consulta de medicina funcional (90 min). El costo de la consulta se aplica a un Programa de Medicina Funcional si te inscribes. Para visitas virtuales, debes encontrarte físicamente en Carolina del Norte, Maryland, Minnesota, Oregón, Utah o Dakota del Sur durante tu cita. Si esperas visitarnos más de unas pocas veces al año, una membresía puede ser la mejor opción. Visita nuestra <a href=\"staywell-memberships.html#pay-per-visit\">página de Membresías</a> para más detalles.",
         k1: "Preguntas Frecuentes | Staywell Health",
         navhome: "Inicio",
         navservices: "Servicios ›",
