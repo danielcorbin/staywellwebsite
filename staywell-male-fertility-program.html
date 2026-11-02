@@ -108,11 +108,41 @@
   .price-callout .m-amt{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--olive-deep);}
 
   /* Add-on row */
-  .addon-box{max-width:640px;margin:1.4rem auto 0;background:var(--ivory-deep);border:1px solid var(--line);padding:1.4rem 1.8rem;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
+  .addon-box{max-width:640px;flex-direction:column;align-items:flex-start;margin:1.4rem auto 0;background:var(--ivory-deep);border:1px solid var(--line);padding:1.4rem 1.8rem;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
   .addon-label{font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--brass);font-weight:700;margin-bottom:0.3rem;}
   .addon-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ink);}
   .addon-desc{color:var(--ink-soft);font-size:0.85rem;margin-top:0.3rem;max-width:26rem;}
   .addon-price{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--olive-deep);white-space:nowrap;}
+
+
+  /* Clear pricing layout */
+  .pricing{max-width:860px;margin:0 auto;text-align:center;}
+  .pricing h2{font-size:2.1rem;margin-bottom:0.8rem;}
+  .pricing .lead{color:var(--ink-soft);max-width:40rem;margin:0 auto 2rem;font-size:1rem;}
+  .inc-box{background:#fff;border:1px solid var(--line);padding:1.6rem 2rem;text-align:left;margin-bottom:2.2rem;}
+  .inc-box h4{font-size:1.1rem;margin-bottom:0.9rem;text-align:center;}
+  .inc-box ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.55rem 2rem;}
+  .inc-box li{position:relative;padding-left:1.5rem;font-size:0.92rem;color:var(--ink-soft);}
+  .inc-box li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--brass);font-weight:700;}
+  .step-label{font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--brass);font-weight:700;margin-bottom:0.4rem;}
+  .choose-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--olive-deep);margin-bottom:1.2rem;}
+  .opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;text-align:left;}
+  .opt-card{background:#fff;border:1px solid var(--brass);padding:1.8rem;display:flex;flex-direction:column;}
+  .opt-tag{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass);font-weight:700;margin-bottom:0.3rem;}
+  .opt-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--olive-deep);margin-bottom:0.6rem;}
+  .opt-desc{color:var(--ink-soft);font-size:0.88rem;margin-bottom:1.2rem;}
+  .opt-row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:0.75rem 0;border-top:1px solid var(--line);font-size:0.9rem;color:var(--ink-soft);}
+  .opt-row .who{max-width:11rem;}
+  .opt-row .who small{display:block;font-size:0.78rem;opacity:0.85;}
+  .opt-row .amt{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--olive-deep);white-space:nowrap;}
+  .opt-row.small .amt{font-size:1.15rem;}
+  .opt-note{color:var(--ink-soft);font-size:0.8rem;margin-top:auto;padding-top:1rem;border-top:1px solid var(--line);}
+  .fine{max-width:44rem;margin:2rem auto 0;text-align:left;}
+  .fine h4{font-size:1.05rem;margin-bottom:0.8rem;text-align:center;}
+  .fine dl{display:grid;grid-template-columns:11rem 1fr;gap:0.7rem 1.4rem;font-size:0.88rem;color:var(--ink-soft);}
+  .fine dt{font-weight:700;color:var(--olive-deep);}
+  .fine dd{margin:0;}
+  @media(max-width:720px){.opt-grid,.inc-box ul{grid-template-columns:1fr;}.fine dl{grid-template-columns:1fr;gap:0.2rem;}.fine dd{margin-bottom:0.7rem;}}
 
   .symptom-card{background:#fff;border:1px solid var(--line);padding:2.2rem;max-width:36rem;margin:0 auto;}
   .symptom-card h4{font-size:1.15rem;margin-bottom:1.1rem;}
@@ -240,38 +270,77 @@ End Meta Pixel Code -->
 </section>
 <section class="section">
 <div class="container">
-<div class="notice">
+<div class="pricing">
 <div class="eyebrow">A Root-Cause Medicine Program</div>
-<p>The Male Fertility Program is sold and priced separately from membership. It is a 3-month program matched to the sperm production cycle: a 1-hour workup visit, two 30-minute follow-ups, and a repeat semen test about 3 months after your plan starts.</p>
-<div class="price-callout">
-<div class="m-amt">$1,375<span style="font-size:0.85rem;color:var(--ink-soft);"> standard price</span></div>
-<div style="margin-top:0.8rem;padding-top:0.8rem;border-top:1px solid var(--line);font-size:0.95rem;">
-<strong style="color:var(--olive-deep);">$975</strong><span style="color:var(--ink-soft);"> with an active Complete Membership</span>
+<h2>How the program works and what it costs</h2>
+<p class="lead">The Male Fertility Program is a 3-month program, sold separately from membership. Sperm take about 3 months to develop, so we start your plan, give it time to work, and then retest to see what changed.</p>
+
+<div class="inc-box">
+<h4>Every program includes</h4>
+<ul>
+<li>A 1-hour workup visit to review your history and results</li>
+<li>Two 30-minute follow-up visits</li>
+<li>A baseline hormone, thyroid, and metabolic blood panel</li>
+<li>Two comprehensive semen analyses with DNA fragmentation, done at home (one at the start, one at your retest)</li>
+<li>3 months of your core supplement, ubiquinol (CoQ10), at a package discount</li>
+<li>A personalized plan for nutrition, lifestyle, and supplements</li>
+</ul>
+</div>
+
+<div class="step-label">One choice to make</div>
+<div class="choose-title">How would you like your blood panel handled?</div>
+<div class="opt-grid">
+<div class="opt-card">
+<div class="opt-tag">Option 1</div>
+<div class="opt-name">Labs included in your price</div>
+<div class="opt-desc">We order your blood panel and the cost is part of the program price. Nothing is billed to your insurance, and there are no lab bills to deal with.</div>
+<div class="opt-row"><span class="who">Standard price<small>If you are not a Complete Member</small></span><span class="amt">$1,375</span></div>
+<div class="opt-row"><span class="who">Complete Member price<small>Only for active Complete Members</small></span><span class="amt">$975</span></div>
+<div class="opt-row small"><span class="who">Need more time? Extra month<small>Standard price</small></span><span class="amt">$130</span></div>
+<div class="opt-row small"><span class="who">Need more time? Extra month<small>Complete Member price</small></span><span class="amt">$50</span></div>
+</div>
+<div class="opt-card">
+<div class="opt-tag">Option 2</div>
+<div class="opt-name">Use your insurance for labs</div>
+<div class="opt-desc">LabCorp bills your insurance for the blood panel, so the program price is lower. You pay any copays and deductibles directly to LabCorp (if applicable). Your two comprehensive semen analyses are not covered by insurance, so they remain included in the package pricing.</div>
+<div class="opt-row"><span class="who">Standard price<small>If you are not a Complete Member</small></span><span class="amt">$1,235</span></div>
+<div class="opt-row"><span class="who">Complete Member price<small>Only for active Complete Members</small></span><span class="amt">$855</span></div>
+<div class="opt-row small"><span class="who">Need more time? Extra month<small>Standard price</small></span><span class="amt">$130</span></div>
+<div class="opt-row small"><span class="who">Need more time? Extra month<small>Complete Member price</small></span><span class="amt">$50</span></div>
+<div class="opt-note">Coverage varies by plan. You are responsible for copays, deductibles, and any tests your plan does not cover.</div>
 </div>
 </div>
-<div class="price-callout" style="margin-top:1.4rem;">
-<div class="eyebrow" style="margin-bottom:0.6rem;">Prefer to use your insurance for labs?</div>
-<div class="m-amt">$1,235<span style="font-size:0.85rem;color:var(--ink-soft);"> standard price</span></div>
-<div style="margin-top:0.8rem;padding-top:0.8rem;border-top:1px solid var(--line);font-size:0.95rem;">
-<strong style="color:var(--olive-deep);">$855</strong><span style="color:var(--ink-soft);"> with an active Complete Membership</span>
-</div>
-<div style="margin-top:0.8rem;padding-top:0.8rem;border-top:1px solid var(--line);font-size:0.9rem;color:var(--ink-soft);">Extension month: <strong style="color:var(--olive-deep);">$200</strong> per month, or <strong style="color:var(--olive-deep);">$50</strong> per month with an active Complete Membership.</div>
-<p style="color:var(--ink-soft);font-size:0.82rem;margin-top:0.9rem;">Your baseline blood panel is billed by LabCorp to your insurance instead of being included in the program price. Your two SwimScore semen tests are not billed to insurance and remain included. You are responsible for any copays, deductibles, or tests your plan does not cover, and coverage varies by plan.</p>
-</div>
-<p style="text-align:center;color:var(--ink-soft);font-size:0.78rem;margin-top:0.8rem;"><strong style="color:var(--olive-deep);">Payment plans available with Cherry</strong> for qualified patients, with options up to 12 months interest free. Estimated monthly amounts appear in the Cherry estimator and are subject to approval.</p>
-<div style="text-align:center;margin-top:1.2rem;"><a class="btn-brass" href="https://pay.withcherry.com/staywell-health" target="_blank" rel="noopener">Apply for a Payment Plan</a></div>
-<p style="text-align:center;color:var(--ink-soft);font-size:0.8rem;margin:0.7rem auto 0;max-width:30rem;">Checking your eligibility takes just a few seconds and is not a hard credit pull, so it will not affect your credit score.</p>
-<p style="text-align:center;color:var(--ink-soft);font-size:0.82rem;margin-top:0.6rem;max-width:34rem;margin-left:auto;margin-right:auto;"><strong style="color:var(--olive-deep);">What your price includes:</strong> your workup visit and two follow-ups, a baseline hormone, thyroid, and metabolic blood panel, two at-home SwimScore semen tests with DNA fragmentation (one at the start and one at your retest), and 3 months of your core supplement, ubiquinol (CoQ10), at a package discount.</p>
-<p style="text-align:center;color:var(--ink-soft);font-size:0.82rem;margin-top:0.6rem;max-width:34rem;margin-left:auto;margin-right:auto;"><strong style="color:var(--olive-deep);">Billed separately:</strong> a prescription option when appropriate (prepared by a compounding pharmacy), any follow-up lab monitoring, additional testing, vitamin D correction, and optional supplements. If you have had a semen analysis in the past 90 days, it may be credited toward your first test.</p>
-<p style="text-align:center;color:var(--ink-soft);font-size:0.82rem;margin-top:0.6rem;max-width:34rem;margin-left:auto;margin-right:auto;"><strong style="color:var(--olive-deep);">Need more time?</strong> Extension months are $130 ($50 for Complete members). Complete Membership pricing requires active membership through completion of the program. If membership is canceled before completion, the price difference is billed ($400, or $380 with the insurance labs option).</p>
-<p style="text-align:center;color:var(--ink-soft);font-size:0.82rem;margin-top:0.6rem;max-width:34rem;margin-left:auto;margin-right:auto;">We work to improve the conditions for healthy sperm. We cannot guarantee a pregnancy.</p>
-<div class="addon-box">
+
+<div class="addon-box" style="margin-top:2rem;">
 <div>
 <div class="addon-label">Couple's Rate</div>
-<div class="addon-title">Add-On to the Female Fertility Program</div>
-<div class="addon-desc">Completing this program alongside your partner's Female Fertility Program gets you the couple's rate instead of the individual program price, with visits held together and the visit portion at 50% off. The couple's rate also applies if you choose the insurance labs option. Extension months for couples are priced at enrollment.</div>
+<div class="addon-title">Doing this with your partner?</div>
+<div class="addon-desc">If your partner is in our Female Fertility Program, you get a couple's rate in place of the prices above. Complete Membership is our monthly membership, and the Complete Member price applies only if you have an active one. Visits are held together and your visit portion is 50% off. Extra months for couples are priced at enrollment.</div>
 </div>
-<div class="addon-price">$1,225<br/><span style="font-size:0.78rem;font-weight:400;">$975 Complete</span><br/><span style="font-size:0.72rem;font-weight:400;">Insurance labs: $985 / $855 Complete</span></div>
+<table style="border-collapse:collapse;font-size:0.9rem;color:var(--ink-soft);width:100%;max-width:26rem;margin-top:0.4rem;">
+<tr style="border-bottom:1px solid var(--line);"><th style="text-align:left;padding:0.45rem 0.6rem 0.45rem 0;font-weight:700;color:var(--olive-deep);">Couple's rate</th><th style="text-align:right;padding:0.45rem 0.6rem;font-weight:700;color:var(--olive-deep);">Standard</th><th style="text-align:right;padding:0.45rem 0 0.45rem 0.6rem;font-weight:700;color:var(--olive-deep);">Complete Member</th></tr>
+<tr style="border-bottom:1px solid var(--line);"><td style="padding:0.5rem 0.6rem 0.5rem 0;">Labs included</td><td style="text-align:right;padding:0.5rem 0.6rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--olive-deep);">$1,225</td><td style="text-align:right;padding:0.5rem 0 0.5rem 0.6rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--olive-deep);">$975</td></tr>
+<tr><td style="padding:0.5rem 0.6rem 0.5rem 0;">Using insurance for labs</td><td style="text-align:right;padding:0.5rem 0.6rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--olive-deep);">$985</td><td style="text-align:right;padding:0.5rem 0 0.5rem 0.6rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--olive-deep);">$855</td></tr>
+</table>
+</div>
+
+<p style="color:var(--ink-soft);font-size:0.82rem;margin-top:2rem;"><strong style="color:var(--olive-deep);">Payment plans available with Cherry</strong> for qualified patients, with options up to 12 months interest free. Estimated monthly amounts appear in the Cherry estimator and are subject to approval.</p>
+<div style="margin-top:1rem;"><a class="btn-brass" href="https://pay.withcherry.com/staywell-health" target="_blank" rel="noopener">Apply for a Payment Plan</a></div>
+<p style="color:var(--ink-soft);font-size:0.8rem;margin:0.7rem auto 0;max-width:30rem;">Checking your eligibility takes just a few seconds and is not a hard credit pull, so it will not affect your credit score.</p>
+
+<div class="fine">
+<h4>Good to know</h4>
+<dl>
+<dt>Not included in the price</dt>
+<dd>A prescription option when appropriate (prepared by a compounding pharmacy), any follow-up lab monitoring, additional testing, vitamin D correction, and optional supplements.</dd>
+<dt>Recent semen test</dt>
+<dd>If you have had a semen analysis in the past 90 days, it may be credited toward your first test.</dd>
+<dt>Complete Membership pricing</dt>
+<dd>Requires an active membership through the end of the program. If membership is canceled before completion, the price difference is billed ($400 with labs included, or $380 when using insurance for labs).</dd>
+<dt>Our promise</dt>
+<dd>We work to improve the conditions for healthy sperm. We cannot guarantee a pregnancy.</dd>
+</dl>
+</div>
 </div>
 </div>
 </div>
@@ -323,7 +392,7 @@ End Meta Pixel Code -->
 <div class="approach-card">
 <div class="approach-mark"></div>
 <h4>At-Home Semen Analysis</h4>
-<p>A SwimScore at-home semen test that assesses count, motility, and morphology, plus DNA fragmentation, giving you a clear starting picture.</p>
+<p>A comprehensive at-home semen analysis that assesses count, motility, and morphology, plus DNA fragmentation, giving you a clear starting picture.</p>
 </div>
 <div class="approach-card">
 <div class="approach-mark"></div>
