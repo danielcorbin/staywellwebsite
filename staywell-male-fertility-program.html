@@ -103,18 +103,6 @@
   .notice p{color:var(--ink-soft);font-size:0.94rem;margin-bottom:0.6rem;}
   .notice p:last-child{margin-bottom:0;}
 
-  /* Placeholder pricing callout */
-  .price-callout{max-width:420px;margin:2.4rem auto 0;background:#fff;border:1px solid var(--brass);padding:1.8rem 2rem;text-align:center;}
-  .price-callout .m-amt{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--olive-deep);}
-
-  /* Add-on row */
-  .addon-box{max-width:640px;flex-direction:column;align-items:flex-start;margin:1.4rem auto 0;background:var(--ivory-deep);border:1px solid var(--line);padding:1.4rem 1.8rem;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
-  .addon-label{font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--brass);font-weight:700;margin-bottom:0.3rem;}
-  .addon-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ink);}
-  .addon-desc{color:var(--ink-soft);font-size:0.85rem;margin-top:0.3rem;max-width:26rem;}
-  .addon-price{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--olive-deep);white-space:nowrap;}
-
-
   /* Clear pricing layout */
   .pricing{max-width:860px;margin:0 auto;text-align:center;}
   .pricing h2{font-size:2.1rem;margin-bottom:0.8rem;}
@@ -137,6 +125,10 @@
   .opt-row .amt{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--olive-deep);white-space:nowrap;}
   .opt-row.small .amt{font-size:1.15rem;}
   .opt-note{color:var(--ink-soft);font-size:0.8rem;margin-top:auto;padding-top:1rem;border-top:1px solid var(--line);}
+  .ext-box{max-width:640px;margin:1.4rem auto 0;background:var(--ivory-deep);border:1px solid var(--line);padding:1.4rem 1.8rem;text-align:left;}
+  .ext-box .addon-label{font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--brass);font-weight:700;margin-bottom:0.3rem;}
+  .ext-box .ext-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ink);}
+  .ext-box p{color:var(--ink-soft);font-size:0.85rem;margin-top:0.3rem;}
   .fine{max-width:44rem;margin:2rem auto 0;text-align:left;}
   .fine h4{font-size:1.05rem;margin-bottom:0.8rem;text-align:center;}
   .fine dl{display:grid;grid-template-columns:11rem 1fr;gap:0.7rem 1.4rem;font-size:0.88rem;color:var(--ink-soft);}
@@ -296,8 +288,6 @@ End Meta Pixel Code -->
 <div class="opt-desc">We order your blood panel and the cost is part of the program price. Nothing is billed to your insurance, and there are no lab bills to deal with.</div>
 <div class="opt-row"><span class="who">Standard price<small>If you are not a Complete Member</small></span><span class="amt">$1,375</span></div>
 <div class="opt-row"><span class="who">Complete Member price<small>Only for active Complete Members</small></span><span class="amt">$975</span></div>
-<div class="opt-row small"><span class="who">Need more time? Extra month<small>Standard price</small></span><span class="amt">$130</span></div>
-<div class="opt-row small"><span class="who">Need more time? Extra month<small>Complete Member price</small></span><span class="amt">$50</span></div>
 </div>
 <div class="opt-card">
 <div class="opt-tag">Option 2</div>
@@ -305,23 +295,24 @@ End Meta Pixel Code -->
 <div class="opt-desc">LabCorp bills your insurance for the blood panel, so the program price is lower. You pay any copays and deductibles directly to LabCorp (if applicable). Your two comprehensive semen analyses are not covered by insurance, so they remain included in the package pricing.</div>
 <div class="opt-row"><span class="who">Standard price<small>If you are not a Complete Member</small></span><span class="amt">$1,235</span></div>
 <div class="opt-row"><span class="who">Complete Member price<small>Only for active Complete Members</small></span><span class="amt">$855</span></div>
-<div class="opt-row small"><span class="who">Need more time? Extra month<small>Standard price</small></span><span class="amt">$130</span></div>
-<div class="opt-row small"><span class="who">Need more time? Extra month<small>Complete Member price</small></span><span class="amt">$50</span></div>
 <div class="opt-note">Coverage varies by plan. You are responsible for copays, deductibles, and any tests your plan does not cover.</div>
 </div>
 </div>
 
-<div class="addon-box" style="margin-top:2rem;">
-<div>
-<div class="addon-label">Couple's Rate</div>
-<div class="addon-title">Doing this with your partner?</div>
-<div class="addon-desc">If your partner is in our Female Fertility Program, you get a couple's rate in place of the prices above. Complete Membership is our monthly membership, and the Complete Member price applies only if you have an active one. Visits are held together and your visit portion is 50% off. Extra months for couples are priced at enrollment.</div>
+<div class="ext-box">
+<div class="addon-label">Either option</div>
+<div class="ext-title">Need more time? Extra months</div>
+<p>Some changes take longer to show up in a semen test, so many patients choose to continue. Additional months are the same price with either option. Each extra month includes your follow-up visit and your core supplement.</p>
+<div class="opt-row"><span class="who">Extra month<small>Standard price</small></span><span class="amt">$130</span></div>
+<div class="opt-row"><span class="who">Extra month<small>Complete Member price</small></span><span class="amt">$50</span></div>
 </div>
-<table style="border-collapse:collapse;font-size:0.9rem;color:var(--ink-soft);width:100%;max-width:26rem;margin-top:0.4rem;">
-<tr style="border-bottom:1px solid var(--line);"><th style="text-align:left;padding:0.45rem 0.6rem 0.45rem 0;font-weight:700;color:var(--olive-deep);">Couple's rate</th><th style="text-align:right;padding:0.45rem 0.6rem;font-weight:700;color:var(--olive-deep);">Standard</th><th style="text-align:right;padding:0.45rem 0 0.45rem 0.6rem;font-weight:700;color:var(--olive-deep);">Complete Member</th></tr>
-<tr style="border-bottom:1px solid var(--line);"><td style="padding:0.5rem 0.6rem 0.5rem 0;">Labs included</td><td style="text-align:right;padding:0.5rem 0.6rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--olive-deep);">$1,225</td><td style="text-align:right;padding:0.5rem 0 0.5rem 0.6rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--olive-deep);">$975</td></tr>
-<tr><td style="padding:0.5rem 0.6rem 0.5rem 0;">Using insurance for labs</td><td style="text-align:right;padding:0.5rem 0.6rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--olive-deep);">$985</td><td style="text-align:right;padding:0.5rem 0 0.5rem 0.6rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--olive-deep);">$855</td></tr>
-</table>
+
+<div class="ext-box">
+<div class="addon-label">Couple's Rate</div>
+<div class="ext-title">Doing this with your partner?</div>
+<p>If your partner is in our Female Fertility Program, you get a couple's rate in place of the standard price. Visits are held together and your visit portion is 50% off. Extra months for couples are priced at enrollment. The couple's rate does not apply to Complete Members.</p>
+<div class="opt-row"><span class="who">Couple's rate<small>Labs included</small></span><span class="amt">$1,225</span></div>
+<div class="opt-row"><span class="who">Couple's rate<small>Using insurance for labs</small></span><span class="amt">$985</span></div>
 </div>
 
 <p style="color:var(--ink-soft);font-size:0.82rem;margin-top:2rem;"><strong style="color:var(--olive-deep);">Payment plans available with Cherry</strong> for qualified patients, with options up to 12 months interest free. Estimated monthly amounts appear in the Cherry estimator and are subject to approval.</p>
