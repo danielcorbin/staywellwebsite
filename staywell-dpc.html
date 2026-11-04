@@ -72,6 +72,13 @@
   .btn-outline-light{border:1px solid rgba(255,255,255,0.5);color:#fff;padding:0.9rem 2rem;font-weight:500;font-size:0.9rem;border-radius:2px;display:inline-block;}
   .btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
   .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+  .hero-provider{margin:0 auto 0.4rem !important;max-width:38rem;color:#fff !important;font-weight:500 !important;font-size:1rem !important;}
+  .hero-price{margin:0 auto 1.8rem !important;max-width:38rem;color:var(--brass-light) !important;font-weight:500 !important;font-size:1rem !important;}
+  .hero-primary{margin-bottom:0.8rem;}
+  .hero-note{margin:0 auto 1.6rem !important;font-size:0.85rem !important;color:#c9c6ba !important;}
+  .hero-secondary{margin-top:0.4rem;}
+  .btn-lg{padding:1.1rem 2.4rem;font-size:1rem;}
+  @media(max-width:480px){.btn-lg{display:block;width:100%;padding:1.1rem 1rem;}}
 
   .section{padding:5rem 0;}
   .section-deep{background:var(--ivory-deep);}
@@ -223,9 +230,15 @@ End Meta Pixel Code -->
 <div class="eyebrow" data-i18n="dpc.div10">Direct Primary Care</div>
 <h1 data-i18n="dpc.h111">Everyday care, done right</h1>
 <p data-i18n="dpc.p12">Same-day access, extended visits, and a provider who knows your full history, without the rushed appointments and insurance runaround.</p>
-<p data-i18n="dpc.p12b" style="max-width:38rem;margin:-1rem auto 2rem;color:#c9c6ba;font-size:0.9rem;">Serving Raleigh, Wake Forest, Youngsville, Cary, Knightdale, and Rolesville.</p>
-<div class="hero-buttons">
-<a class="btn-brass" data-i18n="dpc.a13" href="https://staywellforlife.hint.com/signup/membership" target="_blank">Join Now</a>
+<p data-i18n="dpc.p12b" style="max-width:38rem;margin:-1rem auto 1.4rem;color:#c9c6ba;font-size:0.9rem;">Serving Raleigh, Wake Forest, Youngsville, Cary, Knightdale, Rolesville, and surrounding areas.</p>
+<p class="hero-provider">Led by Dr. Daniel Corbin, a nurse practitioner with over a decade of family medicine experience.</p>
+<p class="hero-price">Memberships start at $35 per month.</p>
+<div class="hero-buttons hero-primary">
+<a class="btn-brass btn-lg" href="https://staywellforlife.com/meet" target="_blank" rel="noopener" onclick="if(window.gtag){gtag('event','meet_greet_click',{location:'hero'});}">Book a Free 15-Min Virtual Meet &amp; Greet</a>
+</div>
+<p class="hero-note">Free. No commitment. Meet your provider by video before you decide.</p>
+<div class="hero-buttons hero-secondary">
+<a class="btn-outline-light" data-i18n="dpc.a13" href="https://staywellforlife.hint.com/signup/membership" target="_blank">Join Now</a>
 <a class="btn-outline-light" data-i18n="dpc.a14" href="staywell-memberships.html">Compare Memberships</a>
 </div>
 </div>
@@ -320,8 +333,11 @@ End Meta Pixel Code -->
 <div class="eyebrow" data-i18n="dpc.div41">Ready to Get Started?</div>
 <h2 data-i18n="dpc.h242">Join today</h2>
 <p data-i18n="dpc.p43">We'll review your history and build your primary care plan around your goals. Not sure which membership fits? Compare Access and Complete side by side.</p>
-<div class="hero-buttons">
-<a class="btn-brass" data-i18n="dpc.a44" href="https://staywellforlife.hint.com/signup/membership" target="_blank">Join Now</a>
+<div class="hero-buttons hero-primary">
+<a class="btn-brass btn-lg" href="https://staywellforlife.com/meet" target="_blank" rel="noopener" onclick="if(window.gtag){gtag('event','meet_greet_click',{location:'footer_cta'});}">Book a Free 15-Min Virtual Meet &amp; Greet</a>
+</div>
+<div class="hero-buttons hero-secondary">
+<a class="btn-outline-light" data-i18n="dpc.a44" href="https://staywellforlife.hint.com/signup/membership" target="_blank">Join Now</a>
 <a class="btn-outline-light" data-i18n="dpc.a45" href="staywell-memberships.html">Compare Memberships</a>
 </div>
 </div>
