@@ -153,16 +153,12 @@
 </script>
 <script>
 function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17090631962/xpkrCMqY4bIdEJqyudU_',
-      'event_callback': callback
-  });
-  return false;
+  try {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17090631962/xpkrCMqY4bIdEJqyudU_'
+    });
+  } catch (e) {}
+  return true;
 }
 </script>
 <!-- Meta Pixel disabled until a real Pixel ID is provided. Meta Pixel Code:
