@@ -19,8 +19,7 @@
   const translations = {
     en: {
       nav: {
-        allservices: "All Services",
-        aesthetics: "Aesthetics"
+        allservices: "All Services"
       },
       blog: {
         title: "Blog | The Staywell Perspective",
@@ -1981,8 +1980,7 @@
     },
     es: {
       nav: {
-        allservices: "Todos los Servicios",
-        aesthetics: "Estética"
+        allservices: "Todos los Servicios"
       },
       homepage: {
         pvLine: "¿Aún no estás listo para una membresía? Paga por visita, desde $100.",
