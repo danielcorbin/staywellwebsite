@@ -230,8 +230,8 @@
 <li class="dropdown">
 <a class="dropbtn" data-i18n="blog.k5" href="#">Resources ›</a>
 <div class="dropdown-content">
-<a data-i18n="blog.k6" href="#">FAQ</a>
-<a data-i18n="blog.k7" href="#">Blog</a>
+<a data-i18n="blog.k6" href="../staywell-faq.html">FAQ</a>
+<a data-i18n="blog.k7" href="../blog.html">Blog</a>
 <a data-i18n="blog.k8" href="../staywell-contact.html">Contact</a>
 <a data-i18n="blog.k9" href="../staywell-healthshare.html">Healthshare Coverage</a>
 <a data-i18n="blog.navtrusted" href="../staywell-trusted-resources.html">Trusted Local Resources</a>
@@ -385,21 +385,5 @@ document.querySelectorAll('.nav-links a').forEach(function(a){
 </div>
 <script src="../js/main.js"></script>
 
-<script>
-document.querySelectorAll('.hamburger').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var nav = btn.closest('nav');
-    var links = nav.querySelector('.nav-links');
-    links.classList.toggle('active');
-  });
-});
-document.querySelectorAll('.nav-links a').forEach(function(a){
-  a.addEventListener('click', function(){
-    a.closest('.nav-links').classList.remove('active');
-  });
-});
-</script>
-<script src="../js/i18n.js"></script>
-<script src="../js/main.js"></script>
 </body>
 </html>
