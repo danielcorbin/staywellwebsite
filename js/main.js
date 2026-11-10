@@ -25,6 +25,11 @@ class SiteNavigation {
   }
   
   setupSmoothScroll() {
+    // Dropdown headers that have no page of their own (e.g. "Resources") should not jump to the top of the page
+    document.querySelectorAll('a.dropbtn[href="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) { e.preventDefault(); });
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
