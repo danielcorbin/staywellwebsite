@@ -388,6 +388,15 @@
             line-height: 1.35;
         }
     </style>
+    <style>
+    /* On small screens the hamburger menu lists dropdown items directly (matches the rest of the site) */
+    @media (max-width: 1280px) {
+        .nav-links .dropdown { display: block; text-align: center; }
+        .nav-links .dropbtn { display: block; text-align: center; }
+        .nav-links .dropdown-content { display: block !important; position: static !important; opacity: 1; visibility: visible; box-shadow: none; background: none; margin: 0; width: auto; text-align: center; overflow: visible; }
+        .nav-links .dropdown-content a { padding: 0.35rem 1rem; font-size: 0.9rem; }
+    }
+    </style>
 </head>
 <body>
 
@@ -402,8 +411,10 @@
                 <li class="dropdown">
                     <a href="../staywell-services.html" class="dropbtn"><span data-i18n="blog.navservices">Services &#8250;</span></a>
                     <div class="dropdown-content">
+                        <a data-i18n="nav.allservices" href="../staywell-services.html" style="font-weight:700;border-bottom:1px solid #e7e3d6;">All Services</a>
                         <a href="../staywell-memberships.html" data-i18n="blog.navmembership">Membership</a>
                         <a href="../staywell-functional-medicine.html" data-i18n="blog.navfuncmed">Functional Medicine</a>
+                        <a data-i18n="nav.aesthetics" href="../staywell-aesthetics.html">Aesthetics</a>
                     </div>
                 </li>
                 <li><a href="../staywell-about.html" data-i18n="blog.k3">About</a></li>
