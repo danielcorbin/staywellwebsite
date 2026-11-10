@@ -1,0 +1,64 @@
+name: Publish Scheduled Blog Posts
+
+on:
+  schedule:
+    # Runs at 8:00 AM Eastern every day (13:00 UTC)
+    - cron: '0 13 * * *'
+  workflow_dispatch: # allows manual trigger from GitHub UI
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Publish due posts
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          PUBLISHED=0
+
+          # Check for any scheduled post whose date has arrived
+          for FILE in blog/_scheduled/*.html; do
+            [ -f "$FILE" ] || continue
+
+            FILENAME=$(basename "$FILE")
+            # Expect filename format: YYYY-MM-DD-slug.html
+            POSTDATE=$(echo "$FILENAME" | grep -oP '^\d{4}-\d{2}-\d{2}')
+
+            if [ -z "$POSTDATE" ]; then
+              echo "Skipping $FILENAME (no date prefix found)"
+              continue
+            fi
+
+            if [[ "$POSTDATE" <= "$TODAY" ]]; then
+              SLUG=$(echo "$FILENAME" | sed "s/^${POSTDATE}-//")
+              echo "Publishing $FILENAME as blog/$SLUG"
+              mv "$FILE" "blog/$SLUG"
+              PUBLISHED=1
+            else
+              echo "Not yet: $FILENAME publishes on $POSTDATE"
+            fi
+          done
+
+          # Update blog.html: move any pending card from blog/_scheduled/blog.html
+          if [ -f "blog/_scheduled/blog.html" ]; then
+            echo "Updating blog.html from scheduled version"
+            cp "blog/_scheduled/blog.html" "blog.html"
+            rm "blog/_scheduled/blog.html"
+            PUBLISHED=1
+          fi
+
+          if [ "$PUBLISHED" -eq 1 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Publish scheduled blog post(s) for $TODAY"
+            git push
+            echo "Done. Post(s) published."
+          else
+            echo "Nothing to publish today."
+          fi
