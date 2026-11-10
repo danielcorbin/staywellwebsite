@@ -23,19 +23,28 @@ jobs:
 
           # Check for any scheduled post whose date has arrived
           for FILE in blog/_scheduled/*.html; do
-            [ -f "$FILE" ] || continue
-
-            FILENAME=$(basename "$FILE")
-            # Expect filename format: YYYY-MM-DD-slug.html
-            POSTDATE=$(echo "$FILENAME" | grep -oP '^\d{4}-\d{2}-\d{2}')
-
-            if [ -z "$POSTDATE" ]; then
-              echo "Skipping $FILENAME (no date prefix found)"
+            if [ ! -f "$FILE" ]; then
               continue
             fi
 
-            if [[ "$POSTDATE" <= "$TODAY" ]]; then
-              SLUG=$(echo "$FILENAME" | sed "s/^${POSTDATE}-//")
+            FILENAME=$(basename "$FILE")
+
+            # Skip the reserved blog.html index file
+            if [ "$FILENAME" = "blog.html" ]; then
+              continue
+            fi
+
+            # Expect filename format: YYYY-MM-DD-slug.html
+            POSTDATE=$(echo "$FILENAME" | cut -c1-10)
+
+            # Validate it looks like a date
+            if ! echo "$POSTDATE" | grep -qE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'; then
+              echo "Skipping $FILENAME (no valid date prefix)"
+              continue
+            fi
+
+            if [ "$POSTDATE" \<= "$TODAY" ]; then
+              SLUG=$(echo "$FILENAME" | cut -c12-)
               echo "Publishing $FILENAME as blog/$SLUG"
               mv "$FILE" "blog/$SLUG"
               PUBLISHED=1
@@ -44,7 +53,7 @@ jobs:
             fi
           done
 
-          # Update blog.html: move any pending card from blog/_scheduled/blog.html
+          # Update blog.html if a scheduled version exists
           if [ -f "blog/_scheduled/blog.html" ]; then
             echo "Updating blog.html from scheduled version"
             cp "blog/_scheduled/blog.html" "blog.html"
