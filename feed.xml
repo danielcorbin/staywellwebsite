@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Staywell Health Blog</title>
+    <link>https://staywellforlife.com/blog.html</link>
+    <description>Root-cause medicine, functional health, and practical guidance from Daniel Corbin, DNP, APRN, FNP-C at Staywell Health in Raleigh, NC.</description>
+    <language>en-us</language>
+    <managingEditor>daniel@staywellforlife.com (Daniel Corbin, DNP, APRN, FNP-C)</managingEditor>
+    <webMaster>daniel@staywellforlife.com (Daniel Corbin, DNP, APRN, FNP-C)</webMaster>
+    <image>
+      <url>https://staywellforlife.com/images/Logo.png</url>
+      <title>Staywell Health Blog</title>
+      <link>https://staywellforlife.com/blog.html</link>
+    </image>
+    <atom:link href="https://staywellforlife.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>What Dry January Actually Does to Your Body</title>
+      <link>https://staywellforlife.com/blog/dry-january.html</link>
+      <guid isPermaLink="true">https://staywellforlife.com/blog/dry-january.html</guid>
+      <pubDate>Thu, 15 Jan 2027 08:00:00 -0500</pubDate>
+      <description>A month without alcohol does more than you might expect. Here's what the science says about what happens to your sleep, liver, hormones, and inflammation when you take a break.</description>
+      <content:encoded><![CDATA[<p>A month without alcohol does more than you might expect. Here's what the science says about what happens to your sleep, liver, hormones, and inflammation when you take a break from drinking.</p><p><a href="https://staywellforlife.com/blog/dry-january.html">Read the full post</a></p>]]></content:encoded>
+      <author>daniel@staywellforlife.com (Daniel Corbin, DNP, APRN, FNP-C)</author>
+    </item>
+
+    <item>
+      <title>What I Wish Every Patient Knew at the Start of the Year</title>
+      <link>https://staywellforlife.com/blog/new-year-health.html</link>
+      <guid isPermaLink="true">https://staywellforlife.com/blog/new-year-health.html</guid>
+      <pubDate>Fri, 01 Jan 2027 08:00:00 -0500</pubDate>
+      <description>Before you set a single resolution, here's the perspective on health that actually changes things long-term, from a functional medicine provider in Raleigh, NC.</description>
+      <content:encoded><![CDATA[<p>Every January, something shifts. People come in with more intention than usual. But I also see what happens by February. So before you set a single resolution, here's the perspective that actually changes things long-term.</p><p><a href="https://staywellforlife.com/blog/new-year-health.html">Read the full post</a></p>]]></content:encoded>
+      <author>daniel@staywellforlife.com (Daniel Corbin, DNP, APRN, FNP-C)</author>
+    </item>
+
+    <item>
+      <title>Blood Sugar Basics: What Your Numbers Actually Mean</title>
+      <link>https://staywellforlife.com/blog/blood-sugar-basics.html</link>
+      <guid isPermaLink="true">https://staywellforlife.com/blog/blood-sugar-basics.html</guid>
+      <pubDate>Mon, 15 Dec 2026 08:00:00 -0500</pubDate>
+      <description>Your fasting glucose and A1C tell a story, but only if you know how to read them. Here's what those numbers actually mean, what the ranges miss, and what to do if yours aren't where you want them.</description>
+      <content:encoded><![CDATA[<p>Your fasting glucose and A1C come back on nearly every lab panel. But most people have no idea what those numbers actually mean, or what range they should be aiming for. Here's how to read them.</p><p><a href="https://staywellforlife.com/blog/blood-sugar-basics.html">Read the full post</a></p>]]></content:encoded>
+      <author>daniel@staywellforlife.com (Daniel Corbin, DNP, APRN, FNP-C)</author>
+    </item>
+
+    <item>
+      <title>The Holiday Season Is Doing Something to Your Body. Here's What It Is.</title>
+      <link>https://staywellforlife.com/blog/holiday-stress.html</link>
+      <guid isPermaLink="true">https://staywellforlife.com/blog/holiday-stress.html</guid>
+      <pubDate>Tue, 01 Dec 2026 08:00:00 -0500</pubDate>
+      <description>Financial pressure, disrupted sleep, sugar, alcohol, overscheduling. Each one raises cortisol on its own. Stack them for six weeks and your body is running in a low-grade stress state almost continuously.</description>
+      <content:encoded><![CDATA[<p>The holidays are one of the most reliable cortisol triggers of the year. Financial pressure, disrupted sleep, sugar, alcohol, overscheduling -- each one raises cortisol on its own. Stack them together and your body is running in a low-grade stress state almost continuously.</p><p><a href="https://staywellforlife.com/blog/holiday-stress.html">Read the full post</a></p>]]></content:encoded>
+      <author>daniel@staywellforlife.com (Daniel Corbin, DNP, APRN, FNP-C)</author>
+    </item>
+
+    <item>
+      <title>Gratitude Is Medicine: How Your Emotions Affect Your Health</title>
+      <link>https://staywellforlife.com/blog/gratitude-health.html</link>
+      <guid isPermaLink="true">https://staywellforlife.com/blog/gratitude-health.html</guid>
+      <pubDate>Sun, 15 Nov 2026 08:00:00 -0500</pubDate>
+      <description>The emotions you dwell in most often are quietly shaping your health. Here is what the science says about cortisol, chronic stress, and how gratitude works as medicine.</description>
+      <content:encoded><![CDATA[<p>The emotions you dwell in most often are quietly shaping your biology. Chronic negative emotional states raise cortisol, suppress immune function, and accelerate inflammation. Gratitude does the opposite -- and the research is more robust than you might expect.</p><p><a href="https://staywellforlife.com/blog/gratitude-health.html">Read the full post</a></p>]]></content:encoded>
+      <author>daniel@staywellforlife.com (Daniel Corbin, DNP, APRN, FNP-C)</author>
+    </item>
+
+  </channel>
+</rss>
