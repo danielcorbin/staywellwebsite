@@ -155,6 +155,15 @@
   .cookie-banner-inner button{background:var(--brass);color:var(--olive-deep);border:none;padding:0.6rem 1.4rem;font-weight:600;font-size:0.85rem;border-radius:2px;cursor:pointer;white-space:nowrap;}
   .cookie-banner-inner button:hover{background:var(--brass-light);}
   @media(max-width:600px){.cookie-banner-inner{flex-direction:column;align-items:stretch;text-align:center;}}
+
+  .ml-subscribe-section{max-width:780px;margin:2.5rem auto;padding:0 1.5rem;}
+  .ml-subscribe-section .ml-form-embedContainer{background:var(--ivory-deep);border:1px solid var(--line);border-radius:4px;padding:2rem;}
+  .ml-subscribe-section h4{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--olive-deep);margin-bottom:0.5rem;}
+  .ml-subscribe-section p{font-size:0.95rem;color:var(--ink-soft);margin-bottom:1.2rem;}
+  .ml-subscribe-section input[type="email"]{width:100%;padding:0.65rem 1rem;border:1px solid var(--line);border-radius:2px;font-family:'Inter',sans-serif;font-size:0.95rem;background:#fff;color:var(--ink);margin-bottom:0.75rem;}
+  .ml-subscribe-section button.primary{background:var(--brass);color:#fff;border:none;padding:0.65rem 1.5rem;border-radius:2px;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;letter-spacing:0.03em;}
+  .ml-subscribe-section button.primary:hover{background:var(--brass-light);}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3E9RVJR52"></script>
@@ -326,6 +335,54 @@
     </div>
   </div>
 
+</div>
+
+<div class="ml-subscribe-section">
+  <div id="mlb2-25539030" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-25539030">
+    <div class="ml-form-align-center">
+      <div class="ml-form-embedWrapper embedForm">
+        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+          <div class="ml-form-embedContent">
+            <h4>Stay in the loop</h4>
+            <p>Want new blog posts by email? No spam, just real updates. Subscribe here!</p>
+          </div>
+          <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1495692/forms/153393758919984967/subscribe" data-code="" method="post" target="_blank">
+            <div class="ml-form-formContent">
+              <div class="ml-form-fieldRow ml-last-item">
+                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                  <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email" autocomplete="email">
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="ml-submit" value="1">
+            <div class="ml-form-embedSubmit">
+              <button type="submit" class="primary">Subscribe</button>
+              <button disabled="disabled" style="display:none;" type="button" class="loading">
+                <div class="ml-form-embedSubmitLoad"></div>
+                <span class="sr-only">Loading...</span>
+              </button>
+            </div>
+            <input type="hidden" name="anticsrf" value="true">
+          </form>
+        </div>
+        <div class="ml-form-successBody row-success" style="display:none">
+          <div class="ml-form-successContent">
+            <h4>Thank you!</h4>
+            <p>You have successfully subscribed to the Staywell Health blog.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function ml_webform_success_25539030() {
+      var $ = ml_jQuery || jQuery;
+      $('.ml-subscribe-form-25539030 .row-success').show();
+      $('.ml-subscribe-form-25539030 .row-form').hide();
+    }
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+  <script>fetch("https://assets.mailerlite.com/jsonp/1495692/forms/153393758919984967/takel")</script>
 </div>
 
 <section class="cta-final">

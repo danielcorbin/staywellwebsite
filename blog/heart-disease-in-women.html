@@ -205,6 +205,24 @@
   .cookie-banner-inner button{background:var(--brass);color:var(--olive-deep);border:none;padding:0.6rem 1.4rem;font-weight:600;font-size:0.85rem;border-radius:2px;cursor:pointer;white-space:nowrap;}
   .cookie-banner-inner button:hover{background:var(--brass-light);}
   @media(max-width:600px){.cookie-banner-inner{flex-direction:column;align-items:stretch;text-align:center;}}
+
+  .share-row{max-width:780px;margin:2rem auto 0;padding:1.5rem 1.5rem 0;border-top:1px solid var(--line);display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+  .share-label{font-size:0.82rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-soft);}
+  .share-btn{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1rem;border-radius:2px;font-size:0.82rem;font-weight:600;text-decoration:none;transition:opacity 0.2s;}
+  .share-btn:hover{opacity:0.85;text-decoration:none;}
+  .share-btn.fb{background:#1877f2;color:#fff;}
+  .share-btn.x{background:#000;color:#fff;}
+  .share-btn.li{background:#0a66c2;color:#fff;}
+
+
+  .ml-subscribe-section{max-width:780px;margin:2.5rem auto;padding:0 1.5rem;}
+  .ml-subscribe-section .ml-form-embedContainer{background:var(--ivory-deep);border:1px solid var(--line);border-radius:4px;padding:2rem;}
+  .ml-subscribe-section h4{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--olive-deep);margin-bottom:0.5rem;}
+  .ml-subscribe-section p{font-size:0.95rem;color:var(--ink-soft);margin-bottom:1.2rem;}
+  .ml-subscribe-section input[type="email"]{width:100%;padding:0.65rem 1rem;border:1px solid var(--line);border-radius:2px;font-family:'Inter',sans-serif;font-size:0.95rem;background:#fff;color:var(--ink);margin-bottom:0.75rem;}
+  .ml-subscribe-section button.primary{background:var(--brass);color:#fff;border:none;padding:0.65rem 1.5rem;border-radius:2px;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;letter-spacing:0.03em;}
+  .ml-subscribe-section button.primary:hover{background:var(--brass-light);}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B3E9RVJR52"></script>
@@ -340,6 +358,23 @@ End Meta Pixel Code -->
 <div class="post-callout">
 <p>If you've been brushed off about cardiac symptoms, or you've never had a provider sit down with you and actually go through your cardiovascular risk, that's exactly the kind of thing I have time for at Staywell. It matters, and it's worth doing right.</p>
 </div>
+
+<div class="share-row">
+  <span class="share-label">Share</span>
+  <a class="share-btn fb" href="https://www.facebook.com/sharer/sharer.php?u=https://www.staywellforlife.com/blog/heart-disease-in-women.html" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+    Facebook
+  </a>
+  <a class="share-btn x" href="https://twitter.com/intent/tweet?url=https://www.staywellforlife.com/blog/heart-disease-in-women.html&text=Heart%20Disease%20in%20Women%3A%20Why%20It%20Looks%20Different%20and%20Gets%20Missed" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    X
+  </a>
+  <a class="share-btn li" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.staywellforlife.com/blog/heart-disease-in-women.html" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    LinkedIn
+  </a>
+</div>
+
 <div class="post-author-box">
 <img class="post-author-avatar" src="../images/provider-photo.jpg" alt="Daniel Corbin, DNP, APRN, FNP-C"/>
 <div class="post-author-info">
